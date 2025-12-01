@@ -1,0 +1,112 @@
+1) Update the hero metrics (Page 1)
+
+On Page 1, update the hero metric row so it shows exactly these 4 metrics, program-wide (AO + Tacticals):
+	1.	Roles Reached (Total) – total individual roles reached across all campaigns this month
+	2.	Key Roles Engaged (Tacticals) – number of key roles engaged in Tactical campaigns this month
+	3.	Watch Time (Hours) – total content watch time across all campaigns this month
+	4.	Active Targets (Total) – total number of target accounts with active campaigns this month
+
+For each metric card:
+	•	Keep the existing style (label, large value, small MoM trend pill with arrow and %).
+	•	Update the labels and placeholder values to align with the above definitions.
+	•	Ensure the order is: Roles Reached → Key Roles Engaged → Watch Time → Active Targets.
+
+Add a small caption line under the hero row:
+
+“All metrics shown are for this month across all Always On and Tactical campaigns.”
+
+⸻
+
+2) Add a Program Overview grid (Page 1, below hero metrics)
+
+Under the hero metrics and insights block on Page 1, add a Program Overview section to give context (not performance trends).
+
+Use a simple 2×2 grid of small cards / panels:
+	•	Always On Coverage
+	•	“AO Target Accounts: XX total”
+	•	“New AO Targets this month: +Y”
+	•	Tactical Activity
+	•	“Active Tactical Campaigns: X”
+	•	“New/Paused this month: …”
+	•	Content Library
+	•	“Active Content Pieces: X”
+	•	“Total Library: Y”
+	•	Program Objectives
+	•	Short bullet list with: “Decision Chain Influence”, “Brand Awareness”, “Value Proposition Clarity”
+
+Visually:
+	•	Use the existing card / panel style: light border, subtle radius, no heavy shadows.
+	•	Keep copy short, like a fact sheet.
+	•	Make sure spacing matches the rest of the page (8/16/24px scale).
+
+⸻
+
+3) Create a new Tactical table on the Tactical page (Page 2)
+
+On the Tactical page, at the top, add a Tactical Rollup Table that compares all active tacticals.
+
+Use this column structure:
+
+| Target | Audience Size | Roles Reached | Completed Views | Watch Time | New Roles |
+
+For each row:
+	•	Target – tactical/target name (e.g. “Southern Rail Logistics”)
+	•	Audience Size – total addressable audience (e.g. 38,000)
+	•	Roles Reached – show value + MoM trend (e.g. 140  ▲ +12%)
+	•	Completed Views – value + MoM trend (e.g. 312  ▼ –8%)
+	•	Watch Time – value + MoM trend (e.g. 24h  ▲ +3%)
+	•	New Roles – value + MoM trend (e.g. +7  ▲ +2)
+
+Design details:
+	•	Use a clean, simple table style (no row borders except header line and maybe alternating row shading).
+	•	Trend indicators should be small arrows + % or delta, using the existing green/red color tokens from the design system.
+	•	Keep text compact so the table fits nicely across the page and prints cleanly as a PDF.
+
+Place this table at the top of the Tactical page, above any existing tactical cards/content.
+
+⸻
+
+4) Add a Tactical Deep Dive for one tactical (Page 2)
+
+Under the new Tactical Rollup Table, add a “Top Tactical Deep Dive” card for one tactical (e.g. the first row in the table).
+
+Layout the deep dive as a single card/block with this structure:
+	•	Header line:
+	•	“Tactical: [Target Name] (e.g. Southern Rail Logistics)”
+	•	Include campaign duration (e.g. “Running for 8 months”) and sector (e.g. “Heavy Industry”) in smaller text.
+	•	Metrics block (two-column grid):
+	•	Left side:
+	•	Audience Size
+	•	Roles Reached
+	•	Key Roles Engaged
+	•	New Roles
+	•	Right side:
+	•	Impressions
+	•	Completed Views
+	•	Watch Time (hours)
+	•	Priority Messages Delivered:
+	•	A short list (3 bullet points) of message titles, styled as bullets or small tags.
+	•	Best Performing Message:
+	•	Message name as a sub-heading.
+	•	Below it: “Impressions: X”, “Views: Y”, “Complete Views: Z”.
+	•	Role Group Influence Summary:
+	•	A small table or list by role group (e.g. C-Suite, Operations, Finance, Risk, Technology) with basic numbers:
+	•	Impressions | Views | Complete Views | New Roles this month
+	•	Insights block:
+	•	1–2 short bullets that interpret the data (placeholder copy is fine), e.g.:
+	•	“Growing interest from Operations and Finance roles, with increasing repeat engagement.”
+	•	“C-Suite engagement remains lower but is starting to show early signs of traction.”
+
+Visual style:
+	•	Use the same card styling as other panels (white, soft border, small radius).
+	•	Use headings (H3 style) for sub-sections: “Metrics (this month)”, “Priority Messages”, “Best Performing Message”, “Role Group Influence”, “Insights”.
+	•	Ensure this deep dive card fits comfortably on the page below the table when printed.
+
+⸻
+
+5) General guidelines
+	•	Reuse existing CSS tokens and type styles (Yappy orange, greys, Poppins for headings, Inter for body).
+	•	Do not remove the existing Always On page; just update Page 1 and Page 2 as described.
+	•	Keep all data mocked/static for now; focus on layout, hierarchy, and styling.
+
+Please update the existing HTML and CSS to implement these changes, preserving the current aesthetic and layout rhythm while adding these new elements.

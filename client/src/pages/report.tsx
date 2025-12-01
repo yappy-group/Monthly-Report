@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUp, ArrowDown, Box, Users, Clock, Eye, Target, Layers, CheckCircle2, PlayCircle, Briefcase, LucideIcon, Zap, BarChart3, Info } from "lucide-react";
+import { ArrowUp, ArrowDown, Box, Users, Clock, Eye, Target, Layers, CheckCircle2, PlayCircle, Briefcase, LucideIcon, Zap, BarChart3, Info, Calendar, Building2, FileText, Goal } from "lucide-react";
 
 // --- Components ---
 
@@ -69,7 +69,7 @@ interface InsightPanelProps {
 }
 
 const InsightPanel = ({ title, children, footer, icon: Icon }: InsightPanelProps) => (
-  <div className="bg-yappy-grey-light/30 rounded-lg border border-yappy-grey-light p-8 mt-10">
+  <div className="bg-yappy-grey-light/30 rounded-lg border border-yappy-grey-light p-8 mb-8">
     <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2.5">
       {Icon ? <Icon className="w-5 h-5 text-yappy-orange" /> : <div className="w-1.5 h-5 bg-yappy-orange rounded-full" />}
       {title}
@@ -108,54 +108,238 @@ const Tag = ({ children, color = "gray" }: { children: React.ReactNode, color?: 
   );
 };
 
-interface TacticalCardProps {
-  name: string;
-  description: string;
-  stats: { label: string; value: string }[];
-  tags: string[];
-  highlights: string[];
-}
+// New Component: Program Overview Grid
+const ProgramOverviewGrid = () => (
+  <div className="mt-8">
+    <h3 className="text-lg font-bold text-yappy-grey-dark mb-4 flex items-center gap-2">
+      <Layers className="w-5 h-5 text-yappy-orange" />
+      Program Overview
+    </h3>
+    <div className="grid grid-cols-2 gap-4">
+      <div className="bg-white border border-yappy-grey-light rounded-lg p-6">
+        <div className="flex items-center gap-2 mb-3">
+          <PlayCircle className="w-4 h-4 text-yappy-grey-med" />
+          <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide">Always On Coverage</h4>
+        </div>
+        <div className="space-y-1 text-[15px]">
+          <p className="text-yappy-grey-dark font-medium">AO Target Accounts: <span className="font-bold">142 total</span></p>
+          <p className="text-yappy-grey-med">New AO Targets this month: <span className="text-yappy-green font-bold">+12</span></p>
+        </div>
+      </div>
 
-const TacticalCard = ({ name, description, stats, tags, highlights }: TacticalCardProps) => (
-  <div className="bg-white border border-yappy-grey-light rounded-lg p-7 shadow-sm hover:shadow-md transition-shadow">
-    <div className="flex justify-between items-start mb-6">
-      <div>
-        <h3 className="text-xl font-bold text-yappy-grey-dark tracking-tight">{name}</h3>
-        <p className="text-sm text-yappy-grey-med font-medium mt-1">{description}</p>
-      </div>
-      <div className="flex gap-2">
-        {tags.map(t => <Tag key={t}>{t}</Tag>)}
-      </div>
-    </div>
-    
-    <div className="flex items-center gap-8 mb-8 py-5 border-t border-b border-yappy-grey-light relative">
-      {stats.map((s, i) => (
-        <div key={i} className="flex-1 border-r border-dashed border-yappy-grey-light last:border-0 pr-4 last:pr-0">
-          <p className="text-[10px] font-bold text-yappy-grey-med uppercase mb-1 tracking-wider">{s.label}</p>
-          <p className="text-xl font-bold text-yappy-grey-dark">{s.value}</p>
+      <div className="bg-white border border-yappy-grey-light rounded-lg p-6">
+        <div className="flex items-center gap-2 mb-3">
+          <Target className="w-4 h-4 text-yappy-grey-med" />
+          <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide">Tactical Activity</h4>
         </div>
-      ))}
-      {/* Sparkline Placeholder */}
-      <div className="w-16 h-8 ml-4 opacity-50 hidden sm:block" title="Activity Trend">
-        <div className="w-full h-full bg-gradient-to-t from-yappy-orange/20 to-transparent rounded-sm border-b-2 border-yappy-orange relative overflow-hidden">
-           <svg viewBox="0 0 64 32" className="w-full h-full absolute bottom-0 left-0" preserveAspectRatio="none">
-             <path d="M0 32 L10 20 L20 28 L30 10 L40 22 L50 5 L64 15 V32 H0 Z" fill="currentColor" className="text-yappy-orange/10" />
-             <path d="M0 32 L10 20 L20 28 L30 10 L40 22 L50 5 L64 15" fill="none" stroke="currentColor" strokeWidth="2" className="text-yappy-orange" />
-           </svg>
+        <div className="space-y-1 text-[15px]">
+          <p className="text-yappy-grey-dark font-medium">Active Tactical Campaigns: <span className="font-bold">5</span></p>
+          <p className="text-yappy-grey-med">New/Paused this month: <span className="font-bold">1 New / 0 Paused</span></p>
         </div>
       </div>
-    </div>
 
-    <div className="space-y-3 bg-yappy-grey-light/20 p-4 rounded-md -mx-2">
-      {highlights.map((h, i) => (
-        <div key={i} className="flex items-start gap-2.5 text-[13px] text-yappy-grey-dark font-medium">
-          <span className="text-yappy-orange mt-1.5 text-[10px]">●</span>
-          <span className="leading-relaxed">{h}</span>
+      <div className="bg-white border border-yappy-grey-light rounded-lg p-6">
+        <div className="flex items-center gap-2 mb-3">
+          <FileText className="w-4 h-4 text-yappy-grey-med" />
+          <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide">Content Library</h4>
         </div>
-      ))}
+        <div className="space-y-1 text-[15px]">
+          <p className="text-yappy-grey-dark font-medium">Active Content Pieces: <span className="font-bold">24</span></p>
+          <p className="text-yappy-grey-med">Total Library: <span className="font-bold">86 Assets</span></p>
+        </div>
+      </div>
+
+      <div className="bg-white border border-yappy-grey-light rounded-lg p-6">
+        <div className="flex items-center gap-2 mb-3">
+          <Goal className="w-4 h-4 text-yappy-grey-med" />
+          <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide">Program Objectives</h4>
+        </div>
+        <div className="space-y-1 text-[15px]">
+          <p className="text-yappy-grey-dark flex items-center gap-2"><span className="w-1 h-1 bg-yappy-orange rounded-full"></span>Decision Chain Influence</p>
+          <p className="text-yappy-grey-dark flex items-center gap-2"><span className="w-1 h-1 bg-yappy-orange rounded-full"></span>Brand Awareness</p>
+          <p className="text-yappy-grey-dark flex items-center gap-2"><span className="w-1 h-1 bg-yappy-orange rounded-full"></span>Value Proposition Clarity</p>
+        </div>
+      </div>
     </div>
   </div>
 );
+
+// New Component: Tactical Rollup Table
+const TacticalRollupTable = () => (
+  <div className="mb-10">
+     <h2 className="text-xl font-bold text-yappy-grey-dark mb-6 flex items-center gap-2.5">
+        <div className="p-1.5 bg-yappy-orange/10 rounded text-yappy-orange">
+          <Layers className="w-5 h-5" />
+        </div>
+        Tactical Rollup
+      </h2>
+    <div className="border border-yappy-grey-light rounded-lg overflow-hidden bg-white shadow-sm">
+      <table className="w-full text-left">
+        <thead className="bg-yappy-grey-light/30 text-yappy-grey-med font-bold border-b border-yappy-grey-light uppercase text-[10px] tracking-wider">
+          <tr>
+            <th className="px-5 py-3">Target</th>
+            <th className="px-5 py-3">Audience Size</th>
+            <th className="px-5 py-3">Roles Reached</th>
+            <th className="px-5 py-3">Completed Views</th>
+            <th className="px-5 py-3">Watch Time</th>
+            <th className="px-5 py-3">New Roles</th>
+          </tr>
+        </thead>
+        <tbody className="divide-y divide-yappy-grey-light text-sm">
+          {[
+            { name: "Southern Rail Logistics", aud: "38,000", reached: "140", reachedTrend: "+12%", views: "312", viewsTrend: "-8%", time: "24h", timeTrend: "+3%", new: "+7", newTrend: "+2" },
+            { name: "Apex Manufacturing Group", aud: "22,500", reached: "98", reachedTrend: "+5%", views: "210", viewsTrend: "+15%", time: "18h", timeTrend: "+8%", new: "+4", newTrend: "+1" },
+            { name: "Pacific Energy Systems", aud: "45,000", reached: "215", reachedTrend: "+18%", views: "450", viewsTrend: "+22%", time: "36h", timeTrend: "+12%", new: "+15", newTrend: "+6" },
+          ].map((row, i) => (
+            <tr key={i} className="hover:bg-gray-50 transition-colors">
+              <td className="px-5 py-3 font-bold text-yappy-grey-dark">{row.name}</td>
+              <td className="px-5 py-3 text-yappy-grey-med font-medium">{row.aud}</td>
+              <td className="px-5 py-3 text-yappy-grey-dark font-medium">
+                {row.reached} <span className={`text-[10px] ml-1 font-bold ${row.reachedTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.reachedTrend.includes('+') ? '▲' : '▼'} {row.reachedTrend}</span>
+              </td>
+              <td className="px-5 py-3 text-yappy-grey-dark font-medium">
+                {row.views} <span className={`text-[10px] ml-1 font-bold ${row.viewsTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.viewsTrend.includes('+') ? '▲' : '▼'} {row.viewsTrend}</span>
+              </td>
+               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
+                {row.time} <span className={`text-[10px] ml-1 font-bold ${row.timeTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.timeTrend.includes('+') ? '▲' : '▼'} {row.timeTrend}</span>
+              </td>
+               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
+                {row.new} <span className={`text-[10px] ml-1 font-bold ${row.newTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.newTrend.includes('+') ? '▲' : '▼'} {row.newTrend}</span>
+              </td>
+            </tr>
+          ))}
+        </tbody>
+      </table>
+    </div>
+  </div>
+);
+
+// New Component: Tactical Deep Dive
+const TacticalDeepDive = () => (
+  <div className="bg-white border border-yappy-grey-light rounded-lg p-8 shadow-sm">
+    <div className="flex justify-between items-start mb-8 pb-6 border-b border-yappy-grey-light">
+      <div>
+        <h3 className="text-xl font-extrabold text-yappy-grey-dark tracking-tight flex items-center gap-3">
+          Tactical: Southern Rail Logistics
+        </h3>
+        <div className="flex items-center gap-4 mt-2 text-sm text-yappy-grey-med font-medium">
+          <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> Running for 8 months</span>
+          <span className="flex items-center gap-1.5"><Building2 className="w-4 h-4" /> Heavy Industry</span>
+        </div>
+      </div>
+      <div className="flex gap-2">
+        <Tag color="orange">High Priority</Tag>
+        <Tag>Active</Tag>
+      </div>
+    </div>
+
+    <div className="grid grid-cols-2 gap-12 mb-10">
+      {/* Left Metrics */}
+      <div className="space-y-6">
+        <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-4 flex items-center gap-2">
+          <BarChart3 className="w-4 h-4 text-yappy-orange" /> Metrics (This Month)
+        </h4>
+        <div className="grid grid-cols-2 gap-y-6 gap-x-8">
+          <div>
+             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Audience Size</p>
+             <p className="text-xl font-bold text-yappy-grey-dark">38,000</p>
+          </div>
+          <div>
+             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Roles Reached</p>
+             <p className="text-xl font-bold text-yappy-grey-dark">140</p>
+          </div>
+           <div>
+             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Key Roles Engaged</p>
+             <p className="text-xl font-bold text-yappy-grey-dark">42</p>
+          </div>
+          <div>
+             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">New Roles</p>
+             <p className="text-xl font-bold text-yappy-green">+7</p>
+          </div>
+        </div>
+      </div>
+
+      {/* Right Metrics */}
+      <div className="space-y-6">
+         <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-4 opacity-0">Metrics Continued</h4>
+         <div className="grid grid-cols-2 gap-y-6 gap-x-8">
+          <div>
+             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Impressions</p>
+             <p className="text-xl font-bold text-yappy-grey-dark">2,400</p>
+          </div>
+          <div>
+             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Completed Views</p>
+             <p className="text-xl font-bold text-yappy-grey-dark">312</p>
+          </div>
+           <div>
+             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Watch Time</p>
+             <p className="text-xl font-bold text-yappy-grey-dark">24h</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div className="grid grid-cols-2 gap-12 mb-10 border-t border-yappy-grey-light pt-8">
+       <div>
+          <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-4">Priority Messages</h4>
+          <div className="space-y-2">
+             {['Predictive Maintenance ROI', 'Safety Compliance Standards', 'Operational Efficiency'].map(msg => (
+               <div key={msg} className="flex items-center gap-2 text-sm text-yappy-grey-dark font-medium bg-yappy-grey-light/30 px-3 py-2 rounded">
+                 <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full"></div>
+                 {msg}
+               </div>
+             ))}
+          </div>
+       </div>
+       <div>
+          <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-4">Best Performing Message</h4>
+          <div className="bg-yappy-grey-light/20 p-4 rounded-lg border border-yappy-grey-light/50">
+             <p className="font-bold text-yappy-grey-dark text-sm mb-3">"Predictive Maintenance ROI"</p>
+             <div className="flex gap-4 text-xs text-yappy-grey-med">
+                <span><strong className="text-yappy-grey-dark">1.2k</strong> Impressions</span>
+                <span><strong className="text-yappy-grey-dark">450</strong> Views</span>
+                <span><strong className="text-yappy-grey-dark">180</strong> Complete Views</span>
+             </div>
+          </div>
+       </div>
+    </div>
+
+    <div className="mb-10">
+       <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-4">Role Group Influence</h4>
+       <div className="border border-yappy-grey-light rounded-lg overflow-hidden">
+          <table className="w-full text-xs text-left">
+             <thead className="bg-yappy-grey-light/30 text-yappy-grey-med uppercase font-bold">
+                <tr>
+                   <th className="px-4 py-2">Role Group</th>
+                   <th className="px-4 py-2">Impressions</th>
+                   <th className="px-4 py-2">Views</th>
+                   <th className="px-4 py-2">Complete Views</th>
+                   <th className="px-4 py-2">New Roles</th>
+                </tr>
+             </thead>
+             <tbody className="divide-y divide-yappy-grey-light text-yappy-grey-dark font-medium">
+                <tr><td className="px-4 py-2">Operations</td><td className="px-4 py-2">850</td><td className="px-4 py-2">320</td><td className="px-4 py-2">150</td><td className="px-4 py-2 text-yappy-green">+4</td></tr>
+                <tr><td className="px-4 py-2">Finance</td><td className="px-4 py-2">420</td><td className="px-4 py-2">110</td><td className="px-4 py-2">45</td><td className="px-4 py-2 text-yappy-green">+2</td></tr>
+                <tr><td className="px-4 py-2">Risk & Compliance</td><td className="px-4 py-2">380</td><td className="px-4 py-2">95</td><td className="px-4 py-2">38</td><td className="px-4 py-2 text-yappy-green">+1</td></tr>
+             </tbody>
+          </table>
+       </div>
+    </div>
+
+    <div className="bg-yappy-grey-light/30 p-6 rounded-lg border border-yappy-grey-light">
+        <h4 className="font-bold text-yappy-grey-dark text-sm uppercase mb-3 flex items-center gap-2">
+          <Zap className="w-4 h-4 text-yappy-orange" />
+          Tactical Insights
+        </h4>
+        <div className="space-y-2">
+            <Bullet>Growing interest from Operations and Finance roles, with increasing repeat engagement.</Bullet>
+            <Bullet>C-Suite engagement remains lower but is starting to show early signs of traction.</Bullet>
+        </div>
+      </div>
+
+  </div>
+);
+
 
 // --- Pages ---
 
@@ -171,36 +355,37 @@ const Page1_ExecutiveSummary = () => (
         Global Overview
       </h2>
       
-      <div className="grid grid-cols-4 gap-5 mb-10">
+      <div className="grid grid-cols-4 gap-5 mb-6">
         <MetricCard 
-          label="Active Targets" 
-          value="28" 
-          trend="2" 
-          trendIsPositive={true} 
-          icon={Briefcase}
-        />
-        <MetricCard 
-          label="Roles Reached" 
-          value="840" 
+          label="Roles Reached (Total)" 
+          value="1,240" 
           trend="15%" 
           trendIsPositive={true} 
           icon={Users}
         />
         <MetricCard 
           label="Key Roles Engaged" 
-          value="124" 
+          value="342" 
           trend="8%" 
           trendIsPositive={true} 
           icon={Target}
         />
         <MetricCard 
-          label="Content Watch Time" 
-          value="342h" 
+          label="Watch Time (Hours)" 
+          value="486h" 
           trend="24%" 
           trendIsPositive={true} 
           icon={Clock}
         />
+        <MetricCard 
+          label="Active Targets (Total)" 
+          value="142" 
+          trend="2" 
+          trendIsPositive={true} 
+          icon={Briefcase}
+        />
       </div>
+      <p className="text-xs text-yappy-grey-med font-medium mb-10 text-center italic">All metrics shown are for this month across all Always On and Tactical campaigns.</p>
 
       <InsightPanel 
         title="Key Insights This Month"
@@ -211,6 +396,8 @@ const Page1_ExecutiveSummary = () => (
         <Bullet>Watch time up 24%, led by C-Suite personas in heavy industry targets.</Bullet>
         <Bullet>Three new targets surpassed the 20% exposure threshold.</Bullet>
       </InsightPanel>
+
+      <ProgramOverviewGrid />
     </div>
   </section>
 );
@@ -218,106 +405,8 @@ const Page1_ExecutiveSummary = () => (
 const Page2_TacticalHighlights = () => (
   <section className="report-page print:break-after-page">
     <Header />
-    
-    <div className="mb-8">
-      <h2 className="text-xl font-bold text-yappy-grey-dark mb-8 flex items-center gap-2.5">
-        <div className="p-1.5 bg-yappy-orange/10 rounded text-yappy-orange">
-          <Layers className="w-5 h-5" />
-        </div>
-        Tactical Campaign Highlights
-      </h2>
-
-      {/* Aggregate Metrics */}
-      <div className="grid grid-cols-5 gap-5 mb-12">
-        <div className="p-5 bg-white rounded-lg border border-yappy-grey-light shadow-sm">
-           <p className="text-[10px] text-yappy-grey-med uppercase font-bold mb-2 tracking-wider">Roles Engaged</p>
-           <p className="text-3xl font-bold text-yappy-grey-dark">342</p>
-        </div>
-        <div className="p-5 bg-white rounded-lg border border-yappy-grey-light shadow-sm">
-           <p className="text-[10px] text-yappy-grey-med uppercase font-bold mb-2 tracking-wider">Avg Depth</p>
-           <p className="text-3xl font-bold text-yappy-grey-dark">3.2</p>
-        </div>
-        <div className="p-5 bg-white rounded-lg border border-yappy-grey-light shadow-sm">
-           <p className="text-[10px] text-yappy-grey-med uppercase font-bold mb-2 tracking-wider">Watch Time</p>
-           <p className="text-3xl font-bold text-yappy-grey-dark">128h</p>
-        </div>
-        <div className="p-5 bg-white rounded-lg border border-yappy-grey-light shadow-sm">
-           <p className="text-[10px] text-yappy-grey-med uppercase font-bold mb-2 tracking-wider">New Roles</p>
-           <p className="text-3xl font-bold text-yappy-grey-dark text-yappy-green">+45</p>
-        </div>
-        <div className="p-5 bg-white rounded-lg border border-yappy-grey-light shadow-sm">
-           <p className="text-[10px] text-yappy-grey-med uppercase font-bold mb-2 tracking-wider">Completions</p>
-           <p className="text-3xl font-bold text-yappy-grey-dark">1.2k</p>
-        </div>
-      </div>
-
-      {/* Cards */}
-      <div className="space-y-6 mb-10">
-        <TacticalCard 
-          name="Southern Rail Logistics"
-          description="Solar deployment for heavy industry site portfolio"
-          tags={["Ops", "Finance", "Risk"]}
-          stats={[
-            { label: "Reached", value: "145" },
-            { label: "Engaged", value: "42" },
-            { label: "Watch Time", value: "24h" },
-            { label: "Impressions", value: "2.4k" },
-            { label: "Comp. Views", value: "850" },
-          ]}
-          highlights={[
-            "Emerging interest from Finance leadership; repeat engagement from Operations.",
-            "Message 'Predictive Maintenance ROI' driving majority of completions."
-          ]}
-        />
-        
-        <TacticalCard 
-          name="Apex Manufacturing Group"
-          description="Enterprise-wide automation upgrade"
-          tags={["CTO Office", "Plant Mgr"]}
-          stats={[
-            { label: "Reached", value: "88" },
-            { label: "Engaged", value: "31" },
-            { label: "Watch Time", value: "18h" },
-            { label: "Impressions", value: "1.8k" },
-            { label: "Comp. Views", value: "620" },
-          ]}
-          highlights={[
-            "Strong traction with regional Plant Managers.",
-            "Technical deep-dive content performing 2x above benchmark."
-          ]}
-        />
-
-         <TacticalCard 
-          name="Pacific Energy Systems"
-          description="Grid modernization initiative"
-          tags={["Infrastructure", "Procurement"]}
-          stats={[
-            { label: "Reached", value: "210" },
-            { label: "Engaged", value: "56" },
-            { label: "Watch Time", value: "31h" },
-            { label: "Impressions", value: "3.1k" },
-            { label: "Comp. Views", value: "940" },
-          ]}
-          highlights={[
-            "Procurement team showing early intent signals.",
-            "Video case studies driving high engagement."
-          ]}
-        />
-      </div>
-
-      {/* Insights */}
-      <div className="bg-yappy-grey-light/30 p-8 rounded-lg border border-yappy-grey-light">
-        <h4 className="font-bold text-yappy-grey-dark text-sm uppercase mb-5 flex items-center gap-2">
-          <div className="w-2 h-2 bg-yappy-orange rounded-full"></div>
-          Tactical Insights
-        </h4>
-        <div className="grid grid-cols-2 gap-8">
-            <Bullet>Southern Rail showed increasing engagement from Risk & Compliance, indicating momentum in the buying group.</Bullet>
-            <Bullet>Content piece 'Automation ROI' resonated strongly among Technology roles at Apex, suggesting readiness for deeper solution messaging.</Bullet>
-        </div>
-      </div>
-
-    </div>
+    <TacticalRollupTable />
+    <TacticalDeepDive />
   </section>
 );
 
