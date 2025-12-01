@@ -1,0 +1,139 @@
+I’m designing a static “Yappy Monthly Progress Report” in Replit Design Mode (HTML + CSS only, optional tiny JS).
+Please build a desktop-first, print-friendly report that follows this 3-page narrative:
+	1.	Page 1 – Executive Summary (Global Overview) – maps to Home dashboard
+	2.	Page 2 – Tactical Campaign Highlights (High-Intent Targets) – maps to Tactical/Target dashboards
+	3.	Page 3 – Always On Program Highlights – maps to Always On dashboard
+
+Use simple, semantic HTML and a single CSS file. No frameworks.
+
+⸻
+
+Global Layout & Style
+	•	Center the report in a max-width container (~1100px).
+	•	Each “page” should be a <section> with a .report-page class and use CSS like page-break-after: always; so it prints as 3 pages in PDF.
+	•	Light grey background for the whole viewport, white page card with subtle border and 4–6px radius.
+	•	Use a system font, with clear typographic hierarchy (h1, h2, h3, body, caption).
+	•	Colors:
+	•	--yappy-orange for accents (e.g. #F77C22 or similar)
+	•	Neutral greys for text and dividers
+	•	Green (--positive) and red (--negative) for trend indicators.
+
+⸻
+
+PAGE 1 — Executive Summary (Global Overview)
+
+Source concept: Home Dashboard
+
+Header (repeated on each page)
+	•	Top-left: simple Yappy logo (orange square + “yappy”).
+	•	Report title: “Monthly Progress Report”
+	•	Subline: “November 2025”
+	•	Top-right: client logo placeholder box (“Client Logo / Client Name”).
+
+A. Hero Metrics (Global, All Campaigns)
+Row of 4 hero metric blocks that match the home screen:
+	1.	Active Targets – number of accounts across all campaigns
+	2.	Roles Reached – total individual roles reached (AO + Tactical)
+	3.	Key Roles Engaged – engaged roles in Tactical campaigns
+	4.	Content Watch Time – total watch time across all campaigns
+
+Each metric block should include:
+	•	Label (small, uppercase or semi-bold)
+	•	Large value (e.g. 28, 840, 124, 342h)
+	•	A mini trend pill showing month-on-month change:
+	•	Arrow up/down
+	•	% or delta value (e.g. +15%, –2.1%)
+	•	Green for positive, red for negative.
+
+B. Executive Insights
+	•	Below the metrics, a light grey panel titled “Key Insights This Month”.
+	•	3–4 bullet points of placeholder copy that read like leadership insights, e.g.:
+	•	“Significant increase in role engagement across priority accounts, driven by Tactical campaigns.”
+	•	“Watch time up 24%, led by C-Suite personas in heavy industry targets.”
+	•	“Three new targets surpassed the 20% exposure threshold.”
+	•	At the bottom of this panel, add one line of program totals for the month:
+	•	e.g. “This month: 2.4M impressions, 38k complete views, 38% avg completion rate across all campaigns.”
+
+⸻
+
+PAGE 2 — Tactical Campaign Highlights (Target-Level Influence)
+
+Source concept: Tactical/Target Dashboards
+
+Section heading: “Tactical Campaign Highlights”
+
+A. Tactical Program Metrics (Aggregated)
+A row of 4–5 compact metric blocks summarising all Tactical campaigns:
+	•	Key Roles Engaged (count)
+	•	Decision Chain Depth or number of Key Role Groups Engaged
+	•	Tactical Watch Time (hrs)
+	•	New Roles Engaged this month
+	•	Tactical Content Completions (complete views across tacticals)
+
+B. Top Tactical Accounts (Top 3)
+Below the aggregate metrics, show 3 “tactical highlight cards”, one per key high-intent account. For each card:
+	•	Target name (e.g. “Southern Rail Logistics”)
+	•	Short one-line descriptor of the opportunity (e.g. “Solar deployment for heavy industry site portfolio”).
+	•	A small grid of metrics:
+	•	Roles Reached
+	•	Key Roles Engaged
+	•	Watch Time
+	•	Impressions
+	•	Complete Views
+	•	Role Groups Activated (e.g. “Ops, Finance, Risk” listed as tags)
+	•	A short highlight bullet list (1–2 bullets) per tactical, e.g.:
+	•	“Emerging interest from Finance leadership; repeat engagement from Operations.”
+	•	“Message ‘Predictive Maintenance ROI’ driving majority of completions.”
+
+C. Strategic Insights (Tactical)
+At the bottom of the page, a small text block titled “Tactical Insights” with 2–3 bullets that interpret the data in plain language, e.g.:
+	•	“[Target A] showed increasing engagement from Risk & Compliance, indicating momentum in the buying group.”
+	•	“Content piece X resonated strongly among Technology roles at [Target B], suggesting readiness for deeper solution messaging.”
+
+⸻
+
+PAGE 3 — Always On Program Highlights
+
+Source concept: Always On Campaign Dashboard
+
+Section heading: “Always On Program Highlights”
+
+A. Always On Hero Metrics (Program-Level)
+Another row of 4 metrics, but AO-only:
+	•	Target Account Reach (%) (AO only)
+	•	AO Watch Time (hrs)
+	•	Roles Reached (aggregate AO)
+	•	AO Content Engagement (e.g. total impressions or completions from AO)
+
+Each metric block should match the style of Page 1 (label, value, MoM trend).
+
+B. Top Always On Targets
+A simple table or list of 3–5 AO targets. For each:
+	•	Target name
+	•	Stage or awareness level (e.g. Low / Medium / High)
+	•	Impressions this month
+	•	Complete Views
+	•	Watch Time
+	•	A small indicator if they crossed a meaningful threshold (e.g. “Reached 20% exposure” or “New this month”).
+
+C. Top Always On Content
+A small content performance block (2–3 rows). Each row:
+	•	Content title
+	•	Whether it’s AO only or shared
+	•	Impressions
+	•	Complete Views
+	•	Estimated number of organisations reached
+	•	One short note like “Drove 60% of AO completions”.
+
+D. Narrative Wrap-Up
+At the bottom, a brief section titled “Program Narrative” with 2–3 short bullets:
+	•	“AO program continues to build early awareness across priority heavy industry markets.”
+	•	“Consistent uplift among target clusters in [sector], with increasing watch time from Operations roles.”
+
+⸻
+
+Implementation details
+	•	Use semantic HTML (<header>, <section>, <article>, <table>, etc.).
+	•	Use CSS classes to structure spacing (8px / 16px / 24px scale).
+	•	Use .report-page with page-break-after: always; so each main section prints as a new page in PDF.
+	•	All data can be mocked as static content in the HTML. Focus on layout, typography, and visual hierarchy that feels like a polished, executive PDF report, not an interactive dashboard.
