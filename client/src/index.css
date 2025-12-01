@@ -2,9 +2,15 @@
 
 @theme {
   --color-yappy-orange: #F77C22;
-  --color-positive: #16a34a;
-  --color-negative: #dc2626;
+  --color-yappy-grey-light: #EAEBEC;
+  --color-yappy-grey-med: #A9A9A9;
+  --color-yappy-grey-dark: #272525;
+  --color-yappy-red: #D11E1A;
+  --color-yappy-yellow: #FFAB2D;
+  --color-yappy-green: #9FC64B;
+  
   --font-sans: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-heading: 'Poppins', var(--font-sans);
 }
 
 @layer base {
@@ -12,7 +18,10 @@
     box-sizing: border-box;
   }
   body {
-    @apply bg-gray-100 font-sans text-gray-900 antialiased;
+    @apply bg-gray-100 font-sans text-yappy-grey-dark antialiased;
+  }
+  h1, h2, h3, h4, h5, h6 {
+    @apply font-heading;
   }
 }
 

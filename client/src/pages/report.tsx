@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUp, ArrowDown, Box, Users, Clock, Eye, Target, Layers, CheckCircle2, PlayCircle, Briefcase, LucideIcon } from "lucide-react";
+import { ArrowUp, ArrowDown, Box, Users, Clock, Eye, Target, Layers, CheckCircle2, PlayCircle, Briefcase, LucideIcon, Zap, BarChart3, Info } from "lucide-react";
 
 // --- Components ---
 
@@ -8,23 +8,23 @@ interface HeaderProps {
 }
 
 const Header = ({ title = "Monthly Progress Report" }: HeaderProps) => (
-  <header className="flex items-center justify-between mb-12 border-b border-gray-100 pb-6">
-    <div className="flex items-center gap-4">
-      <div className="w-10 h-10 bg-yappy-orange rounded-sm flex items-center justify-center text-white font-bold text-xl">
+  <header className="flex items-center justify-between mb-8 pb-6 border-b border-yappy-grey-light">
+    <div className="flex items-center gap-5">
+      <div className="w-12 h-12 bg-yappy-orange rounded-sm flex items-center justify-center text-white font-bold text-2xl shadow-sm">
         Y
       </div>
       <div>
-        <h1 className="text-2xl font-bold text-gray-900 tracking-tight leading-none">{title}</h1>
-        <p className="text-sm text-gray-500 font-medium mt-1">November 2025</p>
+        <h1 className="text-3xl font-extrabold text-yappy-grey-dark tracking-tight leading-none">{title}</h1>
+        <p className="text-sm text-yappy-grey-med font-semibold mt-1.5 tracking-wide">NOVEMBER 2025</p>
       </div>
     </div>
-    <div className="flex items-center gap-3">
+    <div className="flex items-center gap-4">
       <div className="text-right">
-        <p className="text-xs font-semibold text-gray-400 uppercase tracking-wider">Client</p>
-        <p className="text-sm font-bold text-gray-800">Acme Industries</p>
+        <p className="text-[10px] font-bold text-yappy-grey-med uppercase tracking-widest mb-0.5">Client</p>
+        <p className="text-base font-black text-yappy-grey-dark tracking-tight">Acme Industries</p>
       </div>
-      <div className="w-10 h-10 bg-gray-100 rounded border border-gray-200 flex items-center justify-center">
-        <Box className="w-5 h-5 text-gray-400" />
+      <div className="w-12 h-12 bg-white rounded-lg border border-yappy-grey-light flex items-center justify-center shadow-sm">
+        <Box className="w-6 h-6 text-yappy-grey-med" />
       </div>
     </div>
   </header>
@@ -39,16 +39,21 @@ interface MetricCardProps {
 }
 
 const MetricCard = ({ label, value, trend, trendIsPositive, icon: Icon }: MetricCardProps) => (
-  <div className="flex flex-col p-5 bg-gray-50 rounded-lg border border-gray-100">
-    <div className="flex justify-between items-start mb-2">
-      <span className="text-xs font-bold text-gray-500 uppercase tracking-wider">{label}</span>
-      {Icon && <Icon className="w-4 h-4 text-gray-400" />}
+  <div className="flex flex-col p-6 bg-white rounded-lg border border-yappy-grey-light shadow-[0_2px_4px_rgba(0,0,0,0.02)] h-full relative overflow-hidden group">
+    <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-transparent via-yappy-grey-light to-transparent opacity-0 group-hover:opacity-50 transition-opacity" />
+    <div className="flex justify-between items-start mb-4">
+      <span className="text-[11px] font-bold text-yappy-grey-med uppercase tracking-widest">{label}</span>
+      {Icon && <Icon className="w-4 h-4 text-yappy-grey-med/70" />}
     </div>
-    <div className="flex items-baseline gap-3 mt-auto">
-      <span className="text-3xl font-bold text-gray-900">{value}</span>
+    <div className="flex items-center justify-between mt-auto">
+      <span className="text-4xl font-bold text-yappy-grey-dark tracking-tight">{value}</span>
       {trend && (
-        <div className={`flex items-center text-xs font-bold px-1.5 py-0.5 rounded-full ${trendIsPositive ? 'text-positive bg-green-50' : 'text-negative bg-red-50'}`}>
-          {trendIsPositive ? <ArrowUp className="w-3 h-3 mr-0.5" /> : <ArrowDown className="w-3 h-3 mr-0.5" />}
+        <div className={`flex items-center gap-1 px-2 py-1 rounded-full text-[11px] font-bold ${
+          trendIsPositive 
+            ? 'bg-yappy-green/10 text-yappy-green' 
+            : 'bg-yappy-red/10 text-yappy-red'
+        }`}>
+          {trendIsPositive ? <ArrowUp className="w-3 h-3" /> : <ArrowDown className="w-3 h-3" />}
           {trend}
         </div>
       )}
@@ -60,16 +65,21 @@ interface InsightPanelProps {
   title: string;
   children: React.ReactNode;
   footer?: string;
+  icon?: LucideIcon;
 }
 
-const InsightPanel = ({ title, children, footer }: InsightPanelProps) => (
-  <div className="bg-gray-50 rounded-lg border border-gray-100 p-8 mt-8">
-    <h3 className="text-lg font-bold text-gray-900 mb-4">{title}</h3>
-    <div className="space-y-3">
+const InsightPanel = ({ title, children, footer, icon: Icon }: InsightPanelProps) => (
+  <div className="bg-yappy-grey-light/30 rounded-lg border border-yappy-grey-light p-8 mt-10">
+    <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2.5">
+      {Icon ? <Icon className="w-5 h-5 text-yappy-orange" /> : <div className="w-1.5 h-5 bg-yappy-orange rounded-full" />}
+      {title}
+    </h3>
+    <div className="space-y-4">
       {children}
     </div>
     {footer && (
-      <div className="mt-6 pt-6 border-t border-gray-200 text-sm font-medium text-gray-600">
+      <div className="mt-8 pt-6 border-t border-yappy-grey-light/60 text-sm font-medium text-yappy-grey-med flex items-center gap-2">
+        <Info className="w-4 h-4 text-yappy-orange" />
         {footer}
       </div>
     )}
@@ -77,17 +87,26 @@ const InsightPanel = ({ title, children, footer }: InsightPanelProps) => (
 );
 
 const Bullet = ({ children }: { children: React.ReactNode }) => (
-  <div className="flex items-start gap-3">
-    <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2 shrink-0" />
-    <p className="text-gray-700 leading-relaxed">{children}</p>
+  <div className="flex items-start gap-3 group">
+    <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 group-hover:scale-125 transition-transform" />
+    <p className="text-yappy-grey-dark leading-relaxed text-[15px]">{children}</p>
   </div>
 );
 
-const Tag = ({ children }: { children: React.ReactNode }) => (
-  <span className="inline-flex items-center px-2 py-1 rounded bg-gray-100 text-xs font-medium text-gray-600 border border-gray-200">
-    {children}
-  </span>
-);
+const Tag = ({ children, color = "gray" }: { children: React.ReactNode, color?: "gray" | "red" | "orange" | "green" }) => {
+  const colorClasses = {
+    gray: "bg-yappy-grey-light text-yappy-grey-dark border-transparent",
+    red: "bg-red-50 text-red-700 border-red-100",
+    orange: "bg-orange-50 text-orange-700 border-orange-100",
+    green: "bg-green-50 text-green-700 border-green-100"
+  };
+
+  return (
+    <span className={`inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-semibold border ${colorClasses[color]}`}>
+      {children}
+    </span>
+  );
+};
 
 interface TacticalCardProps {
   name: string;
@@ -98,31 +117,40 @@ interface TacticalCardProps {
 }
 
 const TacticalCard = ({ name, description, stats, tags, highlights }: TacticalCardProps) => (
-  <div className="bg-white border border-gray-200 rounded-lg p-6 shadow-sm">
-    <div className="flex justify-between items-start mb-4">
+  <div className="bg-white border border-yappy-grey-light rounded-lg p-7 shadow-sm hover:shadow-md transition-shadow">
+    <div className="flex justify-between items-start mb-6">
       <div>
-        <h3 className="text-lg font-bold text-gray-900">{name}</h3>
-        <p className="text-sm text-gray-500">{description}</p>
+        <h3 className="text-xl font-bold text-yappy-grey-dark tracking-tight">{name}</h3>
+        <p className="text-sm text-yappy-grey-med font-medium mt-1">{description}</p>
       </div>
       <div className="flex gap-2">
         {tags.map(t => <Tag key={t}>{t}</Tag>)}
       </div>
     </div>
     
-    <div className="grid grid-cols-5 gap-4 mb-6 py-4 border-t border-b border-gray-100">
+    <div className="flex items-center gap-8 mb-8 py-5 border-t border-b border-yappy-grey-light relative">
       {stats.map((s, i) => (
-        <div key={i}>
-          <p className="text-[10px] font-bold text-gray-400 uppercase mb-1">{s.label}</p>
-          <p className="text-lg font-bold text-gray-900">{s.value}</p>
+        <div key={i} className="flex-1 border-r border-dashed border-yappy-grey-light last:border-0 pr-4 last:pr-0">
+          <p className="text-[10px] font-bold text-yappy-grey-med uppercase mb-1 tracking-wider">{s.label}</p>
+          <p className="text-xl font-bold text-yappy-grey-dark">{s.value}</p>
         </div>
       ))}
+      {/* Sparkline Placeholder */}
+      <div className="w-16 h-8 ml-4 opacity-50 hidden sm:block" title="Activity Trend">
+        <div className="w-full h-full bg-gradient-to-t from-yappy-orange/20 to-transparent rounded-sm border-b-2 border-yappy-orange relative overflow-hidden">
+           <svg viewBox="0 0 64 32" className="w-full h-full absolute bottom-0 left-0" preserveAspectRatio="none">
+             <path d="M0 32 L10 20 L20 28 L30 10 L40 22 L50 5 L64 15 V32 H0 Z" fill="currentColor" className="text-yappy-orange/10" />
+             <path d="M0 32 L10 20 L20 28 L30 10 L40 22 L50 5 L64 15" fill="none" stroke="currentColor" strokeWidth="2" className="text-yappy-orange" />
+           </svg>
+        </div>
+      </div>
     </div>
 
-    <div className="space-y-2">
+    <div className="space-y-3 bg-yappy-grey-light/20 p-4 rounded-md -mx-2">
       {highlights.map((h, i) => (
-        <div key={i} className="flex items-start gap-2 text-sm text-gray-600">
-          <span className="text-yappy-orange mt-1">•</span>
-          <span>{h}</span>
+        <div key={i} className="flex items-start gap-2.5 text-[13px] text-yappy-grey-dark font-medium">
+          <span className="text-yappy-orange mt-1.5 text-[10px]">●</span>
+          <span className="leading-relaxed">{h}</span>
         </div>
       ))}
     </div>
@@ -132,16 +160,18 @@ const TacticalCard = ({ name, description, stats, tags, highlights }: TacticalCa
 // --- Pages ---
 
 const Page1_ExecutiveSummary = () => (
-  <section className="report-page">
+  <section className="report-page print:break-after-page">
     <Header />
     
     <div className="mb-8">
-      <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-        <Target className="w-5 h-5 text-yappy-orange" />
+      <h2 className="text-xl font-bold text-yappy-grey-dark mb-8 flex items-center gap-2.5">
+        <div className="p-1.5 bg-yappy-orange/10 rounded text-yappy-orange">
+          <Target className="w-5 h-5" />
+        </div>
         Global Overview
       </h2>
       
-      <div className="grid grid-cols-4 gap-4 mb-8">
+      <div className="grid grid-cols-4 gap-5 mb-10">
         <MetricCard 
           label="Active Targets" 
           value="28" 
@@ -174,6 +204,7 @@ const Page1_ExecutiveSummary = () => (
 
       <InsightPanel 
         title="Key Insights This Month"
+        icon={Zap}
         footer="This month: 2.4M impressions, 38k complete views, 38% avg completion rate across all campaigns."
       >
         <Bullet>Significant increase in role engagement across priority accounts, driven by Tactical campaigns.</Bullet>
@@ -185,36 +216,38 @@ const Page1_ExecutiveSummary = () => (
 );
 
 const Page2_TacticalHighlights = () => (
-  <section className="report-page">
+  <section className="report-page print:break-after-page">
     <Header />
     
     <div className="mb-8">
-      <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-        <Layers className="w-5 h-5 text-yappy-orange" />
+      <h2 className="text-xl font-bold text-yappy-grey-dark mb-8 flex items-center gap-2.5">
+        <div className="p-1.5 bg-yappy-orange/10 rounded text-yappy-orange">
+          <Layers className="w-5 h-5" />
+        </div>
         Tactical Campaign Highlights
       </h2>
 
       {/* Aggregate Metrics */}
-      <div className="grid grid-cols-5 gap-4 mb-10">
-        <div className="p-4 bg-gray-50 rounded border border-gray-100">
-           <p className="text-xs text-gray-500 uppercase font-bold mb-1">Roles Engaged</p>
-           <p className="text-2xl font-bold text-gray-900">342</p>
+      <div className="grid grid-cols-5 gap-5 mb-12">
+        <div className="p-5 bg-white rounded-lg border border-yappy-grey-light shadow-sm">
+           <p className="text-[10px] text-yappy-grey-med uppercase font-bold mb-2 tracking-wider">Roles Engaged</p>
+           <p className="text-3xl font-bold text-yappy-grey-dark">342</p>
         </div>
-        <div className="p-4 bg-gray-50 rounded border border-gray-100">
-           <p className="text-xs text-gray-500 uppercase font-bold mb-1">Avg Depth</p>
-           <p className="text-2xl font-bold text-gray-900">3.2</p>
+        <div className="p-5 bg-white rounded-lg border border-yappy-grey-light shadow-sm">
+           <p className="text-[10px] text-yappy-grey-med uppercase font-bold mb-2 tracking-wider">Avg Depth</p>
+           <p className="text-3xl font-bold text-yappy-grey-dark">3.2</p>
         </div>
-        <div className="p-4 bg-gray-50 rounded border border-gray-100">
-           <p className="text-xs text-gray-500 uppercase font-bold mb-1">Watch Time</p>
-           <p className="text-2xl font-bold text-gray-900">128h</p>
+        <div className="p-5 bg-white rounded-lg border border-yappy-grey-light shadow-sm">
+           <p className="text-[10px] text-yappy-grey-med uppercase font-bold mb-2 tracking-wider">Watch Time</p>
+           <p className="text-3xl font-bold text-yappy-grey-dark">128h</p>
         </div>
-        <div className="p-4 bg-gray-50 rounded border border-gray-100">
-           <p className="text-xs text-gray-500 uppercase font-bold mb-1">New Roles</p>
-           <p className="text-2xl font-bold text-gray-900">+45</p>
+        <div className="p-5 bg-white rounded-lg border border-yappy-grey-light shadow-sm">
+           <p className="text-[10px] text-yappy-grey-med uppercase font-bold mb-2 tracking-wider">New Roles</p>
+           <p className="text-3xl font-bold text-yappy-grey-dark text-yappy-green">+45</p>
         </div>
-        <div className="p-4 bg-gray-50 rounded border border-gray-100">
-           <p className="text-xs text-gray-500 uppercase font-bold mb-1">Completions</p>
-           <p className="text-2xl font-bold text-gray-900">1.2k</p>
+        <div className="p-5 bg-white rounded-lg border border-yappy-grey-light shadow-sm">
+           <p className="text-[10px] text-yappy-grey-med uppercase font-bold mb-2 tracking-wider">Completions</p>
+           <p className="text-3xl font-bold text-yappy-grey-dark">1.2k</p>
         </div>
       </div>
 
@@ -273,9 +306,12 @@ const Page2_TacticalHighlights = () => (
       </div>
 
       {/* Insights */}
-      <div className="bg-gray-50 p-6 rounded-lg border border-gray-100">
-        <h4 className="font-bold text-gray-900 text-sm uppercase mb-3">Tactical Insights</h4>
-        <div className="grid grid-cols-2 gap-6">
+      <div className="bg-yappy-grey-light/30 p-8 rounded-lg border border-yappy-grey-light">
+        <h4 className="font-bold text-yappy-grey-dark text-sm uppercase mb-5 flex items-center gap-2">
+          <div className="w-2 h-2 bg-yappy-orange rounded-full"></div>
+          Tactical Insights
+        </h4>
+        <div className="grid grid-cols-2 gap-8">
             <Bullet>Southern Rail showed increasing engagement from Risk & Compliance, indicating momentum in the buying group.</Bullet>
             <Bullet>Content piece 'Automation ROI' resonated strongly among Technology roles at Apex, suggesting readiness for deeper solution messaging.</Bullet>
         </div>
@@ -286,16 +322,18 @@ const Page2_TacticalHighlights = () => (
 );
 
 const Page3_AlwaysOnHighlights = () => (
-  <section className="report-page">
-    <Header />
+  <section className="report-page print:break-after-page">
+    <Header title="Always On Program Highlights" />
     
     <div className="mb-8">
-      <h2 className="text-xl font-bold text-gray-900 mb-6 flex items-center gap-2">
-        <PlayCircle className="w-5 h-5 text-yappy-orange" />
-        Always On Program Highlights
+      <h2 className="text-xl font-bold text-yappy-grey-dark mb-8 flex items-center gap-2.5">
+        <div className="p-1.5 bg-yappy-orange/10 rounded text-yappy-orange">
+          <PlayCircle className="w-5 h-5" />
+        </div>
+        Program Performance
       </h2>
 
-       <div className="grid grid-cols-4 gap-4 mb-8">
+       <div className="grid grid-cols-4 gap-5 mb-12">
         <MetricCard 
           label="Target Reach" 
           value="68%" 
@@ -326,47 +364,54 @@ const Page3_AlwaysOnHighlights = () => (
         />
       </div>
 
-      <div className="grid grid-cols-1 gap-8">
+      <div className="grid grid-cols-1 gap-10">
         
         {/* Top Targets Table */}
         <div>
-          <h3 className="text-lg font-bold text-gray-900 mb-4">Top Always On Targets</h3>
-          <div className="border border-gray-200 rounded-lg overflow-hidden">
+          <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
+            <BarChart3 className="w-5 h-5 text-yappy-grey-med" />
+            Top Always On Targets
+          </h3>
+          <div className="border border-yappy-grey-light rounded-lg overflow-hidden shadow-sm bg-white">
             <table className="w-full text-sm text-left">
-              <thead className="bg-gray-50 text-gray-500 font-semibold border-b border-gray-200">
+              <thead className="bg-gray-50 text-yappy-grey-med font-semibold border-b border-yappy-grey-light uppercase text-[11px] tracking-wider">
                 <tr>
-                  <th className="px-4 py-3">Target Name</th>
-                  <th className="px-4 py-3">Awareness Stage</th>
-                  <th className="px-4 py-3">Impressions</th>
-                  <th className="px-4 py-3">Complete Views</th>
-                  <th className="px-4 py-3">Watch Time</th>
-                  <th className="px-4 py-3">Status</th>
+                  <th className="px-6 py-4">Target Name</th>
+                  <th className="px-6 py-4">Awareness Stage</th>
+                  <th className="px-6 py-4">Impressions</th>
+                  <th className="px-6 py-4">Complete Views</th>
+                  <th className="px-6 py-4">Watch Time</th>
+                  <th className="px-6 py-4">Status</th>
                 </tr>
               </thead>
-              <tbody className="divide-y divide-gray-100">
-                <tr>
-                  <td className="px-4 py-3 font-medium text-gray-900">Global Logistics Co.</td>
-                  <td className="px-4 py-3"><Tag>High</Tag></td>
-                  <td className="px-4 py-3 text-gray-600">12,400</td>
-                  <td className="px-4 py-3 text-gray-600">4,200</td>
-                  <td className="px-4 py-3 text-gray-600">42h</td>
-                  <td className="px-4 py-3 text-positive font-medium text-xs">Reached 20% exposure</td>
+              <tbody className="divide-y divide-yappy-grey-light">
+                <tr className="hover:bg-gray-50/50 transition-colors">
+                  <td className="px-6 py-4 font-bold text-yappy-grey-dark">Global Logistics Co.</td>
+                  <td className="px-6 py-4"><Tag color="red">High</Tag></td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">12,400</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">4,200</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">42h</td>
+                  <td className="px-6 py-4 text-yappy-green font-bold text-xs flex items-center gap-1">
+                    <ArrowUp className="w-3 h-3" /> Reached 20% exposure
+                  </td>
                 </tr>
-                 <tr>
-                  <td className="px-4 py-3 font-medium text-gray-900">Metro Transit Authority</td>
-                  <td className="px-4 py-3"><Tag>Medium</Tag></td>
-                  <td className="px-4 py-3 text-gray-600">8,100</td>
-                  <td className="px-4 py-3 text-gray-600">2,100</td>
-                  <td className="px-4 py-3 text-gray-600">28h</td>
-                  <td className="px-4 py-3 text-yappy-orange font-medium text-xs">New this month</td>
+                 <tr className="hover:bg-gray-50/50 transition-colors">
+                  <td className="px-6 py-4 font-bold text-yappy-grey-dark">Metro Transit Authority</td>
+                  <td className="px-6 py-4"><Tag color="orange">Medium</Tag></td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">8,100</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">2,100</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">28h</td>
+                  <td className="px-6 py-4 text-yappy-orange font-bold text-xs flex items-center gap-1">
+                    <Zap className="w-3 h-3" /> New this month
+                  </td>
                 </tr>
-                 <tr>
-                  <td className="px-4 py-3 font-medium text-gray-900">West Coast Ports</td>
-                  <td className="px-4 py-3"><Tag>Low</Tag></td>
-                  <td className="px-4 py-3 text-gray-600">3,400</td>
-                  <td className="px-4 py-3 text-gray-600">850</td>
-                  <td className="px-4 py-3 text-gray-600">12h</td>
-                  <td className="px-4 py-3 text-gray-400 text-xs">-</td>
+                 <tr className="hover:bg-gray-50/50 transition-colors">
+                  <td className="px-6 py-4 font-bold text-yappy-grey-dark">West Coast Ports</td>
+                  <td className="px-6 py-4"><Tag color="gray">Low</Tag></td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">3,400</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">850</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">12h</td>
+                  <td className="px-6 py-4 text-yappy-grey-med text-xs">-</td>
                 </tr>
               </tbody>
             </table>
@@ -375,32 +420,41 @@ const Page3_AlwaysOnHighlights = () => (
 
         {/* Content Performance */}
         <div>
-           <h3 className="text-lg font-bold text-gray-900 mb-4">Top Performing Content</h3>
-           <div className="space-y-3">
+           <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
+             <Layers className="w-5 h-5 text-yappy-grey-med" />
+             Top Performing Content
+           </h3>
+           <div className="space-y-4">
               {[
                 { title: "The Future of Logistics Automation", type: "AO Only", imp: "45k", views: "12k", orgs: "142", note: "Drove 60% of AO completions" },
                 { title: "Safety First: Site Protocols", type: "Shared", imp: "22k", views: "8k", orgs: "98", note: "High retention rate (85%)" },
               ].map((item, i) => (
-                <div key={i} className="flex items-center justify-between p-4 bg-white border border-gray-200 rounded-lg">
-                  <div className="flex-1">
-                    <div className="flex items-center gap-2 mb-1">
-                      <span className="font-bold text-gray-900">{item.title}</span>
-                      <span className="text-[10px] uppercase tracking-wide px-1.5 py-0.5 bg-gray-100 text-gray-500 rounded">{item.type}</span>
+                <div key={i} className="flex items-center justify-between p-5 bg-white border border-yappy-grey-light rounded-lg shadow-sm hover:shadow-md transition-shadow">
+                  <div className="flex-1 flex items-start gap-4">
+                    {/* Thumbnail Placeholder */}
+                    <div className="w-10 h-10 bg-yappy-grey-light rounded flex-shrink-0" />
+                    <div>
+                      <div className="flex items-center gap-3 mb-1">
+                        <span className="font-bold text-yappy-grey-dark text-base">{item.title}</span>
+                        <span className="text-[10px] uppercase tracking-wide px-2 py-0.5 bg-yappy-grey-light text-yappy-grey-dark font-semibold rounded">{item.type}</span>
+                      </div>
+                      <p className="text-xs text-yappy-orange font-medium flex items-center gap-1">
+                        <Info className="w-3 h-3" /> {item.note}
+                      </p>
                     </div>
-                    <p className="text-xs text-yappy-orange font-medium">{item.note}</p>
                   </div>
-                  <div className="flex gap-6 text-sm">
-                    <div className="text-center">
-                      <p className="text-xs text-gray-400 font-bold uppercase">Imp</p>
-                      <p className="font-bold text-gray-700">{item.imp}</p>
+                  <div className="flex gap-10 text-sm">
+                    <div className="w-16 text-center">
+                      <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Imp</p>
+                      <p className="font-bold text-yappy-grey-dark text-lg">{item.imp}</p>
                     </div>
-                    <div className="text-center">
-                      <p className="text-xs text-gray-400 font-bold uppercase">Views</p>
-                      <p className="font-bold text-gray-700">{item.views}</p>
+                    <div className="w-16 text-center">
+                      <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Views</p>
+                      <p className="font-bold text-yappy-grey-dark text-lg">{item.views}</p>
                     </div>
-                     <div className="text-center">
-                      <p className="text-xs text-gray-400 font-bold uppercase">Orgs</p>
-                      <p className="font-bold text-gray-700">{item.orgs}</p>
+                     <div className="w-16 text-center">
+                      <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Orgs</p>
+                      <p className="font-bold text-yappy-grey-dark text-lg">{item.orgs}</p>
                     </div>
                   </div>
                 </div>
@@ -409,16 +463,22 @@ const Page3_AlwaysOnHighlights = () => (
         </div>
 
         {/* Narrative */}
-        <div className="bg-gray-900 text-white p-6 rounded-lg mt-4">
-          <h4 className="font-bold text-lg mb-4">Program Narrative</h4>
-          <div className="space-y-3">
-             <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-yappy-orange mt-0.5 shrink-0" />
-                <p className="text-gray-300 text-sm leading-relaxed">AO program continues to build early awareness across priority heavy industry markets.</p>
+        <div className="bg-yappy-grey-dark text-white p-8 rounded-lg mt-4 shadow-lg relative overflow-hidden">
+           <div className="absolute top-0 right-0 w-64 h-64 bg-yappy-orange/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+          <h4 className="font-bold text-lg mb-6 flex items-center gap-3 text-white relative z-10">
+            <div className="w-6 h-6 rounded-full border-2 border-yappy-orange flex items-center justify-center">
+              <CheckCircle2 className="w-3 h-3 text-yappy-orange" />
+            </div>
+            Program Narrative
+          </h4>
+          <div className="space-y-4 relative z-10">
+             <div className="flex items-start gap-4">
+                <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 shadow-[0_0_8px_rgba(247,124,34,0.6)]" />
+                <p className="text-gray-300 text-[15px] leading-relaxed">AO program continues to build early awareness across priority heavy industry markets.</p>
               </div>
-              <div className="flex items-start gap-3">
-                <CheckCircle2 className="w-5 h-5 text-yappy-orange mt-0.5 shrink-0" />
-                <p className="text-gray-300 text-sm leading-relaxed">Consistent uplift among target clusters in logistics sector, with increasing watch time from Operations roles.</p>
+              <div className="flex items-start gap-4">
+                <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 shadow-[0_0_8px_rgba(247,124,34,0.6)]" />
+                <p className="text-gray-300 text-[15px] leading-relaxed">Consistent uplift among target clusters in logistics sector, with increasing watch time from Operations roles.</p>
               </div>
           </div>
         </div>

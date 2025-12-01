@@ -1,0 +1,64 @@
+Please refine and upgrade the current design while keeping the existing structure and content.
+I’m not using any backend or frameworks – just HTML + CSS.
+
+1. Page header improvements (all pages)
+	•	Keep the “Monthly Progress Report / November 2025 / Client” header, but:
+	•	Slightly increase the title weight and tighten line-height for a stronger presence.
+	•	Add a subtle horizontal divider below the header using a light border (#E3E4E6) to anchor the page.
+	•	Make the client name a little bolder than the “CLIENT” label so it reads as a proper identifier.
+
+2. Hero KPI card refinements (Global + Tactical + AO)
+	•	For all KPI rows (Global Overview, Tactical metrics row, AO metrics row):
+	•	Keep the card layout but add either:
+	•	a very subtle border (1px solid #E3E4E6) or
+	•	a faint background tint using the Yappy light grey (#EAEBEC at ~4–6%).
+	•	Ensure the trend indicator (arrow + % or delta) is vertically centered and consistently aligned across all cards.
+	•	Use a small pill-style background behind trends (soft green for up, soft red for down), but keep it subtle and in line with the brand.
+
+3. Tactical cards (Southern Rail / Apex / Pacific) polish
+	•	Each tactical card already shows:
+	•	Name, one-line description, metrics row (Reached, Engaged, Watch Time, Impressions, Comp. Views) and bullets.
+	•	Please:
+	•	Ensure every card includes a one-line contextual subtitle under the title (where missing) so they’re consistent.
+	•	Style the role group tags (e.g. Ops, Finance, Risk) as proper chips:
+	•	Light grey background, rounded corners, small padding (6px x 10px), dark grey text.
+	•	Increase the spacing between the metrics row and the bullet insights slightly for readability.
+
+(Optional but nice: if simple to do, add a tiny 40–60px wide sparkline placeholder for “watch time trend” inside each tactical card, aligned to the right of the metrics row. It can be a simple SVG or CSS gradient bar – just visual, no real data needed.)
+
+4. Tactical Insights block
+	•	Keep the “Tactical Insights” panel at the bottom of the Tactical page but:
+	•	Give it a subtle background tint (very light grey) so it feels like a summary block.
+	•	Add a small orange icon or bullet marker to the left of the heading to tie it visually to the other section icons.
+
+5. Always On page header and structure
+	•	For the Always On page:
+	•	Change the main section heading near the top from “Monthly Progress Report” to “Always On Program Highlights — November 2025” (or similar), so it’s clear this page is AO-focused.
+	•	Keep the small logo / client region as is.
+
+6. AO Target table enhancements
+	•	In the “Top Always On Targets” table:
+	•	Style the Awareness Stage labels (High, Medium, Low) as coloured pills:
+	•	High: soft red tint background, red text.
+	•	Medium: soft orange tint background, orange text.
+	•	Low: soft grey tint background, dark grey text.
+	•	Maintain subtle, clean styling (no heavy saturation).
+
+7. Top Performing Content cards
+	•	For each content row in “Top Performing Content”:
+	•	Add a small square thumbnail placeholder (40x40px) on the left of the title.
+	•	Keep the title and subtitle stacked to the right of the thumbnail.
+	•	Align the right-hand metrics (IMP, VIEWS, ORGS) to a fixed width so they line up consistently between rows.
+
+8. Program Narrative block
+	•	The dark Program Narrative block is great. Please:
+	•	Add a small orange icon (e.g. a simple outline circle with a check/insight symbol) to the left of the heading “Program Narrative”.
+	•	Slightly increase line spacing on the bullet text for better legibility against the dark background.
+
+9. Consistency & tokens
+	•	Use the existing Yappy design tokens:
+	•	Primary orange #F77C22, greys #EAEBEC, #A9A9A9, #272525, red #D11E1A, yellow-orange #FFAB2D, green #9FC64B.
+	•	Heading font: Poppins, body font: Inter (fall back to system fonts).
+	•	Ensure heading styles (H1, H2, section labels) and spacing between sections are consistent across all three pages.
+
+Please modify the existing HTML and CSS rather than rewriting everything from scratch. Keep the current content and structure, but apply the visual refinements and class/style adjustments described above so the prototype feels like a polished, production-ready monthly report.
