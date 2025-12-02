@@ -475,25 +475,25 @@ const Page4_AlwaysOnHighlights = () => (
             <thead className="bg-gray-50 text-yappy-grey-med font-semibold border-b border-yappy-grey-light uppercase text-[11px] tracking-wider">
               <tr>
                 <th className="px-6 py-4">Target Company</th>
-                <th className="px-6 py-4">Est. Audience Size</th>
+                <th className="px-6 py-4">Impressions</th>
                 <th className="px-6 py-4">Complete Views</th>
-                <th className="px-6 py-4">Conversion Rate</th>
+                <th className="px-6 py-4">Watch Time</th>
                 <th className="px-6 py-4">Status</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-yappy-grey-light">
               {[
-                { name: "Global Logistics Co.", audience: "8,500", views: "4,200", rate: "49.4%", status: "Strong Performer", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
-                { name: "Pacific Ports Group", audience: "6,200", views: "1,800", rate: "29.0%", status: "Emerging", statusIcon: Zap, statusColor: "text-yappy-orange" },
-                { name: "Metro Transit Authority", audience: "5,800", views: "2,100", rate: "36.2%", status: "High Momentum", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
-                { name: "National Rail Services", audience: "4,500", views: "1,100", rate: "24.4%", status: "Tracking", statusIcon: null, statusColor: "text-yappy-grey-med" },
-                { name: "West Coast Ports", audience: "3,200", views: "850", rate: "26.6%", status: "Watch List", statusIcon: null, statusColor: "text-yappy-grey-med" },
+                { name: "Global Logistics Co.", imp: "12,400", views: "4,200", time: "42h", status: "Strong Performer", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
+                { name: "Pacific Ports Group", imp: "6,500", views: "1,800", time: "22h", status: "Emerging", statusIcon: Zap, statusColor: "text-yappy-orange" },
+                { name: "Metro Transit Authority", imp: "8,100", views: "2,100", time: "28h", status: "High Momentum", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
+                { name: "National Rail Services", imp: "4,200", views: "1,100", time: "18h", status: "Tracking", statusIcon: null, statusColor: "text-yappy-grey-med" },
+                { name: "West Coast Ports", imp: "3,400", views: "850", time: "12h", status: "Watch List", statusIcon: null, statusColor: "text-yappy-grey-med" },
               ].map((row, i) => (
                 <tr key={i} className="hover:bg-gray-50/50 transition-colors">
                   <td className="px-6 py-4 font-bold text-yappy-grey-dark">{row.name}</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.audience}</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.imp}</td>
                   <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.views}</td>
-                  <td className="px-6 py-4 font-bold text-yappy-grey-dark">{row.rate}</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.time}</td>
                   <td className={`px-6 py-4 font-bold text-xs flex items-center gap-1 ${row.statusColor}`}>
                     {row.statusIcon && <row.statusIcon className="w-3 h-3" />} {row.status}
                   </td>
