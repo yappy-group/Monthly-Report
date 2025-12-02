@@ -297,10 +297,17 @@ const TacticalDeepDive = () => (
        <div>
           <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-4">Priority Messages</h4>
           <div className="space-y-2">
-             {['Predictive Maintenance ROI', 'Safety Compliance Standards', 'Operational Efficiency'].map(msg => (
-               <div key={msg} className="flex items-center gap-2 text-sm text-yappy-grey-dark font-medium bg-yappy-grey-light/30 px-3 py-2 rounded">
-                 <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full"></div>
-                 {msg}
+             {[
+               { name: 'Predictive Maintenance ROI', active: true },
+               { name: 'Safety Compliance Standards', active: false },
+               { name: 'Operational Efficiency', active: true }
+             ].map(msg => (
+               <div key={msg.name} className="flex items-center justify-between gap-2 text-sm text-yappy-grey-dark font-medium bg-yappy-grey-light/30 px-3 py-2 rounded">
+                 <div className="flex items-center gap-2">
+                   <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full"></div>
+                   {msg.name}
+                 </div>
+                 {msg.active && <Tag color="green">Active This Month</Tag>}
                </div>
              ))}
           </div>
@@ -318,29 +325,6 @@ const TacticalDeepDive = () => (
        </div>
     </div>
 
-    <div className="mb-10">
-       <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-4">Role Group Influence</h4>
-       <div className="border border-yappy-grey-light rounded-lg overflow-hidden">
-          <table className="w-full text-xs text-left">
-             <thead className="bg-yappy-grey-light/30 text-yappy-grey-med uppercase font-bold">
-                <tr>
-                   <th className="px-4 py-2">Role Group</th>
-                   <th className="px-4 py-2">Impressions</th>
-                   <th className="px-4 py-2">Views</th>
-                   <th className="px-4 py-2">Complete Views</th>
-                   <th className="px-4 py-2">New Roles</th>
-                </tr>
-             </thead>
-             <tbody className="divide-y divide-yappy-grey-light text-yappy-grey-dark font-medium">
-                <tr><td className="px-4 py-2">Operations</td><td className="px-4 py-2">850</td><td className="px-4 py-2">320</td><td className="px-4 py-2">150</td><td className="px-4 py-2 text-yappy-green">+4</td></tr>
-                <tr><td className="px-4 py-2">Finance</td><td className="px-4 py-2">420</td><td className="px-4 py-2">110</td><td className="px-4 py-2">45</td><td className="px-4 py-2 text-yappy-green">+2</td></tr>
-                <tr><td className="px-4 py-2">Risk & Compliance</td><td className="px-4 py-2">380</td><td className="px-4 py-2">95</td><td className="px-4 py-2">38</td><td className="px-4 py-2 text-yappy-green">+1</td></tr>
-                <tr><td className="px-4 py-2">Technology</td><td className="px-4 py-2">310</td><td className="px-4 py-2">80</td><td className="px-4 py-2">30</td><td className="px-4 py-2 text-yappy-green">+0</td></tr>
-                <tr><td className="px-4 py-2">C-Suite</td><td className="px-4 py-2">150</td><td className="px-4 py-2">45</td><td className="px-4 py-2">15</td><td className="px-4 py-2 text-yappy-green">+0</td></tr>
-             </tbody>
-          </table>
-       </div>
-    </div>
 
     <div className="bg-yappy-grey-light/30 p-6 rounded-lg border border-yappy-grey-light">
         <h4 className="font-bold text-yappy-grey-dark text-sm uppercase mb-3 flex items-center gap-2">
