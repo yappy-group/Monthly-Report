@@ -347,8 +347,8 @@ const TacticalDeepDive = () => (
              <p className="font-bold text-yappy-grey-dark text-sm mb-3">"Predictive Maintenance ROI"</p>
              <div className="flex gap-4 text-xs text-yappy-grey-med">
                 <span><strong className="text-yappy-grey-dark">1.2k</strong> Impressions</span>
-                <span><strong className="text-yappy-grey-dark">450</strong> Views</span>
                 <span><strong className="text-yappy-grey-dark">180</strong> Complete Views</span>
+                <span><strong className="text-yappy-grey-dark">15h</strong> Watch Time</span>
              </div>
           </div>
        </div>
