@@ -455,7 +455,7 @@ const Page4_AlwaysOnHighlights = () => (
           icon={Users}
         />
         <MetricCard 
-          label="Engagement" 
+          label="Impressions" 
           value="14.2k" 
           trend="2.1%" 
           trendIsPositive={false} 
