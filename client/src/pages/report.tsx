@@ -468,7 +468,7 @@ const Page4_AlwaysOnHighlights = () => (
       <div className="mb-10">
         <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
           <BarChart3 className="w-5 h-5 text-yappy-grey-med" />
-          Biggest Movers (Complete Views vs Audience Size)
+          Biggest Movers
         </h3>
         <div className="border border-yappy-grey-light rounded-lg overflow-hidden shadow-sm bg-white">
           <table className="w-full text-sm text-left">
