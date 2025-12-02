@@ -108,19 +108,7 @@ const Tag = ({ children, color = "gray" }: { children: React.ReactNode, color?: 
   );
 };
 
-const InfluenceBadge = ({ level }: { level: "High" | "Medium" | "Low" }) => {
-  const styles = {
-    High: "bg-yappy-green text-white border-transparent",
-    Medium: "bg-[#E5F0D3] text-[#4d661f] border-transparent", // Soft desaturated green
-    Low: "bg-gray-100 text-gray-600 border-transparent"
-  };
 
-  return (
-    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide border ${styles[level]}`}>
-      {level}
-    </span>
-  );
-};
 
 const ProgramNarrativeBlock = () => (
   <div className="bg-yappy-grey-light/30 border border-yappy-grey-light text-yappy-grey-dark p-8 rounded-lg mt-8 shadow-sm relative overflow-hidden">
@@ -233,10 +221,7 @@ const TacticalRollupTable = () => (
           ].map((row, i) => (
             <tr key={i} className="hover:bg-gray-50 transition-colors">
               <td className="px-5 py-3 font-bold text-yappy-grey-dark">
-                <div className="flex items-center gap-3">
-                  {row.name}
-                  <InfluenceBadge level={row.level as "High" | "Medium" | "Low"} />
-                </div>
+                {row.name}
               </td>
               <td className="px-5 py-3 text-yappy-grey-med font-medium">{row.aud}</td>
               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
@@ -273,7 +258,6 @@ const TacticalDeepDive = () => (
         </div>
       </div>
       <div className="flex gap-2">
-        <InfluenceBadge level="High" />
         <Tag>Active</Tag>
       </div>
     </div>
