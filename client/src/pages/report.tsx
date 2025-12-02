@@ -123,9 +123,8 @@ const InfluenceBadge = ({ level }: { level: "High" | "Medium" | "Low" }) => {
 };
 
 const ProgramNarrativeBlock = () => (
-  <div className="bg-yappy-grey-dark text-white p-8 rounded-lg mt-8 shadow-lg relative overflow-hidden">
-      <div className="absolute top-0 right-0 w-64 h-64 bg-yappy-orange/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
-    <h4 className="font-bold text-lg mb-6 flex items-center gap-3 text-white relative z-10">
+  <div className="bg-yappy-grey-light/30 border border-yappy-grey-light text-yappy-grey-dark p-8 rounded-lg mt-8 shadow-sm relative overflow-hidden">
+    <h4 className="font-bold text-lg mb-6 flex items-center gap-3 text-yappy-grey-dark relative z-10">
       <div className="w-6 h-6 rounded-full border-2 border-yappy-orange flex items-center justify-center">
         <CheckCircle2 className="w-3 h-3 text-yappy-orange" />
       </div>
@@ -133,19 +132,19 @@ const ProgramNarrativeBlock = () => (
     </h4>
     <div className="space-y-4 relative z-10">
         <div className="flex items-start gap-4">
-          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 shadow-[0_0_8px_rgba(247,124,34,0.6)]" />
-          <p className="text-gray-300 text-[15px] leading-relaxed">Significant increase in role engagement across priority accounts, driven by Tactical campaigns.</p>
+          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Significant increase in role engagement across priority accounts, driven by Tactical campaigns.</p>
         </div>
         <div className="flex items-start gap-4">
-          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 shadow-[0_0_8px_rgba(247,124,34,0.6)]" />
-          <p className="text-gray-300 text-[15px] leading-relaxed">Watch time up 24%, led by C-Suite personas in heavy industry targets. Three new targets surpassed the 20% exposure threshold.</p>
+          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Watch time up 24%, led by C-Suite personas in heavy industry targets. Three new targets surpassed the 20% exposure threshold.</p>
         </div>
         <div className="flex items-start gap-4">
-          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 shadow-[0_0_8px_rgba(247,124,34,0.6)]" />
-          <p className="text-gray-300 text-[15px] leading-relaxed">AO program continues to build early awareness across priority heavy industry markets, with consistent uplift in logistics sector.</p>
+          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">AO program continues to build early awareness across priority heavy industry markets, with consistent uplift in logistics sector.</p>
         </div>
     </div>
-    <div className="mt-8 pt-6 border-t border-white/10 text-sm font-medium text-gray-400 flex items-center gap-2">
+    <div className="mt-8 pt-6 border-t border-yappy-grey-light/50 text-sm font-medium text-yappy-grey-med flex items-center gap-2">
       <Info className="w-4 h-4 text-yappy-orange" />
       This month: 2.4M impressions, 38k complete views, 38% avg completion rate across all campaigns.
     </div>
@@ -411,20 +410,6 @@ const Page1_ExecutiveSummary = () => (
       
       <div className="grid grid-cols-4 gap-5 mb-6">
         <MetricCard 
-          label="Roles Reached (Total)" 
-          value="1,240" 
-          trend="15%" 
-          trendIsPositive={true} 
-          icon={Users}
-        />
-        <MetricCard 
-          label="Key Roles Engaged" 
-          value="342" 
-          trend="8%" 
-          trendIsPositive={true} 
-          icon={Target}
-        />
-        <MetricCard 
           label="Watch Time (Hours)" 
           value="486h" 
           trend="24%" 
@@ -432,11 +417,25 @@ const Page1_ExecutiveSummary = () => (
           icon={Clock}
         />
         <MetricCard 
-          label="Active Targets (Total)" 
-          value="142" 
-          trend="2" 
+          label="Targets Reached %" 
+          value="68%" 
+          trend="4%" 
           trendIsPositive={true} 
           icon={Briefcase}
+        />
+        <MetricCard 
+          label="Engaged Roles" 
+          value="342" 
+          trend="8%" 
+          trendIsPositive={true} 
+          icon={Users}
+        />
+         <MetricCard 
+          label="Key Roles Engaged" 
+          value="124" 
+          trend="15%" 
+          trendIsPositive={true} 
+          icon={Target}
         />
       </div>
       <p className="text-xs text-yappy-grey-med font-medium mb-10 text-center italic">All metrics shown are for this month across all Always On and Tactical campaigns.</p>
