@@ -431,6 +431,8 @@ const Page4_AlwaysOnHighlights = () => (
         </div>
         Program Performance
       </h2>
+      
+      <p className="text-sm font-semibold text-yappy-grey-dark mb-6">Target Location: <span className="text-yappy-orange">Australia</span></p>
 
        <div className="grid grid-cols-4 gap-5 mb-12">
         <MetricCard 
