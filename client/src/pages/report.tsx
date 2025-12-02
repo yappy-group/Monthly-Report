@@ -144,7 +144,7 @@ const ProgramNarrativeBlock = () => (
           <p className="text-yappy-grey-dark text-[15px] leading-relaxed">AO program continues to build early awareness across priority heavy industry markets, with consistent uplift in logistics sector.</p>
         </div>
     </div>
-    <div className="mt-8 pt-6 border-t border-yappy-grey-light/50 text-sm font-medium text-yappy-grey-med flex items-center gap-2">
+    <div className="mt-8 pt-6 border-t border-yappy-grey-light/50 text-sm font-medium flex items-center gap-2 text-[#363636]">
       <Info className="w-4 h-4 text-yappy-orange" />
       This month: 2.4M impressions, 38k complete views, 38% avg completion rate across all campaigns.
     </div>
