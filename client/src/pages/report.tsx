@@ -465,56 +465,7 @@ const Page4_AlwaysOnHighlights = () => (
         />
       </div>
 
-      <div className="grid grid-cols-1 gap-10">
-        
-        {/* Content Performance */}
-        <div>
-           <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
-             <Layers className="w-5 h-5 text-yappy-grey-med" />
-             Top 5 Performing Content
-           </h3>
-           <div className="space-y-4">
-              {[
-                { title: "The Future of Logistics Automation", type: "AO Only", imp: "45k", views: "12k", orgs: "142", note: "Drove 60% of AO completions" },
-                { title: "Safety First: Site Protocols", type: "Shared", imp: "22k", views: "8k", orgs: "98", note: "High retention rate (85%)" },
-                { title: "Predictive Maintenance Basics", type: "Tactical", imp: "18k", views: "6.5k", orgs: "76", note: "Strong technical engagement" },
-                { title: "Sustainability in Supply Chain", type: "AO Only", imp: "15k", views: "5.2k", orgs: "110", note: "High C-Suite views" },
-                { title: "Digital Twin Case Study", type: "Shared", imp: "12k", views: "4.8k", orgs: "65", note: "New release" },
-              ].map((item, i) => (
-                <div key={i} className="flex items-center justify-between p-5 bg-white border border-yappy-grey-light rounded-lg shadow-sm hover:shadow-md transition-shadow">
-                  <div className="flex-1 flex items-start gap-4">
-                    {/* Thumbnail Placeholder */}
-                    <div className="w-10 h-10 bg-yappy-grey-light rounded flex-shrink-0" />
-                    <div>
-                      <div className="flex items-center gap-3 mb-1">
-                        <span className="font-bold text-yappy-grey-dark text-base">{item.title}</span>
-                        <span className="text-[10px] uppercase tracking-wide px-2 py-0.5 bg-yappy-grey-light text-yappy-grey-dark font-semibold rounded">{item.type}</span>
-                      </div>
-                      <p className="text-xs text-yappy-orange font-medium flex items-center gap-1">
-                        <Info className="w-3 h-3" /> {item.note}
-                      </p>
-                    </div>
-                  </div>
-                  <div className="flex gap-10 text-sm">
-                    <div className="w-16 text-center">
-                      <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Imp</p>
-                      <p className="font-bold text-yappy-grey-dark text-lg">{item.imp}</p>
-                    </div>
-                    <div className="w-16 text-center">
-                      <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Views</p>
-                      <p className="font-bold text-yappy-grey-dark text-lg">{item.views}</p>
-                    </div>
-                     <div className="w-16 text-center">
-                      <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Orgs</p>
-                      <p className="font-bold text-yappy-grey-dark text-lg">{item.orgs}</p>
-                    </div>
-                  </div>
-                </div>
-              ))}
-           </div>
-        </div>
-
-      </div>
+      
     </div>
   </section>
 );
