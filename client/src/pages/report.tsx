@@ -448,7 +448,7 @@ const Page4_AlwaysOnHighlights = () => (
           icon={Clock}
         />
         <MetricCard 
-          label="Roles Reached" 
+          label="Individuals Reached" 
           value="2,450" 
           trend="8%" 
           trendIsPositive={true} 
