@@ -528,7 +528,7 @@ const Page4_AlwaysOnHighlights = () => (
                     <p className="text-base font-semibold text-yappy-grey-dark">{target.time}</p>
                   </div>
                 </div>
-                <div className="border border-yappy-orange/20 rounded p-3 bg-yappy-orange/5">
+                <div className="border border-yappy-orange/20 rounded p-3 bg-[#f77c2200]">
                   <p className="text-[10px] font-semibold text-yappy-orange uppercase mb-1">Completion Rate</p>
                   <p className="text-lg font-semibold text-yappy-orange">{target.rate}</p>
                 </div>
