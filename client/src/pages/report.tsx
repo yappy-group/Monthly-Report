@@ -441,7 +441,6 @@ const Page1_ExecutiveSummary = () => (
       </div>
       <p className="text-xs text-yappy-grey-med font-medium mb-10 text-center italic">All metrics shown are for this month across all Always On and Tactical campaigns.</p>
 
-      <ProgramOverviewGrid />
       <ProgramNarrativeBlock />
     </div>
   </section>
