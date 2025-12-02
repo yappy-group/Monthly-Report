@@ -248,18 +248,12 @@ const TacticalRollupTable = () => (
 // New Component: Tactical Deep Dive
 const TacticalDeepDive = () => (
   <div className="bg-white border border-yappy-grey-light rounded-lg p-8 shadow-sm">
-    <div className="flex justify-between items-start mb-8 pb-6 border-b border-yappy-grey-light">
-      <div>
-        <h3 className="text-xl font-extrabold text-yappy-grey-dark tracking-tight flex items-center gap-3">
-          Tactical: Southern Rail Logistics
-        </h3>
-        <div className="flex items-center gap-4 mt-2 text-sm text-yappy-grey-med font-medium">
-          <span className="flex items-center gap-1.5"><Calendar className="w-4 h-4" /> Running for 8 months</span>
-          <span className="flex items-center gap-1.5"><Building2 className="w-4 h-4" /> Heavy Industry</span>
-        </div>
-      </div>
-      <div className="flex gap-2">
-        <Tag>Active</Tag>
+    <div className="mb-8 pb-6 border-b border-yappy-grey-light">
+      <h3 className="text-xl font-extrabold text-yappy-grey-dark tracking-tight flex items-center gap-3">
+        Tactical: Southern Rail Logistics
+      </h3>
+      <div className="mt-2 text-sm text-yappy-grey-med font-medium flex items-center gap-1.5">
+        <Calendar className="w-4 h-4" /> Running for 8 months
       </div>
     </div>
 
