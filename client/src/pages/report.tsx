@@ -259,7 +259,7 @@ const TacticalDeepDive = () => (
 
     <div className="mb-10">
       <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-6 flex items-center gap-2">
-        <BarChart3 className="w-4 h-4 text-yappy-orange" /> Metrics (This Month)
+        <BarChart3 className="w-4 h-4 text-yappy-orange" /> Metrics
       </h4>
       <div className="grid grid-cols-4 gap-6">
         <div>
