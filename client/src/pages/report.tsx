@@ -587,32 +587,31 @@ const Page4_AlwaysOnHighlights = () => (
           <FileText className="w-5 h-5 text-yappy-grey-med" />
           Key Messaging Performance
         </h3>
-        <div className="space-y-4">
+        <div className="grid grid-cols-3 gap-6">
           {[
-            { message: "Predictive Maintenance ROI", length: "18s", impressions: "12.4k", views: "4.2k", watchTime: "42h" },
-            { message: "Safety Compliance Standards", length: "24s", impressions: "8.1k", views: "2.1k", watchTime: "28h" },
-            { message: "Operational Efficiency", length: "22s", impressions: "9.8k", views: "2.5k", watchTime: "35h" },
-          ].map((msg) => (
-            <div key={msg.message} className="grid grid-cols-5 gap-3">
-              <div className="bg-white border border-yappy-grey-light rounded-lg p-4 col-span-1">
-                <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-2">Message</p>
-                <p className="font-bold text-yappy-grey-dark text-sm">{msg.message}</p>
-              </div>
-              <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
-                <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Avg Length</p>
-                <p className="text-xl font-bold text-yappy-grey-dark">{msg.length}</p>
-              </div>
-              <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
-                <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Impressions</p>
-                <p className="text-xl font-bold text-yappy-grey-dark">{msg.impressions}</p>
-              </div>
-              <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
-                <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Complete Views</p>
-                <p className="text-xl font-bold text-yappy-grey-dark">{msg.views}</p>
-              </div>
-              <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
-                <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Watch Time</p>
-                <p className="text-xl font-bold text-yappy-grey-dark">{msg.watchTime}</p>
+            { message: "Predictive Maintenance ROI", length: "18s", impressions: "12.4k", views: "4.2k", watchTime: "42h", efficiency: 8400 },
+            { message: "Operational Efficiency", length: "22s", impressions: "9.8k", views: "2.5k", watchTime: "35h", efficiency: 5727 },
+            { message: "Safety Compliance Standards", length: "24s", impressions: "8.1k", views: "2.1k", watchTime: "28h", efficiency: 4200 },
+          ].sort((a, b) => b.efficiency - a.efficiency).map((msg) => (
+            <div key={msg.message} className="bg-white border border-yappy-grey-light rounded-lg shadow-sm p-5">
+              <h4 className="font-bold text-yappy-grey-dark text-base mb-5">{msg.message}</h4>
+              <div className="space-y-4">
+                <div>
+                  <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-2">Avg Length</p>
+                  <p className="text-lg font-bold text-yappy-grey-dark">{msg.length}</p>
+                </div>
+                <div>
+                  <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-2">Impressions</p>
+                  <p className="text-lg font-bold text-yappy-grey-dark">{msg.impressions}</p>
+                </div>
+                <div>
+                  <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-2">Complete Views</p>
+                  <p className="text-lg font-bold text-yappy-grey-dark">{msg.views}</p>
+                </div>
+                <div className="border-t border-yappy-grey-light pt-4">
+                  <p className="text-[10px] font-semibold text-yappy-orange uppercase mb-2">Watch Time</p>
+                  <p className="text-xl font-bold text-yappy-orange">{msg.watchTime}</p>
+                </div>
               </div>
             </div>
           ))}
