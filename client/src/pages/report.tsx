@@ -564,15 +564,15 @@ const Page4_AlwaysOnHighlights = () => (
                 <tr key={i} className="hover:bg-gray-50/50 transition-colors">
                   <td className="px-6 py-4 font-bold text-yappy-grey-dark">{row.name}</td>
                   <td className="px-6 py-4">
-                    <div className="text-yappy-grey-dark font-mono font-bold">{row.imp}</div>
+                    <div className="text-yappy-grey-dark font-bold">{row.imp}</div>
                     <div className="text-[11px] text-yappy-green font-semibold">{row.impDelta}</div>
                   </td>
                   <td className="px-6 py-4">
-                    <div className="text-yappy-grey-dark font-mono font-bold">{row.views}</div>
+                    <div className="text-yappy-grey-dark font-bold">{row.views}</div>
                     <div className="text-[11px] text-yappy-green font-semibold">{row.viewsDelta}</div>
                   </td>
                   <td className="px-6 py-4">
-                    <div className="text-yappy-grey-dark font-mono font-bold">{row.time}</div>
+                    <div className="text-yappy-grey-dark font-bold">{row.time}</div>
                     <div className="text-[11px] text-yappy-green font-semibold">{row.timeDelta}</div>
                   </td>
                 </tr>
