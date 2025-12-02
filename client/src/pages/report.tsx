@@ -257,48 +257,38 @@ const TacticalDeepDive = () => (
       </div>
     </div>
 
-    <div className="grid grid-cols-2 gap-12 mb-10">
-      {/* Left Metrics */}
-      <div className="space-y-6">
-        <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-4 flex items-center gap-2">
-          <BarChart3 className="w-4 h-4 text-yappy-orange" /> Metrics (This Month)
-        </h4>
-        <div className="grid grid-cols-2 gap-y-6 gap-x-8">
-          <div>
-             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Audience Size</p>
-             <p className="text-xl font-bold text-yappy-grey-dark">38,000</p>
-          </div>
-          <div>
-             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Roles Reached</p>
-             <p className="text-xl font-bold text-yappy-grey-dark">140</p>
-          </div>
-           <div>
-             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Key Roles Engaged</p>
-             <p className="text-xl font-bold text-yappy-grey-dark">42</p>
-          </div>
-          <div>
-             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">New Roles</p>
-             <p className="text-xl font-bold text-yappy-green">+7</p>
-          </div>
+    <div className="mb-10">
+      <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-6 flex items-center gap-2">
+        <BarChart3 className="w-4 h-4 text-yappy-orange" /> Metrics (This Month)
+      </h4>
+      <div className="grid grid-cols-4 gap-6">
+        <div>
+          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Audience Size</p>
+          <p className="text-2xl font-bold text-yappy-grey-dark">38,000</p>
         </div>
-      </div>
-
-      {/* Right Metrics */}
-      <div className="space-y-6">
-         <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-4 opacity-0">Metrics Continued</h4>
-         <div className="grid grid-cols-2 gap-y-6 gap-x-8">
-          <div>
-             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Impressions</p>
-             <p className="text-xl font-bold text-yappy-grey-dark">2,400</p>
-          </div>
-          <div>
-             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Completed Views</p>
-             <p className="text-xl font-bold text-yappy-grey-dark">312</p>
-          </div>
-           <div>
-             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-1">Watch Time</p>
-             <p className="text-xl font-bold text-yappy-grey-dark">24h</p>
-          </div>
+        <div>
+          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Impressions</p>
+          <p className="text-2xl font-bold text-yappy-grey-dark">2,400 <span className="text-sm text-yappy-green font-bold">▲ +8%</span></p>
+        </div>
+        <div>
+          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Roles Reached</p>
+          <p className="text-2xl font-bold text-yappy-grey-dark">140 <span className="text-sm text-yappy-green font-bold">▲ +12</span></p>
+        </div>
+        <div>
+          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Roles Engaged</p>
+          <p className="text-2xl font-bold text-yappy-grey-dark">42 <span className="text-sm text-yappy-green font-bold">▲ +5</span></p>
+        </div>
+        <div>
+          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Key Roles Reached</p>
+          <p className="text-2xl font-bold text-yappy-grey-dark">28 <span className="text-sm text-yappy-green font-bold">▲ +7</span></p>
+        </div>
+        <div>
+          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Key Roles Engaged</p>
+          <p className="text-2xl font-bold text-yappy-grey-dark">18 <span className="text-sm text-yappy-green font-bold">▲ +4</span></p>
+        </div>
+        <div>
+          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Watch Time</p>
+          <p className="text-2xl font-bold text-yappy-grey-dark">24h <span className="text-sm text-yappy-green font-bold">▲ +3h</span></p>
         </div>
       </div>
     </div>
