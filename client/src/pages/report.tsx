@@ -207,17 +207,17 @@ const TacticalRollupTable = () => (
             <th className="px-5 py-3">Impressions</th>
             <th className="px-5 py-3">Roles Reached</th>
             <th className="px-5 py-3">Roles Engaged</th>
-            <th className="px-5 py-3">New Roles</th>
+            <th className="px-5 py-3">Key Roles</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-yappy-grey-light text-sm">
           {[
-            { name: "Southern Rail Logistics", aud: "38,000", imp: "2,400", impTrend: "+8%", reached: "140", reachedTrend: "+12%", engaged: "42", engagedTrend: "+5%", new: "+7", newTrend: "+2" },
-            { name: "Apex Manufacturing Group", aud: "22,500", imp: "1,200", impTrend: "+3%", reached: "98", reachedTrend: "+5%", engaged: "28", engagedTrend: "+2%", new: "+4", newTrend: "+1" },
-            { name: "Pacific Energy Systems", aud: "45,000", imp: "3,100", impTrend: "+18%", reached: "215", reachedTrend: "+18%", engaged: "68", engagedTrend: "+9%", new: "+15", newTrend: "+6" },
-            { name: "Global Shipping Corp", aud: "18,200", imp: "900", impTrend: "-1%", reached: "85", reachedTrend: "+3%", engaged: "24", engagedTrend: "+1%", new: "+2", newTrend: "+0" },
-            { name: "Northern Grid", aud: "12,400", imp: "450", impTrend: "+2%", reached: "45", reachedTrend: "+1%", engaged: "12", engagedTrend: "+0%", new: "+1", newTrend: "+0" },
-            { name: "Metro Infrastructure", aud: "28,000", imp: "1,500", impTrend: "+6%", reached: "65", reachedTrend: "+4%", engaged: "18", engagedTrend: "+2%", new: "+3", newTrend: "+1" },
+            { name: "Southern Rail Logistics", aud: "38,000", imp: "2,400", impTrend: "+8%", reached: "140", reachedDelta: "+12", engaged: "42", engagedDelta: "+5", keyRoles: "7" },
+            { name: "Apex Manufacturing Group", aud: "22,500", imp: "1,200", impTrend: "+3%", reached: "98", reachedDelta: "+5", engaged: "28", engagedDelta: "+2", keyRoles: "4" },
+            { name: "Pacific Energy Systems", aud: "45,000", imp: "3,100", impTrend: "+18%", reached: "215", reachedDelta: "+18", engaged: "68", engagedDelta: "+9", keyRoles: "15" },
+            { name: "Global Shipping Corp", aud: "18,200", imp: "900", impTrend: "-1%", reached: "85", reachedDelta: "+3", engaged: "24", engagedDelta: "+1", keyRoles: "2" },
+            { name: "Northern Grid", aud: "12,400", imp: "450", impTrend: "+2%", reached: "45", reachedDelta: "+1", engaged: "12", engagedDelta: "+0", keyRoles: "1" },
+            { name: "Metro Infrastructure", aud: "28,000", imp: "1,500", impTrend: "+6%", reached: "65", reachedDelta: "+4", engaged: "18", engagedDelta: "+2", keyRoles: "3" },
           ].map((row, i) => (
             <tr key={i} className="hover:bg-gray-50 transition-colors">
               <td className="px-5 py-3 font-bold text-yappy-grey-dark">
@@ -228,13 +228,13 @@ const TacticalRollupTable = () => (
                 {row.imp} <span className={`text-[10px] ml-1 font-bold ${row.impTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.impTrend.includes('+') ? '▲' : '▼'} {row.impTrend}</span>
               </td>
               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
-                {row.reached} <span className={`text-[10px] ml-1 font-bold ${row.reachedTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.reachedTrend.includes('+') ? '▲' : '▼'} {row.reachedTrend}</span>
+                {row.reached} <span className={`text-[10px] ml-1 font-bold ${row.reachedDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.reachedDelta.includes('+') ? '▲' : '▼'} {row.reachedDelta}</span>
               </td>
                <td className="px-5 py-3 text-yappy-grey-dark font-medium">
-                {row.engaged} <span className={`text-[10px] ml-1 font-bold ${row.engagedTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.engagedTrend.includes('+') ? '▲' : '▼'} {row.engagedTrend}</span>
+                {row.engaged} <span className={`text-[10px] ml-1 font-bold ${row.engagedDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.engagedDelta.includes('+') ? '▲' : '▼'} {row.engagedDelta}</span>
               </td>
                <td className="px-5 py-3 text-yappy-grey-dark font-medium">
-                {row.new} <span className={`text-[10px] ml-1 font-bold ${row.newTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.newTrend.includes('+') ? '▲' : '▼'} {row.newTrend}</span>
+                {row.keyRoles}
               </td>
             </tr>
           ))}
