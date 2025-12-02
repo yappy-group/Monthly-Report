@@ -344,7 +344,7 @@ const TacticalDeepDive = () => (
               <p className="text-xs font-bold text-yappy-grey-dark uppercase mb-3">Key Roles with Repeat Engagement</p>
               <div className="flex flex-wrap gap-2">
                 {['CFO', 'Plant Manager', 'Head of Maintenance'].map(role => (
-                  <Tag key={role} color="green">{role}</Tag>
+                  <Tag key={role} color="gray">{role}</Tag>
                 ))}
               </div>
             </div>
