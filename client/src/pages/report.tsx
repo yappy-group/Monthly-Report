@@ -476,6 +476,7 @@ const Page4_AlwaysOnHighlights = () => (
               <thead className="bg-gray-50 text-yappy-grey-med font-semibold border-b border-yappy-grey-light uppercase text-[11px] tracking-wider">
                 <tr>
                   <th className="px-6 py-4">Target Name</th>
+                  <th className="px-6 py-4">Location</th>
                   <th className="px-6 py-4">Awareness Level</th>
                   <th className="px-6 py-4">Impressions</th>
                   <th className="px-6 py-4">Complete Views</th>
@@ -485,14 +486,15 @@ const Page4_AlwaysOnHighlights = () => (
               </thead>
               <tbody className="divide-y divide-yappy-grey-light">
                 {[
-                  { name: "Global Logistics Co.", level: "High", levelColor: "red", imp: "12,400", views: "4,200", time: "42h", status: "Reached 20% exposure", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
-                  { name: "Metro Transit Authority", level: "Medium", levelColor: "orange", imp: "8,100", views: "2,100", time: "28h", status: "New this month", statusIcon: Zap, statusColor: "text-yappy-orange" },
-                  { name: "Pacific Ports Group", level: "Medium", levelColor: "orange", imp: "6,500", views: "1,800", time: "22h", status: "Trending Up", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
-                  { name: "National Rail Services", level: "Low", levelColor: "gray", imp: "4,200", views: "1,100", time: "18h", status: "-", statusIcon: null, statusColor: "text-yappy-grey-med" },
-                  { name: "West Coast Ports", level: "Low", levelColor: "gray", imp: "3,400", views: "850", time: "12h", status: "-", statusIcon: null, statusColor: "text-yappy-grey-med" },
+                  { name: "Global Logistics Co.", location: "Chicago, IL", level: "High", levelColor: "red", imp: "12,400", views: "4,200", time: "42h", status: "Reached 20% exposure", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
+                  { name: "Metro Transit Authority", location: "New York, NY", level: "Medium", levelColor: "orange", imp: "8,100", views: "2,100", time: "28h", status: "New this month", statusIcon: Zap, statusColor: "text-yappy-orange" },
+                  { name: "Pacific Ports Group", location: "Los Angeles, CA", level: "Medium", levelColor: "orange", imp: "6,500", views: "1,800", time: "22h", status: "Trending Up", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
+                  { name: "National Rail Services", location: "Denver, CO", level: "Low", levelColor: "gray", imp: "4,200", views: "1,100", time: "18h", status: "-", statusIcon: null, statusColor: "text-yappy-grey-med" },
+                  { name: "West Coast Ports", location: "Seattle, WA", level: "Low", levelColor: "gray", imp: "3,400", views: "850", time: "12h", status: "-", statusIcon: null, statusColor: "text-yappy-grey-med" },
                 ].map((row, i) => (
                   <tr key={i} className="hover:bg-gray-50/50 transition-colors">
                     <td className="px-6 py-4 font-bold text-yappy-grey-dark">{row.name}</td>
+                    <td className="px-6 py-4 text-yappy-grey-dark">{row.location}</td>
                     <td className="px-6 py-4"><Tag color={row.levelColor as any}>{row.level}</Tag></td>
                     <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.imp}</td>
                     <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.views}</td>
