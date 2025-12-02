@@ -587,23 +587,35 @@ const Page4_AlwaysOnHighlights = () => (
           <FileText className="w-5 h-5 text-yappy-grey-med" />
           Key Messaging Performance
         </h3>
-        <div className="grid grid-cols-4 gap-4">
-          <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
-            <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Avg Content Length</p>
-            <p className="text-2xl font-bold text-yappy-grey-dark">8.2 min</p>
-          </div>
-          <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
-            <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Total Impressions</p>
-            <p className="text-2xl font-bold text-yappy-grey-dark">34.2k</p>
-          </div>
-          <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
-            <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Complete Views</p>
-            <p className="text-2xl font-bold text-yappy-grey-dark">8.1k</p>
-          </div>
-          <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
-            <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Total Watch Time</p>
-            <p className="text-2xl font-bold text-yappy-grey-dark">142h</p>
-          </div>
+        <div className="space-y-4">
+          {[
+            { message: "Predictive Maintenance ROI", length: "18s", impressions: "12.4k", views: "4.2k", watchTime: "42h" },
+            { message: "Safety Compliance Standards", length: "24s", impressions: "8.1k", views: "2.1k", watchTime: "28h" },
+            { message: "Operational Efficiency", length: "22s", impressions: "9.8k", views: "2.5k", watchTime: "35h" },
+          ].map((msg) => (
+            <div key={msg.message} className="grid grid-cols-5 gap-3">
+              <div className="bg-white border border-yappy-grey-light rounded-lg p-4 col-span-1">
+                <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-2">Message</p>
+                <p className="font-bold text-yappy-grey-dark text-sm">{msg.message}</p>
+              </div>
+              <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
+                <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Avg Length</p>
+                <p className="text-xl font-bold text-yappy-grey-dark">{msg.length}</p>
+              </div>
+              <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
+                <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Impressions</p>
+                <p className="text-xl font-bold text-yappy-grey-dark">{msg.impressions}</p>
+              </div>
+              <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
+                <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Complete Views</p>
+                <p className="text-xl font-bold text-yappy-grey-dark">{msg.views}</p>
+              </div>
+              <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
+                <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Watch Time</p>
+                <p className="text-xl font-bold text-yappy-grey-dark">{msg.watchTime}</p>
+              </div>
+            </div>
+          ))}
         </div>
       </div>
     </div>
