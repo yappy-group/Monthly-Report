@@ -327,18 +327,26 @@ const TacticalDeepDive = () => (
 
 
     <div className="bg-yappy-grey-light/30 p-6 rounded-lg border border-yappy-grey-light">
-        <h4 className="font-bold text-yappy-grey-dark text-sm uppercase mb-3 flex items-center gap-2">
+        <h4 className="font-bold text-yappy-grey-dark text-sm uppercase mb-4 flex items-center gap-2">
           <Zap className="w-4 h-4 text-yappy-orange" />
           Tactical Insights
         </h4>
-        <div className="space-y-4">
+        <div className="space-y-5">
             <div>
-              <p className="text-xs font-bold text-yappy-grey-dark uppercase mb-1">New Key Roles Reached</p>
-              <p className="text-sm text-yappy-grey-dark">Director of Operations, Head of Compliance</p>
+              <p className="text-xs font-bold text-yappy-grey-dark uppercase mb-3">New Key Roles Reached</p>
+              <div className="flex flex-wrap gap-2">
+                {['Director of Operations', 'Head of Compliance'].map(role => (
+                  <Tag key={role} color="orange">{role}</Tag>
+                ))}
+              </div>
             </div>
             <div>
-              <p className="text-xs font-bold text-yappy-grey-dark uppercase mb-1">Key Roles with Repeat Engagement</p>
-              <p className="text-sm text-yappy-grey-dark">CFO, Plant Manager, Head of Maintenance</p>
+              <p className="text-xs font-bold text-yappy-grey-dark uppercase mb-3">Key Roles with Repeat Engagement</p>
+              <div className="flex flex-wrap gap-2">
+                {['CFO', 'Plant Manager', 'Head of Maintenance'].map(role => (
+                  <Tag key={role} color="green">{role}</Tag>
+                ))}
+              </div>
             </div>
         </div>
       </div>
