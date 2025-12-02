@@ -587,35 +587,35 @@ const Page4_AlwaysOnHighlights = () => (
           <FileText className="w-5 h-5 text-yappy-grey-med" />
           Key Messaging Performance
         </h3>
-        <div className="grid grid-cols-3 gap-6">
+        <div className="grid grid-cols-3 gap-4">
           {[
             { message: "Predictive Maintenance ROI", length: "18s", impressions: "12.4k", views: "4.2k", watchTime: "42h", efficiency: 8400 },
             { message: "Operational Efficiency", length: "22s", impressions: "9.8k", views: "2.5k", watchTime: "35h", efficiency: 5727 },
             { message: "Safety Compliance Standards", length: "24s", impressions: "8.1k", views: "2.1k", watchTime: "28h", efficiency: 4200 },
           ].sort((a, b) => b.efficiency - a.efficiency).map((msg, idx) => (
-            <div key={msg.message} className={`bg-white rounded-lg shadow-sm p-5 relative ${idx === 0 ? 'border-2 border-yappy-orange' : 'border border-yappy-grey-light'}`}>
+            <div key={msg.message} className={`bg-white rounded-lg shadow-sm p-3 relative ${idx === 0 ? 'border-2 border-yappy-orange' : 'border border-yappy-grey-light'}`}>
               {idx === 0 && (
-                <div className="absolute -top-3 right-4">
+                <div className="absolute -top-2 right-3">
                   <Tag color="orange">Best Performer</Tag>
                 </div>
               )}
-              <h4 className="font-bold text-yappy-grey-dark text-base mb-5">{msg.message}</h4>
-              <div className="space-y-4">
+              <h4 className="font-bold text-yappy-grey-dark text-sm mb-3">{msg.message}</h4>
+              <div className="space-y-3">
                 <div>
-                  <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-2">Avg Length</p>
-                  <p className="text-lg font-bold text-yappy-grey-dark">{msg.length}</p>
+                  <p className="text-[9px] font-semibold text-yappy-grey-med uppercase mb-1">Avg Length</p>
+                  <p className="text-base font-bold text-yappy-grey-dark">{msg.length}</p>
                 </div>
                 <div>
-                  <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-2">Impressions</p>
-                  <p className="text-lg font-bold text-yappy-grey-dark">{msg.impressions}</p>
+                  <p className="text-[9px] font-semibold text-yappy-grey-med uppercase mb-1">Impressions</p>
+                  <p className="text-base font-bold text-yappy-grey-dark">{msg.impressions}</p>
                 </div>
                 <div>
-                  <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-2">Complete Views</p>
-                  <p className="text-lg font-bold text-yappy-grey-dark">{msg.views}</p>
+                  <p className="text-[9px] font-semibold text-yappy-grey-med uppercase mb-1">Complete Views</p>
+                  <p className="text-base font-bold text-yappy-grey-dark">{msg.views}</p>
                 </div>
-                <div className="border-t border-yappy-grey-light pt-4">
-                  <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-2">Watch Time</p>
-                  <p className="text-xl font-bold text-yappy-grey-dark">{msg.watchTime}</p>
+                <div className="border-t border-yappy-grey-light pt-3">
+                  <p className="text-[9px] font-semibold text-yappy-grey-med uppercase mb-1">Watch Time</p>
+                  <p className="text-lg font-bold text-yappy-grey-dark">{msg.watchTime}</p>
                 </div>
               </div>
             </div>
