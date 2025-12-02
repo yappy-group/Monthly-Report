@@ -139,6 +139,35 @@ const ProgramNarrativeBlock = () => (
   </div>
 );
 
+const TacticalKeyInsights = () => (
+  <div className="bg-yappy-grey-light/30 border border-yappy-grey-light text-yappy-grey-dark p-8 rounded-lg mt-8 shadow-sm relative overflow-hidden">
+    <h4 className="font-bold text-lg mb-6 flex items-center gap-3 text-yappy-grey-dark relative z-10">
+      <div className="w-6 h-6 rounded-full border-2 border-yappy-orange flex items-center justify-center">
+        <CheckCircle2 className="w-3 h-3 text-yappy-orange" />
+      </div>
+      Tactical Key Insights
+    </h4>
+    <div className="space-y-4 relative z-10">
+        <div className="flex items-start gap-4">
+          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Southern Rail Logistics campaign driving strongest engagement with 49.4% conversion rate, significantly outperforming other priority targets.</p>
+        </div>
+        <div className="flex items-start gap-4">
+          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Pacific Ports Group showing highest growth momentum with 22% increase in complete views month-over-month, indicating emerging engagement opportunity.</p>
+        </div>
+        <div className="flex items-start gap-4">
+          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Predictive Maintenance ROI and Safety Compliance messaging driving core engagement metrics across all tactical campaigns this month.</p>
+        </div>
+    </div>
+    <div className="mt-8 pt-6 border-t border-yappy-grey-light/50 text-sm font-medium flex items-center gap-2 text-[#363636]">
+      <Info className="w-4 h-4 text-yappy-orange" />
+      Tactical campaigns: 5 active, 342 roles engaged, 156 watch hours this month.
+    </div>
+  </div>
+);
+
 // New Component: Program Overview Grid
 const ProgramOverviewGrid = () => (
   <div className="mt-8">
@@ -410,6 +439,7 @@ const Page2_TacticalRollup = () => (
   <section className="report-page print:break-after-page">
     <Header title="Tactical Rollup" />
     <TacticalRollupTable />
+    <TacticalKeyInsights />
   </section>
 );
 
