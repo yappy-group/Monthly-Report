@@ -592,8 +592,13 @@ const Page4_AlwaysOnHighlights = () => (
             { message: "Predictive Maintenance ROI", length: "18s", impressions: "12.4k", views: "4.2k", watchTime: "42h", efficiency: 8400 },
             { message: "Operational Efficiency", length: "22s", impressions: "9.8k", views: "2.5k", watchTime: "35h", efficiency: 5727 },
             { message: "Safety Compliance Standards", length: "24s", impressions: "8.1k", views: "2.1k", watchTime: "28h", efficiency: 4200 },
-          ].sort((a, b) => b.efficiency - a.efficiency).map((msg) => (
-            <div key={msg.message} className="bg-white border border-yappy-grey-light rounded-lg shadow-sm p-5">
+          ].sort((a, b) => b.efficiency - a.efficiency).map((msg, idx) => (
+            <div key={msg.message} className={`bg-white rounded-lg shadow-sm p-5 relative ${idx === 0 ? 'border-2 border-yappy-orange' : 'border border-yappy-grey-light'}`}>
+              {idx === 0 && (
+                <div className="absolute -top-3 right-4">
+                  <Tag color="orange">Best Performer</Tag>
+                </div>
+              )}
               <h4 className="font-bold text-yappy-grey-dark text-base mb-5">{msg.message}</h4>
               <div className="space-y-4">
                 <div>
@@ -609,8 +614,8 @@ const Page4_AlwaysOnHighlights = () => (
                   <p className="text-lg font-bold text-yappy-grey-dark">{msg.views}</p>
                 </div>
                 <div className="border-t border-yappy-grey-light pt-4">
-                  <p className="text-[10px] font-semibold text-yappy-orange uppercase mb-2">Watch Time</p>
-                  <p className="text-xl font-bold text-yappy-orange">{msg.watchTime}</p>
+                  <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-2">Watch Time</p>
+                  <p className="text-xl font-bold text-yappy-grey-dark">{msg.watchTime}</p>
                 </div>
               </div>
             </div>
