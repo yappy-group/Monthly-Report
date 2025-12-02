@@ -102,7 +102,7 @@ const Tag = ({ children, color = "gray" }: { children: React.ReactNode, color?: 
   };
 
   return (
-    <span className={`inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-semibold border ${colorClasses[color]}`}>
+    <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-semibold border border-green-100 text-[#ffffff] bg-[#ff7c22]">
       {children}
     </span>
   );
