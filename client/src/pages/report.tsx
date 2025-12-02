@@ -424,14 +424,14 @@ const Page1_ExecutiveSummary = () => (
           icon={Briefcase}
         />
         <MetricCard 
-          label="Engaged Roles" 
+          label="Engaged Roles (Tacticals)" 
           value="342" 
           trend="8%" 
           trendIsPositive={true} 
           icon={Users}
         />
          <MetricCard 
-          label="Key Roles Engaged" 
+          label="Key Roles Engaged (Tacticals)" 
           value="124" 
           trend="15%" 
           trendIsPositive={true} 
