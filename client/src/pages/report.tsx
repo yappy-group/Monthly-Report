@@ -95,14 +95,14 @@ const Bullet = ({ children }: { children: React.ReactNode }) => (
 
 const Tag = ({ children, color = "gray" }: { children: React.ReactNode, color?: "gray" | "red" | "orange" | "green" }) => {
   const colorClasses = {
-    gray: "bg-gray-100 text-yappy-grey-dark border-transparent",
+    gray: "bg-yappy-grey-light text-yappy-grey-dark border-transparent",
     red: "bg-red-50 text-red-700 border-red-100",
     orange: "bg-orange-50 text-orange-700 border-orange-100",
     green: "bg-green-50 text-green-700 border-green-100"
   };
 
   return (
-    <span className={`inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-semibold border ${colorClasses[color]}`}>
+    <span className="inline-flex items-center px-2.5 py-1 rounded-md text-[11px] font-semibold border border-green-100 text-[#ffffff] bg-[#ff7c22]">
       {children}
     </span>
   );
