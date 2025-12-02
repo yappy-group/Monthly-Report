@@ -348,7 +348,7 @@ const TacticalDeepDive = () => (
              <div className="flex gap-4 text-xs text-yappy-grey-med">
                 <span><strong className="text-yappy-grey-dark">1.2k</strong> Impressions</span>
                 <span><strong className="text-yappy-grey-dark">180</strong> Complete Views</span>
-                <span><strong className="text-yappy-grey-dark">15h</strong> Watch Time</span>
+                <span><strong className="text-yappy-grey-dark">1.4hours</strong> Watch Time</span>
              </div>
           </div>
        </div>
