@@ -108,6 +108,50 @@ const Tag = ({ children, color = "gray" }: { children: React.ReactNode, color?: 
   );
 };
 
+const InfluenceBadge = ({ level }: { level: "High" | "Medium" | "Low" }) => {
+  const styles = {
+    High: "bg-yappy-green text-white border-transparent",
+    Medium: "bg-[#E5F0D3] text-[#4d661f] border-transparent", // Soft desaturated green
+    Low: "bg-gray-100 text-gray-600 border-transparent"
+  };
+
+  return (
+    <span className={`inline-flex items-center px-2 py-0.5 rounded-full text-[10px] font-bold uppercase tracking-wide border ${styles[level]}`}>
+      {level}
+    </span>
+  );
+};
+
+const ProgramNarrativeBlock = () => (
+  <div className="bg-yappy-grey-dark text-white p-8 rounded-lg mt-8 shadow-lg relative overflow-hidden">
+      <div className="absolute top-0 right-0 w-64 h-64 bg-yappy-orange/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
+    <h4 className="font-bold text-lg mb-6 flex items-center gap-3 text-white relative z-10">
+      <div className="w-6 h-6 rounded-full border-2 border-yappy-orange flex items-center justify-center">
+        <CheckCircle2 className="w-3 h-3 text-yappy-orange" />
+      </div>
+      Key Insights & Program Narrative
+    </h4>
+    <div className="space-y-4 relative z-10">
+        <div className="flex items-start gap-4">
+          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 shadow-[0_0_8px_rgba(247,124,34,0.6)]" />
+          <p className="text-gray-300 text-[15px] leading-relaxed">Significant increase in role engagement across priority accounts, driven by Tactical campaigns.</p>
+        </div>
+        <div className="flex items-start gap-4">
+          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 shadow-[0_0_8px_rgba(247,124,34,0.6)]" />
+          <p className="text-gray-300 text-[15px] leading-relaxed">Watch time up 24%, led by C-Suite personas in heavy industry targets. Three new targets surpassed the 20% exposure threshold.</p>
+        </div>
+        <div className="flex items-start gap-4">
+          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 shadow-[0_0_8px_rgba(247,124,34,0.6)]" />
+          <p className="text-gray-300 text-[15px] leading-relaxed">AO program continues to build early awareness across priority heavy industry markets, with consistent uplift in logistics sector.</p>
+        </div>
+    </div>
+    <div className="mt-8 pt-6 border-t border-white/10 text-sm font-medium text-gray-400 flex items-center gap-2">
+      <Info className="w-4 h-4 text-yappy-orange" />
+      This month: 2.4M impressions, 38k complete views, 38% avg completion rate across all campaigns.
+    </div>
+  </div>
+);
+
 // New Component: Program Overview Grid
 const ProgramOverviewGrid = () => (
   <div className="mt-8">
@@ -167,12 +211,6 @@ const ProgramOverviewGrid = () => (
 // New Component: Tactical Rollup Table
 const TacticalRollupTable = () => (
   <div className="mb-10">
-     <h2 className="text-xl font-bold text-yappy-grey-dark mb-6 flex items-center gap-2.5">
-        <div className="p-1.5 bg-yappy-orange/10 rounded text-yappy-orange">
-          <Layers className="w-5 h-5" />
-        </div>
-        Tactical Rollup
-      </h2>
     <div className="border border-yappy-grey-light rounded-lg overflow-hidden bg-white shadow-sm">
       <table className="w-full text-left">
         <thead className="bg-yappy-grey-light/30 text-yappy-grey-med font-bold border-b border-yappy-grey-light uppercase text-[10px] tracking-wider">
@@ -187,12 +225,20 @@ const TacticalRollupTable = () => (
         </thead>
         <tbody className="divide-y divide-yappy-grey-light text-sm">
           {[
-            { name: "Southern Rail Logistics", aud: "38,000", reached: "140", reachedTrend: "+12%", views: "312", viewsTrend: "-8%", time: "24h", timeTrend: "+3%", new: "+7", newTrend: "+2" },
-            { name: "Apex Manufacturing Group", aud: "22,500", reached: "98", reachedTrend: "+5%", views: "210", viewsTrend: "+15%", time: "18h", timeTrend: "+8%", new: "+4", newTrend: "+1" },
-            { name: "Pacific Energy Systems", aud: "45,000", reached: "215", reachedTrend: "+18%", views: "450", viewsTrend: "+22%", time: "36h", timeTrend: "+12%", new: "+15", newTrend: "+6" },
+            { name: "Southern Rail Logistics", level: "High", aud: "38,000", reached: "140", reachedTrend: "+12%", views: "312", viewsTrend: "-8%", time: "24h", timeTrend: "+3%", new: "+7", newTrend: "+2" },
+            { name: "Apex Manufacturing Group", level: "High", aud: "22,500", reached: "98", reachedTrend: "+5%", views: "210", viewsTrend: "+15%", time: "18h", timeTrend: "+8%", new: "+4", newTrend: "+1" },
+            { name: "Pacific Energy Systems", level: "Medium", aud: "45,000", reached: "215", reachedTrend: "+18%", views: "450", viewsTrend: "+22%", time: "36h", timeTrend: "+12%", new: "+15", newTrend: "+6" },
+            { name: "Global Shipping Corp", level: "Medium", aud: "18,200", reached: "85", reachedTrend: "+3%", views: "140", viewsTrend: "+5%", time: "12h", timeTrend: "+2%", new: "+2", newTrend: "+0" },
+            { name: "Northern Grid", level: "Low", aud: "12,400", reached: "45", reachedTrend: "+1%", views: "80", viewsTrend: "-2%", time: "6h", timeTrend: "+1%", new: "+1", newTrend: "+0" },
+            { name: "Metro Infrastructure", level: "Low", aud: "28,000", reached: "65", reachedTrend: "+4%", views: "110", viewsTrend: "+6%", time: "9h", timeTrend: "+4%", new: "+3", newTrend: "+1" },
           ].map((row, i) => (
             <tr key={i} className="hover:bg-gray-50 transition-colors">
-              <td className="px-5 py-3 font-bold text-yappy-grey-dark">{row.name}</td>
+              <td className="px-5 py-3 font-bold text-yappy-grey-dark">
+                <div className="flex items-center gap-3">
+                  {row.name}
+                  <InfluenceBadge level={row.level as "High" | "Medium" | "Low"} />
+                </div>
+              </td>
               <td className="px-5 py-3 text-yappy-grey-med font-medium">{row.aud}</td>
               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
                 {row.reached} <span className={`text-[10px] ml-1 font-bold ${row.reachedTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.reachedTrend.includes('+') ? '▲' : '▼'} {row.reachedTrend}</span>
@@ -228,7 +274,7 @@ const TacticalDeepDive = () => (
         </div>
       </div>
       <div className="flex gap-2">
-        <Tag color="orange">High Priority</Tag>
+        <InfluenceBadge level="High" />
         <Tag>Active</Tag>
       </div>
     </div>
@@ -321,6 +367,8 @@ const TacticalDeepDive = () => (
                 <tr><td className="px-4 py-2">Operations</td><td className="px-4 py-2">850</td><td className="px-4 py-2">320</td><td className="px-4 py-2">150</td><td className="px-4 py-2 text-yappy-green">+4</td></tr>
                 <tr><td className="px-4 py-2">Finance</td><td className="px-4 py-2">420</td><td className="px-4 py-2">110</td><td className="px-4 py-2">45</td><td className="px-4 py-2 text-yappy-green">+2</td></tr>
                 <tr><td className="px-4 py-2">Risk & Compliance</td><td className="px-4 py-2">380</td><td className="px-4 py-2">95</td><td className="px-4 py-2">38</td><td className="px-4 py-2 text-yappy-green">+1</td></tr>
+                <tr><td className="px-4 py-2">Technology</td><td className="px-4 py-2">310</td><td className="px-4 py-2">80</td><td className="px-4 py-2">30</td><td className="px-4 py-2 text-yappy-green">+0</td></tr>
+                <tr><td className="px-4 py-2">C-Suite</td><td className="px-4 py-2">150</td><td className="px-4 py-2">45</td><td className="px-4 py-2">15</td><td className="px-4 py-2 text-yappy-green">+0</td></tr>
              </tbody>
           </table>
        </div>
@@ -331,9 +379,15 @@ const TacticalDeepDive = () => (
           <Zap className="w-4 h-4 text-yappy-orange" />
           Tactical Insights
         </h4>
-        <div className="space-y-2">
-            <Bullet>Growing interest from Operations and Finance roles, with increasing repeat engagement.</Bullet>
-            <Bullet>C-Suite engagement remains lower but is starting to show early signs of traction.</Bullet>
+        <div className="space-y-4">
+            <div>
+              <p className="text-xs font-bold text-yappy-grey-dark uppercase mb-1">New Key Roles Reached</p>
+              <p className="text-sm text-yappy-grey-dark">Director of Operations, Head of Compliance</p>
+            </div>
+            <div>
+              <p className="text-xs font-bold text-yappy-grey-dark uppercase mb-1">Key Roles with Repeat Engagement</p>
+              <p className="text-sm text-yappy-grey-dark">CFO, Plant Manager, Head of Maintenance</p>
+            </div>
         </div>
       </div>
 
@@ -387,30 +441,27 @@ const Page1_ExecutiveSummary = () => (
       </div>
       <p className="text-xs text-yappy-grey-med font-medium mb-10 text-center italic">All metrics shown are for this month across all Always On and Tactical campaigns.</p>
 
-      <InsightPanel 
-        title="Key Insights This Month"
-        icon={Zap}
-        footer="This month: 2.4M impressions, 38k complete views, 38% avg completion rate across all campaigns."
-      >
-        <Bullet>Significant increase in role engagement across priority accounts, driven by Tactical campaigns.</Bullet>
-        <Bullet>Watch time up 24%, led by C-Suite personas in heavy industry targets.</Bullet>
-        <Bullet>Three new targets surpassed the 20% exposure threshold.</Bullet>
-      </InsightPanel>
-
       <ProgramOverviewGrid />
+      <ProgramNarrativeBlock />
     </div>
   </section>
 );
 
-const Page2_TacticalHighlights = () => (
+const Page2_TacticalRollup = () => (
   <section className="report-page print:break-after-page">
-    <Header />
+    <Header title="Tactical Rollup" />
     <TacticalRollupTable />
+  </section>
+);
+
+const Page3_TacticalDeepDive = () => (
+  <section className="report-page print:break-after-page">
+    <Header title="Tactical: Southern Rail Logistics" />
     <TacticalDeepDive />
   </section>
 );
 
-const Page3_AlwaysOnHighlights = () => (
+const Page4_AlwaysOnHighlights = () => (
   <section className="report-page print:break-after-page">
     <Header title="Always On Program Highlights" />
     
@@ -459,14 +510,14 @@ const Page3_AlwaysOnHighlights = () => (
         <div>
           <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
             <BarChart3 className="w-5 h-5 text-yappy-grey-med" />
-            Top Always On Targets
+            Top 5 Always On Targets
           </h3>
           <div className="border border-yappy-grey-light rounded-lg overflow-hidden shadow-sm bg-white">
             <table className="w-full text-sm text-left">
               <thead className="bg-gray-50 text-yappy-grey-med font-semibold border-b border-yappy-grey-light uppercase text-[11px] tracking-wider">
                 <tr>
                   <th className="px-6 py-4">Target Name</th>
-                  <th className="px-6 py-4">Awareness Stage</th>
+                  <th className="px-6 py-4">Awareness Level</th>
                   <th className="px-6 py-4">Impressions</th>
                   <th className="px-6 py-4">Complete Views</th>
                   <th className="px-6 py-4">Watch Time</th>
@@ -474,34 +525,24 @@ const Page3_AlwaysOnHighlights = () => (
                 </tr>
               </thead>
               <tbody className="divide-y divide-yappy-grey-light">
-                <tr className="hover:bg-gray-50/50 transition-colors">
-                  <td className="px-6 py-4 font-bold text-yappy-grey-dark">Global Logistics Co.</td>
-                  <td className="px-6 py-4"><Tag color="red">High</Tag></td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">12,400</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">4,200</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">42h</td>
-                  <td className="px-6 py-4 text-yappy-green font-bold text-xs flex items-center gap-1">
-                    <ArrowUp className="w-3 h-3" /> Reached 20% exposure
-                  </td>
-                </tr>
-                 <tr className="hover:bg-gray-50/50 transition-colors">
-                  <td className="px-6 py-4 font-bold text-yappy-grey-dark">Metro Transit Authority</td>
-                  <td className="px-6 py-4"><Tag color="orange">Medium</Tag></td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">8,100</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">2,100</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">28h</td>
-                  <td className="px-6 py-4 text-yappy-orange font-bold text-xs flex items-center gap-1">
-                    <Zap className="w-3 h-3" /> New this month
-                  </td>
-                </tr>
-                 <tr className="hover:bg-gray-50/50 transition-colors">
-                  <td className="px-6 py-4 font-bold text-yappy-grey-dark">West Coast Ports</td>
-                  <td className="px-6 py-4"><Tag color="gray">Low</Tag></td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">3,400</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">850</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">12h</td>
-                  <td className="px-6 py-4 text-yappy-grey-med text-xs">-</td>
-                </tr>
+                {[
+                  { name: "Global Logistics Co.", level: "High", levelColor: "red", imp: "12,400", views: "4,200", time: "42h", status: "Reached 20% exposure", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
+                  { name: "Metro Transit Authority", level: "Medium", levelColor: "orange", imp: "8,100", views: "2,100", time: "28h", status: "New this month", statusIcon: Zap, statusColor: "text-yappy-orange" },
+                  { name: "Pacific Ports Group", level: "Medium", levelColor: "orange", imp: "6,500", views: "1,800", time: "22h", status: "Trending Up", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
+                  { name: "National Rail Services", level: "Low", levelColor: "gray", imp: "4,200", views: "1,100", time: "18h", status: "-", statusIcon: null, statusColor: "text-yappy-grey-med" },
+                  { name: "West Coast Ports", level: "Low", levelColor: "gray", imp: "3,400", views: "850", time: "12h", status: "-", statusIcon: null, statusColor: "text-yappy-grey-med" },
+                ].map((row, i) => (
+                  <tr key={i} className="hover:bg-gray-50/50 transition-colors">
+                    <td className="px-6 py-4 font-bold text-yappy-grey-dark">{row.name}</td>
+                    <td className="px-6 py-4"><Tag color={row.levelColor as any}>{row.level}</Tag></td>
+                    <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.imp}</td>
+                    <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.views}</td>
+                    <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.time}</td>
+                    <td className={`px-6 py-4 font-bold text-xs flex items-center gap-1 ${row.statusColor}`}>
+                      {row.statusIcon && <row.statusIcon className="w-3 h-3" />} {row.status}
+                    </td>
+                  </tr>
+                ))}
               </tbody>
             </table>
           </div>
@@ -511,12 +552,15 @@ const Page3_AlwaysOnHighlights = () => (
         <div>
            <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
              <Layers className="w-5 h-5 text-yappy-grey-med" />
-             Top Performing Content
+             Top 5 Performing Content
            </h3>
            <div className="space-y-4">
               {[
                 { title: "The Future of Logistics Automation", type: "AO Only", imp: "45k", views: "12k", orgs: "142", note: "Drove 60% of AO completions" },
                 { title: "Safety First: Site Protocols", type: "Shared", imp: "22k", views: "8k", orgs: "98", note: "High retention rate (85%)" },
+                { title: "Predictive Maintenance Basics", type: "Tactical", imp: "18k", views: "6.5k", orgs: "76", note: "Strong technical engagement" },
+                { title: "Sustainability in Supply Chain", type: "AO Only", imp: "15k", views: "5.2k", orgs: "110", note: "High C-Suite views" },
+                { title: "Digital Twin Case Study", type: "Shared", imp: "12k", views: "4.8k", orgs: "65", note: "New release" },
               ].map((item, i) => (
                 <div key={i} className="flex items-center justify-between p-5 bg-white border border-yappy-grey-light rounded-lg shadow-sm hover:shadow-md transition-shadow">
                   <div className="flex-1 flex items-start gap-4">
@@ -551,27 +595,6 @@ const Page3_AlwaysOnHighlights = () => (
            </div>
         </div>
 
-        {/* Narrative */}
-        <div className="bg-yappy-grey-dark text-white p-8 rounded-lg mt-4 shadow-lg relative overflow-hidden">
-           <div className="absolute top-0 right-0 w-64 h-64 bg-yappy-orange/5 rounded-full blur-3xl -mr-16 -mt-16 pointer-events-none" />
-          <h4 className="font-bold text-lg mb-6 flex items-center gap-3 text-white relative z-10">
-            <div className="w-6 h-6 rounded-full border-2 border-yappy-orange flex items-center justify-center">
-              <CheckCircle2 className="w-3 h-3 text-yappy-orange" />
-            </div>
-            Program Narrative
-          </h4>
-          <div className="space-y-4 relative z-10">
-             <div className="flex items-start gap-4">
-                <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 shadow-[0_0_8px_rgba(247,124,34,0.6)]" />
-                <p className="text-gray-300 text-[15px] leading-relaxed">AO program continues to build early awareness across priority heavy industry markets.</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0 shadow-[0_0_8px_rgba(247,124,34,0.6)]" />
-                <p className="text-gray-300 text-[15px] leading-relaxed">Consistent uplift among target clusters in logistics sector, with increasing watch time from Operations roles.</p>
-              </div>
-          </div>
-        </div>
-
       </div>
     </div>
   </section>
@@ -581,8 +604,9 @@ const Report = () => {
   return (
     <div className="report-container bg-gray-100 min-h-screen pb-12">
       <Page1_ExecutiveSummary />
-      <Page2_TacticalHighlights />
-      <Page3_AlwaysOnHighlights />
+      <Page2_TacticalRollup />
+      <Page3_TacticalDeepDive />
+      <Page4_AlwaysOnHighlights />
     </div>
   );
 };

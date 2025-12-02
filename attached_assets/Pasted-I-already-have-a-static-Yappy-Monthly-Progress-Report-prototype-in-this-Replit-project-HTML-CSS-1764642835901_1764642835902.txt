@@ -1,0 +1,111 @@
+I already have a static “Yappy Monthly Progress Report” prototype in this Replit project (HTML + CSS only, no backend).
+It currently has:
+	•	Page 1: Global Overview (hero metrics, Key Insights, Program Overview)
+	•	Page 2: Tactical section (Tactical Rollup + Southern Rail deep-dive card on the same page)
+	•	Page 3: Always On Program Highlights (AO metrics, Top AO Targets, Top Performing Content, Program Narrative).
+
+Please modify the existing code (don’t rebuild from scratch) with the changes below.
+
+⸻
+
+1) Split the Tactical view into two pages for A/B testing
+	•	Keep the Global Overview page as Page 1.
+	•	Turn the current Tactical content into two separate pages:
+	•	Page 2 → “Tactical Rollup” view (table only + short intro if needed).
+	•	Page 3 → “Tactical: Southern Rail Logistics” deep-dive (card layout only).
+	•	Adjust any navigation or page headings so it’s clear which page is which.
+
+⸻
+
+2) Tactical Rollup table — extend and add Influence Level
+
+On Page 2 (Tactical Rollup):
+	•	Extend the existing rollup table so it includes 6 tactical targets, not just 3.
+	•	For each row, keep the current columns:
+	•	Target
+	•	Audience Size
+	•	Roles Reached (with MoM trend)
+	•	Completed Views (with MoM trend)
+	•	Watch Time (with MoM trend)
+	•	New Roles (with MoM trend)
+	•	Add a visual “Influence Level” indicator next to each Target name:
+	•	Levels: High, Medium, Low.
+	•	This is derived from the “Interest Score” (VTR: completed views ÷ impressions), but you can hard-code placeholder levels for now.
+	•	Style it as a pill/badge immediately to the right of the target name.
+	•	Use a grey → green scale, no oranges/yellows/reds:
+	•	Low: light grey background, dark grey text
+	•	Medium: soft desaturated green background, darker green text
+	•	High: stronger green background, white text
+	•	The table should still be clean and compact enough to print as a PDF.
+
+Also update the page title at the top of Page 2 to:
+
+Tactical Rollup
+
+⸻
+
+3) Tactical Deep Dive page — Southern Rail Logistics
+
+On Page 3, create a dedicated deep-dive page for Southern Rail Logistics using the existing deep-dive card as the starting point, but:
+	•	Update the page title at the top to:
+Tactical: Southern Rail Logistics
+	•	Replace the old “High Priority” label on the card with an Influence Level badge (same visual language as the rollup table: High / Medium / Low, with grey→green color scales).
+	•	In the Role Group Influence table:
+	•	Expand it to show 5 role groups (top 5 priority groups for this tactical), e.g.:
+	•	Operations
+	•	Finance
+	•	Risk & Compliance
+	•	Technology
+	•	C-Suite
+	•	For each role group, keep the columns: Impressions, Views, Complete Views, New Roles (this month).
+	•	In the Tactical Insights block at the bottom:
+	•	Explicitly call out Key Roles that were new this month (by title).
+	•	e.g. “New this month: Director of Operations, Head of Compliance”.
+	•	Explicitly call out Key Roles that showed repeat engagement this month.
+	•	e.g. “Repeat engagement: CFO, Plant Manager, Head of Maintenance”.
+	•	Use two concise bullet points or sub-sections:
+	•	“New Key Roles Reached”
+	•	“Key Roles with Repeat Engagement”
+
+Keep the rest of the deep-dive structure (metrics block, priority messages, best performing message) as is, just adjust spacing to fit the expanded role table and updated insights.
+
+⸻
+
+4) Move Program Narrative to Page 1 and merge with Key Insights
+	•	On Page 3 (Always On), remove the existing dark “Program Narrative” block at the bottom.
+	•	On Page 1 (Global Overview):
+	•	Take that same narrative block style (dark background, striking visual) and move it to Page 1, placing it below Key Insights or replacing/merging with Key Insights.
+	•	The end result on Page 1 should be:
+	•	Global hero metrics
+	•	Program Overview grid
+	•	A single Program Narrative / Key Insights section using the dark narrative block style (icon + bullets).
+	•	Feel free to merge the existing Key Insights bullets into that dark block so it feels like one strong “story” section rather than two separate ones.
+
+Ensure typography and spacing still feel balanced on Page 1.
+
+⸻
+
+5) Always On page updates — Top 5 Targets & Content, Awareness Level
+
+On the Always On Program Highlights page (now without the Program Narrative at the bottom):
+	•	Keep the existing Program Performance hero metrics at the top.
+	•	Update Top Always On Targets:
+	•	Expand this table to show Top 5 AO targets (instead of 3).
+	•	Rename the column “Awareness Stage” → “Awareness Level”.
+	•	Keep the pill styling but update the label text to match the new name.
+	•	Order the rows by biggest % movement in Completed Views during the reporting period (you can hard-code example values and sort them visually).
+	•	Update Top Performing Content:
+	•	Expand to show Top 5 content pieces (instead of 2).
+	•	Order them by biggest % movement in Completed Views (again, static placeholder values are fine; just sort accordingly).
+	•	Keep the existing card layout (title, subtitle, metrics on the right), simply duplicate and adjust content.
+
+With Program Narrative now on Page 1, use the freed space on the AO page to make the Top 5 Targets and Top 5 Content sections more prominent and well spaced.
+
+⸻
+
+6) General notes
+	•	Keep the existing visual language: Yappy orange (#F77C22), greys (#EAEBEC, #A9A9A9, #272525), green (#9FC64B) for positive indicators, and subtle reds only where already used for negative trends.
+	•	Use existing typography (Poppins for headings, Inter/body) and spacing scale.
+	•	Maintain PDF-friendly layout: no overflowing content, keep tables and blocks within printable width.
+
+Please update the current HTML/CSS to apply these changes while preserving the overall aesthetic and structure of the prototype.
