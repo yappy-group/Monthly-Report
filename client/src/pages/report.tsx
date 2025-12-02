@@ -478,24 +478,29 @@ const Page4_AlwaysOnHighlights = () => (
                 <th className="px-6 py-4">Impressions</th>
                 <th className="px-6 py-4">Complete Views</th>
                 <th className="px-6 py-4">Watch Time</th>
-                <th className="px-6 py-4">Status</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-yappy-grey-light">
               {[
-                { name: "Global Logistics Co.", imp: "12,400", views: "4,200", time: "42h", status: "Strong Performer", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
-                { name: "Pacific Ports Group", imp: "6,500", views: "1,800", time: "22h", status: "Emerging", statusIcon: Zap, statusColor: "text-yappy-orange" },
-                { name: "Metro Transit Authority", imp: "8,100", views: "2,100", time: "28h", status: "High Momentum", statusIcon: ArrowUp, statusColor: "text-yappy-green" },
-                { name: "National Rail Services", imp: "4,200", views: "1,100", time: "18h", status: "Tracking", statusIcon: null, statusColor: "text-yappy-grey-med" },
-                { name: "West Coast Ports", imp: "3,400", views: "850", time: "12h", status: "Watch List", statusIcon: null, statusColor: "text-yappy-grey-med" },
+                { name: "Global Logistics Co.", imp: "12,400", impDelta: "+8%", views: "4,200", viewsDelta: "+12%", time: "42h", timeDelta: "+18%" },
+                { name: "Pacific Ports Group", imp: "6,500", impDelta: "+15%", views: "1,800", viewsDelta: "+22%", time: "22h", timeDelta: "+25%" },
+                { name: "Metro Transit Authority", imp: "8,100", impDelta: "+6%", views: "2,100", viewsDelta: "+9%", time: "28h", timeDelta: "+14%" },
+                { name: "National Rail Services", imp: "4,200", impDelta: "+3%", views: "1,100", viewsDelta: "+5%", time: "18h", timeDelta: "+7%" },
+                { name: "West Coast Ports", imp: "3,400", impDelta: "+11%", views: "850", viewsDelta: "+16%", time: "12h", timeDelta: "+20%" },
               ].map((row, i) => (
                 <tr key={i} className="hover:bg-gray-50/50 transition-colors">
                   <td className="px-6 py-4 font-bold text-yappy-grey-dark">{row.name}</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.imp}</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.views}</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-mono">{row.time}</td>
-                  <td className={`px-6 py-4 font-bold text-xs flex items-center gap-1 ${row.statusColor}`}>
-                    {row.statusIcon && <row.statusIcon className="w-3 h-3" />} {row.status}
+                  <td className="px-6 py-4">
+                    <div className="text-yappy-grey-dark font-mono font-bold">{row.imp}</div>
+                    <div className="text-[11px] text-yappy-green font-semibold">{row.impDelta}</div>
+                  </td>
+                  <td className="px-6 py-4">
+                    <div className="text-yappy-grey-dark font-mono font-bold">{row.views}</div>
+                    <div className="text-[11px] text-yappy-green font-semibold">{row.viewsDelta}</div>
+                  </td>
+                  <td className="px-6 py-4">
+                    <div className="text-yappy-grey-dark font-mono font-bold">{row.time}</div>
+                    <div className="text-[11px] text-yappy-green font-semibold">{row.timeDelta}</div>
                   </td>
                 </tr>
               ))}
