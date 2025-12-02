@@ -204,20 +204,20 @@ const TacticalRollupTable = () => (
           <tr>
             <th className="px-5 py-3">Target</th>
             <th className="px-5 py-3">Audience Size</th>
+            <th className="px-5 py-3">Impressions</th>
             <th className="px-5 py-3">Roles Reached</th>
-            <th className="px-5 py-3">Completed Views</th>
-            <th className="px-5 py-3">Watch Time</th>
+            <th className="px-5 py-3">Roles Engaged</th>
             <th className="px-5 py-3">New Roles</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-yappy-grey-light text-sm">
           {[
-            { name: "Southern Rail Logistics", level: "High", aud: "38,000", reached: "140", reachedTrend: "+12%", views: "312", viewsTrend: "-8%", time: "24h", timeTrend: "+3%", new: "+7", newTrend: "+2" },
-            { name: "Apex Manufacturing Group", level: "High", aud: "22,500", reached: "98", reachedTrend: "+5%", views: "210", viewsTrend: "+15%", time: "18h", timeTrend: "+8%", new: "+4", newTrend: "+1" },
-            { name: "Pacific Energy Systems", level: "Medium", aud: "45,000", reached: "215", reachedTrend: "+18%", views: "450", viewsTrend: "+22%", time: "36h", timeTrend: "+12%", new: "+15", newTrend: "+6" },
-            { name: "Global Shipping Corp", level: "Medium", aud: "18,200", reached: "85", reachedTrend: "+3%", views: "140", viewsTrend: "+5%", time: "12h", timeTrend: "+2%", new: "+2", newTrend: "+0" },
-            { name: "Northern Grid", level: "Low", aud: "12,400", reached: "45", reachedTrend: "+1%", views: "80", viewsTrend: "-2%", time: "6h", timeTrend: "+1%", new: "+1", newTrend: "+0" },
-            { name: "Metro Infrastructure", level: "Low", aud: "28,000", reached: "65", reachedTrend: "+4%", views: "110", viewsTrend: "+6%", time: "9h", timeTrend: "+4%", new: "+3", newTrend: "+1" },
+            { name: "Southern Rail Logistics", aud: "38,000", imp: "2,400", impTrend: "+8%", reached: "140", reachedTrend: "+12%", engaged: "42", engagedTrend: "+5%", new: "+7", newTrend: "+2" },
+            { name: "Apex Manufacturing Group", aud: "22,500", imp: "1,200", impTrend: "+3%", reached: "98", reachedTrend: "+5%", engaged: "28", engagedTrend: "+2%", new: "+4", newTrend: "+1" },
+            { name: "Pacific Energy Systems", aud: "45,000", imp: "3,100", impTrend: "+18%", reached: "215", reachedTrend: "+18%", engaged: "68", engagedTrend: "+9%", new: "+15", newTrend: "+6" },
+            { name: "Global Shipping Corp", aud: "18,200", imp: "900", impTrend: "-1%", reached: "85", reachedTrend: "+3%", engaged: "24", engagedTrend: "+1%", new: "+2", newTrend: "+0" },
+            { name: "Northern Grid", aud: "12,400", imp: "450", impTrend: "+2%", reached: "45", reachedTrend: "+1%", engaged: "12", engagedTrend: "+0%", new: "+1", newTrend: "+0" },
+            { name: "Metro Infrastructure", aud: "28,000", imp: "1,500", impTrend: "+6%", reached: "65", reachedTrend: "+4%", engaged: "18", engagedTrend: "+2%", new: "+3", newTrend: "+1" },
           ].map((row, i) => (
             <tr key={i} className="hover:bg-gray-50 transition-colors">
               <td className="px-5 py-3 font-bold text-yappy-grey-dark">
@@ -225,13 +225,13 @@ const TacticalRollupTable = () => (
               </td>
               <td className="px-5 py-3 text-yappy-grey-med font-medium">{row.aud}</td>
               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
-                {row.reached} <span className={`text-[10px] ml-1 font-bold ${row.reachedTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.reachedTrend.includes('+') ? '▲' : '▼'} {row.reachedTrend}</span>
+                {row.imp} <span className={`text-[10px] ml-1 font-bold ${row.impTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.impTrend.includes('+') ? '▲' : '▼'} {row.impTrend}</span>
               </td>
               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
-                {row.views} <span className={`text-[10px] ml-1 font-bold ${row.viewsTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.viewsTrend.includes('+') ? '▲' : '▼'} {row.viewsTrend}</span>
+                {row.reached} <span className={`text-[10px] ml-1 font-bold ${row.reachedTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.reachedTrend.includes('+') ? '▲' : '▼'} {row.reachedTrend}</span>
               </td>
                <td className="px-5 py-3 text-yappy-grey-dark font-medium">
-                {row.time} <span className={`text-[10px] ml-1 font-bold ${row.timeTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.timeTrend.includes('+') ? '▲' : '▼'} {row.timeTrend}</span>
+                {row.engaged} <span className={`text-[10px] ml-1 font-bold ${row.engagedTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.engagedTrend.includes('+') ? '▲' : '▼'} {row.engagedTrend}</span>
               </td>
                <td className="px-5 py-3 text-yappy-grey-dark font-medium">
                 {row.new} <span className={`text-[10px] ml-1 font-bold ${row.newTrend.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.newTrend.includes('+') ? '▲' : '▼'} {row.newTrend}</span>
