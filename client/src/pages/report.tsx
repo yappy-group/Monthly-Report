@@ -582,7 +582,30 @@ const Page4_AlwaysOnHighlights = () => (
         </div>
       </div>
 
-      
+      <div className="mb-10">
+        <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
+          <FileText className="w-5 h-5 text-yappy-grey-med" />
+          Key Messaging Performance
+        </h3>
+        <div className="grid grid-cols-4 gap-4">
+          <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
+            <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Avg Content Length</p>
+            <p className="text-2xl font-bold text-yappy-grey-dark">8.2 min</p>
+          </div>
+          <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
+            <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Total Impressions</p>
+            <p className="text-2xl font-bold text-yappy-grey-dark">34.2k</p>
+          </div>
+          <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
+            <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Complete Views</p>
+            <p className="text-2xl font-bold text-yappy-grey-dark">8.1k</p>
+          </div>
+          <div className="bg-white border border-yappy-grey-light rounded-lg p-4">
+            <p className="text-[11px] font-bold text-yappy-grey-med uppercase mb-2">Total Watch Time</p>
+            <p className="text-2xl font-bold text-yappy-grey-dark">142h</p>
+          </div>
+        </div>
+      </div>
     </div>
   </section>
 );
