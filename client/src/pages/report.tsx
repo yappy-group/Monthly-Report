@@ -456,6 +456,13 @@ const Page4_AlwaysOnHighlights = () => (
   <section className="report-page print:break-after-page">
     <Header title="Always On Program Highlights" />
     
+    <div className="flex items-center gap-3 mb-8 p-4 bg-yappy-grey-med/10 border border-yappy-grey-med/25 rounded-lg">
+      <div className="px-3 py-1 rounded bg-yappy-grey-med/25 border border-yappy-grey-med/40">
+        <span className="text-xs font-bold text-yappy-grey-dark uppercase tracking-wide">Objective</span>
+      </div>
+      <span className="text-base font-semibold text-yappy-grey-dark">Build Brand Awareness</span>
+    </div>
+    
     <div className="mb-8">
       <h2 className="text-xl font-bold text-yappy-grey-dark mb-8 flex items-center gap-2.5">
         <div className="p-1.5 bg-yappy-orange/10 rounded text-yappy-orange">
