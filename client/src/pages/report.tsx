@@ -299,29 +299,35 @@ const TacticalDeepDive = () => (
           <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Audience Size</p>
           <p className="text-2xl font-bold text-yappy-grey-dark">38,000</p>
         </div>
-        <div>
-          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Impressions</p>
-          <p className="text-2xl font-bold text-yappy-grey-dark">24,000 <span className="text-sm text-yappy-green font-bold">▲ +2,000</span></p>
+        <div className="space-y-4">
+          <div>
+            <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Impressions</p>
+            <p className="text-2xl font-bold text-yappy-grey-dark">24,000 <span className="text-sm text-yappy-green font-bold">▲ +2,000</span></p>
+          </div>
+          <div>
+            <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Watch Time</p>
+            <p className="text-2xl font-bold text-yappy-grey-dark">24h <span className="text-sm text-yappy-green font-bold">▲ +3h</span></p>
+          </div>
         </div>
-        <div>
-          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Roles Reached</p>
-          <p className="text-2xl font-bold text-yappy-grey-dark">140 <span className="text-sm text-yappy-green font-bold">▲ +12</span></p>
+        <div className="space-y-4">
+          <div>
+            <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Roles Reached</p>
+            <p className="text-2xl font-bold text-yappy-grey-dark">140 <span className="text-sm text-yappy-green font-bold">▲ +12</span></p>
+          </div>
+          <div>
+            <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Key Roles Reached</p>
+            <p className="text-2xl font-bold text-yappy-grey-dark">28 <span className="text-sm text-yappy-green font-bold">▲ +7</span></p>
+          </div>
         </div>
-        <div>
-          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Roles Engaged</p>
-          <p className="text-2xl font-bold text-yappy-grey-dark">42 <span className="text-sm text-yappy-green font-bold">▲ +5</span></p>
-        </div>
-        <div>
-          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Key Roles Reached</p>
-          <p className="text-2xl font-bold text-yappy-grey-dark">28 <span className="text-sm text-yappy-green font-bold">▲ +7</span></p>
-        </div>
-        <div>
-          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Key Roles Engaged</p>
-          <p className="text-2xl font-bold text-yappy-grey-dark">18 <span className="text-sm text-yappy-green font-bold">▲ +4</span></p>
-        </div>
-        <div>
-          <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Watch Time</p>
-          <p className="text-2xl font-bold text-yappy-grey-dark">24h <span className="text-sm text-yappy-green font-bold">▲ +3h</span></p>
+        <div className="space-y-4">
+          <div>
+            <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Roles Engaged</p>
+            <p className="text-2xl font-bold text-yappy-grey-dark">42 <span className="text-sm text-yappy-green font-bold">▲ +5</span></p>
+          </div>
+          <div>
+            <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Key Roles Engaged</p>
+            <p className="text-2xl font-bold text-yappy-grey-dark">18 <span className="text-sm text-yappy-green font-bold">▲ +4</span></p>
+          </div>
         </div>
       </div>
     </div>
