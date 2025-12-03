@@ -236,7 +236,7 @@ const TacticalRollupTable = () => (
             <th className="px-5 py-3">Audience Size</th>
             <th className="px-5 py-3">Impressions</th>
             <th className="px-5 py-3">Roles Reached</th>
-            <th className="px-5 py-3 bg-yappy-grey-med/15">Key Roles Engaged</th>
+            <th className="px-5 py-3 bg-yappy-grey-med/15 font-bold">Key Roles Engaged</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-yappy-grey-light text-sm">
@@ -259,7 +259,7 @@ const TacticalRollupTable = () => (
               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
                 {row.reached} <span className={`text-[10px] ml-1 font-bold ${row.reachedDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.reachedDelta.includes('+') ? '▲' : '▼'} {row.reachedDelta}</span>
               </td>
-              <td className="px-5 py-3 text-yappy-grey-dark font-medium bg-yappy-grey-med/15">
+              <td className="px-5 py-3 text-yappy-grey-dark font-bold bg-yappy-grey-med/15">
                 {row.keyRoles} <span className={`text-[10px] ml-1 font-bold ${row.keyRolesDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.keyRolesDelta.includes('+') ? '▲' : '▼'} {row.keyRolesDelta}</span>
               </td>
             </tr>
