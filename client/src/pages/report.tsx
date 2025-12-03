@@ -400,32 +400,32 @@ const Page1_ExecutiveSummary = () => (
       
       <div className="grid grid-cols-4 gap-5 mb-6">
         <MetricCard 
-          label="Watch Time (Hours)" 
-          value="486h" 
-          trend="24%" 
+          label="Roles Reached (Tactical)" 
+          value="342" 
+          trend="8%" 
           trendIsPositive={true} 
-          icon={Clock}
+          icon={Users}
         />
         <MetricCard 
-          label="Targets Reached %" 
+          label="Key Roles Engaged (Tactical)" 
+          value="124" 
+          trend="15%" 
+          trendIsPositive={true} 
+          icon={Target}
+        />
+        <MetricCard 
+          label="Targets Reached % (Always On)" 
           value="68%" 
           trend="4%" 
           trendIsPositive={true} 
           icon={Briefcase}
         />
         <MetricCard 
-          label="Engaged Roles (Tacticals)" 
-          value="342" 
+          label="Individual Reach (Always On)" 
+          value="2,450" 
           trend="8%" 
           trendIsPositive={true} 
           icon={Users}
-        />
-         <MetricCard 
-          label="Key Roles Engaged (Tacticals)" 
-          value="124" 
-          trend="15%" 
-          trendIsPositive={true} 
-          icon={Target}
         />
       </div>
       <p className="text-xs text-yappy-grey-med font-medium mb-10 text-center italic">All metrics shown are for this month across all Always On and Tactical campaigns.</p>
