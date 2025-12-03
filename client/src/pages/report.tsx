@@ -242,7 +242,7 @@ const TacticalRollupTable = () => (
             <th className="px-5 py-3">Audience Size</th>
             <th className="px-5 py-3">Impressions</th>
             <th className="px-5 py-3">Roles Reached</th>
-            <th className="px-5 py-3 bg-yappy-grey-med/15 font-bold">Key Roles Engaged</th>
+            <th className="px-5 py-3 bg-yappy-grey-med/15 font-bold text-[#000000]">Key Roles Engaged</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-yappy-grey-light text-sm">
