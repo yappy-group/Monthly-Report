@@ -406,14 +406,14 @@ const Page1_ExecutiveSummary = () => (
         <MetricCard 
           label="Roles Reached (Tactical)" 
           value="342" 
-          trend="8%" 
+          trend="+27" 
           trendIsPositive={true} 
           icon={Users}
         />
         <MetricCard 
           label="Key Roles Engaged (Tactical)" 
           value="124" 
-          trend="15%" 
+          trend="+19" 
           trendIsPositive={true} 
           icon={Target}
         />
