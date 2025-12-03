@@ -554,7 +554,6 @@ const Page4_AlwaysOnHighlights = () => (
                 <th className="px-6 py-4">Impressions</th>
                 <th className="px-6 py-4">Complete Views</th>
                 <th className="px-6 py-4">Completion Rate</th>
-                <th className="px-6 py-4">Watch Time</th>
               </tr>
             </thead>
             <tbody className="divide-y divide-yappy-grey-light">
@@ -621,7 +620,6 @@ const Page4_AlwaysOnHighlights = () => (
                     <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.imp}</td>
                     <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.views}</td>
                     <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.rate}</td>
-                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.time}</td>
                   </tr>
                 );
               })}
