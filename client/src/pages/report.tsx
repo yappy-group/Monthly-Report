@@ -584,10 +584,10 @@ const Page4_AlwaysOnHighlights = () => (
                 let level = 'Low';
                 let levelColor = 'bg-yappy-grey-light/40 text-yappy-grey-dark';
                 
-                if (impressions >= 6000 && rate >= 26.5) {
+                if (impressions >= 3600) {
                   level = 'High';
                   levelColor = 'bg-yappy-orange/20 text-yappy-orange font-semibold';
-                } else if ((impressions >= 3000 && rate >= 24.5) || impressions >= 6000) {
+                } else if (impressions >= 2450) {
                   level = 'Medium';
                   levelColor = 'bg-yappy-grey-med/20 text-yappy-grey-med font-semibold';
                 }
