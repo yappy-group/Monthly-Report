@@ -586,14 +586,14 @@ const Page4_AlwaysOnHighlights = () => (
                 const rate = parseFloat(row.rate);
                 
                 let level = 'Low';
-                let levelColor = 'bg-green-100 text-green-700 font-medium';
+                let levelColor = 'bg-green-50 text-green-700 font-medium';
                 
                 if (impressions >= 3600) {
                   level = 'High';
-                  levelColor = 'bg-green-600 text-white font-semibold';
+                  levelColor = 'bg-green-200/60 text-green-800 font-semibold';
                 } else if (impressions >= 2450) {
                   level = 'Medium';
-                  levelColor = 'bg-green-300 text-green-900 font-semibold';
+                  levelColor = 'bg-green-100/50 text-green-700 font-semibold';
                 }
                 
                 return (
