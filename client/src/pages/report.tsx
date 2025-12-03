@@ -288,6 +288,8 @@ const TacticalDeepDive = () => (
       </div>
     </div>
 
+    <p className="text-xs text-yappy-grey-med font-medium mb-6 italic bg-yappy-grey-light/20 p-3 rounded border border-yappy-grey-light/40">Lifetime totals shown with monthly increases indicated by deltas (▲).</p>
+
     <div className="mb-10">
       <h4 className="text-sm font-bold text-yappy-grey-dark uppercase tracking-wide mb-6 flex items-center gap-2">
         <BarChart3 className="w-4 h-4 text-yappy-orange" /> Metrics
