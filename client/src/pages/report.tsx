@@ -233,7 +233,7 @@ const TacticalRollupTable = () => (
       </div>
       <span className="text-base font-semibold text-yappy-grey-dark">Decision Chain Influence</span>
     </div>
-    <p className="text-xs text-yappy-grey-med font-medium mb-3 italic">Note: Roles Reached, Roles Engaged, and Key Roles are lifetime totals with monthly increases shown as deltas.</p>
+    <p className="text-xs text-yappy-grey-med font-medium mb-6 italic bg-yappy-grey-light/20 p-3 rounded border border-yappy-grey-light/40">Lifetime totals shown with monthly increases indicated by deltas (▲).</p>
     <div className="border border-yappy-grey-light rounded-lg overflow-hidden bg-white shadow-sm">
       <table className="w-full text-left">
         <thead className="bg-yappy-grey-light/30 text-yappy-grey-med font-bold border-b border-yappy-grey-light uppercase text-[10px] tracking-wider">
