@@ -529,6 +529,16 @@ const Page4_AlwaysOnHighlights = () => (
           <Users className="w-5 h-5 text-yappy-grey-med" />
           Always On Target Companies
         </h3>
+        <div className="mb-4 flex items-center gap-6 text-sm">
+          <div className="flex items-center gap-2">
+            <div className="px-2 py-1 rounded bg-yappy-orange/20 border border-yappy-orange/30 text-yappy-orange font-semibold text-xs">Top Mover</div>
+            <span className="text-yappy-grey-med">Highest engagement growth</span>
+          </div>
+          <div className="flex items-center gap-2">
+            <div className="px-2 py-1 rounded bg-yappy-green/20 border border-yappy-green/30 text-yappy-green font-semibold text-xs">Top Engager</div>
+            <span className="text-yappy-grey-med">Highest engagement this month</span>
+          </div>
+        </div>
         <div className="border border-yappy-grey-light rounded-lg overflow-hidden shadow-sm bg-white">
           <table className="w-full text-sm text-left">
             <thead className="bg-gray-50 text-yappy-grey-med font-semibold border-b border-yappy-grey-light uppercase text-[11px] tracking-wider">
@@ -543,26 +553,26 @@ const Page4_AlwaysOnHighlights = () => (
             </thead>
             <tbody className="divide-y divide-yappy-grey-light">
               {[
-                { name: "Global Logistics Co.", imp: "12,400", views: "4,200", rate: "33.9%", time: "42h" },
-                { name: "Metro Transit Authority", imp: "8,100", views: "2,100", rate: "25.9%", time: "28h" },
-                { name: "Pacific Ports Group", imp: "6,500", views: "1,800", rate: "27.7%", time: "22h" },
-                { name: "National Rail Services", imp: "5,200", views: "1,350", rate: "25.9%", time: "18h" },
-                { name: "West Coast Ports", imp: "4,800", views: "1,200", rate: "25.0%", time: "16h" },
-                { name: "Southern Energy Systems", imp: "4,100", views: "1,100", rate: "26.8%", time: "15h" },
-                { name: "Midwest Rail Operations", imp: "3,900", views: "980", rate: "25.1%", time: "13h" },
-                { name: "Eastern Shipping Lines", imp: "3,600", views: "920", rate: "25.5%", time: "12h" },
-                { name: "Continental Transport", imp: "3,400", views: "850", rate: "25.0%", time: "11h" },
-                { name: "Northern Grid Services", imp: "3,100", views: "780", rate: "25.1%", time: "10h" },
-                { name: "Central Hub Logistics", imp: "2,950", views: "720", rate: "24.4%", time: "9.5h" },
-                { name: "Urban Transit Solutions", imp: "2,800", views: "680", rate: "24.2%", time: "9h" },
-                { name: "Prairie Railway Systems", imp: "2,600", views: "640", rate: "24.6%", time: "8.5h" },
-                { name: "Coastal Port Authority", imp: "2,450", views: "600", rate: "24.4%", time: "8h" },
-                { name: "Regional Distribution", imp: "2,300", views: "560", rate: "24.3%", time: "7.5h" },
-                { name: "Frontier Logistics Hub", imp: "2,150", views: "520", rate: "24.1%", time: "7h" },
-                { name: "Interstate Carriers", imp: "2,000", views: "480", rate: "24.0%", time: "6.5h" },
-                { name: "Valley Transport Group", imp: "1,850", views: "440", rate: "23.7%", time: "6h" },
-                { name: "Summit Shipping Co.", imp: "1,700", views: "410", rate: "24.1%", time: "5.5h" },
-                { name: "Horizon Logistics Ltd.", imp: "1,550", views: "370", rate: "23.8%", time: "5h" },
+                { name: "Global Logistics Co.", imp: "12,400", views: "4,200", rate: "33.9%", time: "42h", badges: ["Top Engager"] },
+                { name: "Pacific Ports Group", imp: "6,500", views: "1,800", rate: "27.7%", time: "22h", badges: ["Top Mover", "Top Engager"] },
+                { name: "Southern Energy Systems", imp: "4,100", views: "1,100", rate: "26.8%", time: "15h", badges: ["Top Engager"] },
+                { name: "Metro Transit Authority", imp: "8,100", views: "2,100", rate: "25.9%", time: "28h", badges: ["Top Mover"] },
+                { name: "National Rail Services", imp: "5,200", views: "1,350", rate: "25.9%", time: "18h", badges: ["Top Mover"] },
+                { name: "West Coast Ports", imp: "4,800", views: "1,200", rate: "25.0%", time: "16h", badges: [] },
+                { name: "Midwest Rail Operations", imp: "3,900", views: "980", rate: "25.1%", time: "13h", badges: [] },
+                { name: "Eastern Shipping Lines", imp: "3,600", views: "920", rate: "25.5%", time: "12h", badges: [] },
+                { name: "Continental Transport", imp: "3,400", views: "850", rate: "25.0%", time: "11h", badges: [] },
+                { name: "Northern Grid Services", imp: "3,100", views: "780", rate: "25.1%", time: "10h", badges: [] },
+                { name: "Central Hub Logistics", imp: "2,950", views: "720", rate: "24.4%", time: "9.5h", badges: [] },
+                { name: "Urban Transit Solutions", imp: "2,800", views: "680", rate: "24.2%", time: "9h", badges: [] },
+                { name: "Prairie Railway Systems", imp: "2,600", views: "640", rate: "24.6%", time: "8.5h", badges: [] },
+                { name: "Coastal Port Authority", imp: "2,450", views: "600", rate: "24.4%", time: "8h", badges: [] },
+                { name: "Regional Distribution", imp: "2,300", views: "560", rate: "24.3%", time: "7.5h", badges: [] },
+                { name: "Frontier Logistics Hub", imp: "2,150", views: "520", rate: "24.1%", time: "7h", badges: [] },
+                { name: "Interstate Carriers", imp: "2,000", views: "480", rate: "24.0%", time: "6.5h", badges: [] },
+                { name: "Valley Transport Group", imp: "1,850", views: "440", rate: "23.7%", time: "6h", badges: [] },
+                { name: "Summit Shipping Co.", imp: "1,700", views: "410", rate: "24.1%", time: "5.5h", badges: [] },
+                { name: "Horizon Logistics Ltd.", imp: "1,550", views: "370", rate: "23.8%", time: "5h", badges: [] },
               ].map((row, i) => {
                 const impressions = parseInt(row.imp.replace(/,/g, ''));
                 const rate = parseFloat(row.rate);
@@ -580,7 +590,24 @@ const Page4_AlwaysOnHighlights = () => (
                 
                 return (
                   <tr key={i} className="hover:bg-gray-50/50 transition-colors">
-                    <td className="px-6 py-4 font-semibold text-yappy-grey-dark">{row.name}</td>
+                    <td className="px-6 py-4 font-semibold text-yappy-grey-dark">
+                      <div className="flex items-center gap-2">
+                        <span>{row.name}</span>
+                        {row.badges.length > 0 && (
+                          <div className="flex gap-1">
+                            {row.badges.map((badge) => (
+                              <span key={badge} className={`text-xs font-semibold px-1.5 py-0.5 rounded ${
+                                badge === 'Top Mover' 
+                                  ? 'bg-yappy-orange/20 text-yappy-orange border border-yappy-orange/30' 
+                                  : 'bg-yappy-green/20 text-yappy-green border border-yappy-green/30'
+                              }`}>
+                                {badge}
+                              </span>
+                            ))}
+                          </div>
+                        )}
+                      </div>
+                    </td>
                     <td className={`px-6 py-4 rounded text-sm font-medium ${levelColor}`}>{level}</td>
                     <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.imp}</td>
                     <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.views}</td>
