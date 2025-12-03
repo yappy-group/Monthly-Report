@@ -526,6 +526,58 @@ const Page4_AlwaysOnHighlights = () => (
 
       <div className="mb-10">
         <h3 className="text-lg font-bold text-yappy-grey-dark mb-4 flex items-center gap-2">
+          <Users className="w-5 h-5 text-yappy-grey-med" />
+          Always On Target Companies
+        </h3>
+        <div className="border border-yappy-grey-light rounded-lg overflow-hidden shadow-sm bg-white">
+          <table className="w-full text-sm text-left">
+            <thead className="bg-gray-50 text-yappy-grey-med font-semibold border-b border-yappy-grey-light uppercase text-[11px] tracking-wider">
+              <tr>
+                <th className="px-6 py-4">Target Company</th>
+                <th className="px-6 py-4">Impressions</th>
+                <th className="px-6 py-4">Complete Views</th>
+                <th className="px-6 py-4">Completion Rate</th>
+                <th className="px-6 py-4">Watch Time</th>
+              </tr>
+            </thead>
+            <tbody className="divide-y divide-yappy-grey-light">
+              {[
+                { name: "Global Logistics Co.", imp: "12,400", views: "4,200", rate: "33.9%", time: "42h" },
+                { name: "Metro Transit Authority", imp: "8,100", views: "2,100", rate: "25.9%", time: "28h" },
+                { name: "Pacific Ports Group", imp: "6,500", views: "1,800", rate: "27.7%", time: "22h" },
+                { name: "National Rail Services", imp: "5,200", views: "1,350", rate: "25.9%", time: "18h" },
+                { name: "West Coast Ports", imp: "4,800", views: "1,200", rate: "25.0%", time: "16h" },
+                { name: "Southern Energy Systems", imp: "4,100", views: "1,100", rate: "26.8%", time: "15h" },
+                { name: "Midwest Rail Operations", imp: "3,900", views: "980", rate: "25.1%", time: "13h" },
+                { name: "Eastern Shipping Lines", imp: "3,600", views: "920", rate: "25.5%", time: "12h" },
+                { name: "Continental Transport", imp: "3,400", views: "850", rate: "25.0%", time: "11h" },
+                { name: "Northern Grid Services", imp: "3,100", views: "780", rate: "25.1%", time: "10h" },
+                { name: "Central Hub Logistics", imp: "2,950", views: "720", rate: "24.4%", time: "9.5h" },
+                { name: "Urban Transit Solutions", imp: "2,800", views: "680", rate: "24.2%", time: "9h" },
+                { name: "Prairie Railway Systems", imp: "2,600", views: "640", rate: "24.6%", time: "8.5h" },
+                { name: "Coastal Port Authority", imp: "2,450", views: "600", rate: "24.4%", time: "8h" },
+                { name: "Regional Distribution", imp: "2,300", views: "560", rate: "24.3%", time: "7.5h" },
+                { name: "Frontier Logistics Hub", imp: "2,150", views: "520", rate: "24.1%", time: "7h" },
+                { name: "Interstate Carriers", imp: "2,000", views: "480", rate: "24.0%", time: "6.5h" },
+                { name: "Valley Transport Group", imp: "1,850", views: "440", rate: "23.7%", time: "6h" },
+                { name: "Summit Shipping Co.", imp: "1,700", views: "410", rate: "24.1%", time: "5.5h" },
+                { name: "Horizon Logistics Ltd.", imp: "1,550", views: "370", rate: "23.8%", time: "5h" },
+              ].map((row, i) => (
+                <tr key={i} className="hover:bg-gray-50/50 transition-colors">
+                  <td className="px-6 py-4 font-semibold text-yappy-grey-dark">{row.name}</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.imp}</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.views}</td>
+                  <td className="px-6 py-4 text-yappy-orange font-semibold">{row.rate}</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.time}</td>
+                </tr>
+              ))}
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div className="mb-10">
+        <h3 className="text-lg font-bold text-yappy-grey-dark mb-4 flex items-center gap-2">
           <FileText className="w-5 h-5 text-yappy-grey-med" />
           Key Messaging Performance
         </h3>
