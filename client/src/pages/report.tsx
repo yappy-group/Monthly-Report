@@ -473,35 +473,55 @@ const Page4_AlwaysOnHighlights = () => (
       
       <p className="text-sm font-semibold text-yappy-grey-dark mb-6">Target Location: <span className="text-yappy-orange">Australia</span></p>
 
-       <div className="grid grid-cols-4 gap-5 mb-12">
-        <MetricCard 
-          label="Target Reach" 
-          value="68%" 
-          trend="4%" 
-          trendIsPositive={true} 
-          icon={Target}
-        />
-        <MetricCard 
-          label="AO Watch Time" 
-          value="156h" 
-          trend="12%" 
-          trendIsPositive={true} 
-          icon={Clock}
-        />
-        <MetricCard 
-          label="Individuals Reached" 
-          value="2,450" 
-          trend="8%" 
-          trendIsPositive={true} 
-          icon={Users}
-        />
-        <MetricCard 
-          label="Impressions" 
-          value="14.2k" 
-          trend="2.1%" 
-          trendIsPositive={false} 
-          icon={Eye}
-        />
+       <div className="grid grid-cols-4 gap-3 mb-8">
+        <div className="flex flex-col p-3 bg-white rounded-lg border border-yappy-grey-light shadow-[0_2px_4px_rgba(0,0,0,0.02)] h-full relative overflow-hidden group">
+          <div className="flex justify-between items-start mb-2">
+            <span className="text-[10px] font-bold text-yappy-grey-med uppercase tracking-widest">Target Reach</span>
+            <Target className="w-4 h-4 text-yappy-grey-med/70" />
+          </div>
+          <div className="flex items-center justify-between mt-auto">
+            <span className="text-2xl font-bold text-yappy-grey-dark tracking-tight">68%</span>
+            <div className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-bold bg-yappy-green/10 text-yappy-green">
+              <ArrowUp className="w-3 h-3" /> 4%
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col p-3 bg-white rounded-lg border border-yappy-grey-light shadow-[0_2px_4px_rgba(0,0,0,0.02)] h-full relative overflow-hidden group">
+          <div className="flex justify-between items-start mb-2">
+            <span className="text-[10px] font-bold text-yappy-grey-med uppercase tracking-widest">AO Watch Time</span>
+            <Clock className="w-4 h-4 text-yappy-grey-med/70" />
+          </div>
+          <div className="flex items-center justify-between mt-auto">
+            <span className="text-2xl font-bold text-yappy-grey-dark tracking-tight">156h</span>
+            <div className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-bold bg-yappy-green/10 text-yappy-green">
+              <ArrowUp className="w-3 h-3" /> 12%
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col p-3 bg-white rounded-lg border border-yappy-grey-light shadow-[0_2px_4px_rgba(0,0,0,0.02)] h-full relative overflow-hidden group">
+          <div className="flex justify-between items-start mb-2">
+            <span className="text-[10px] font-bold text-yappy-grey-med uppercase tracking-widest">Individuals Reached</span>
+            <Users className="w-4 h-4 text-yappy-grey-med/70" />
+          </div>
+          <div className="flex items-center justify-between mt-auto">
+            <span className="text-2xl font-bold text-yappy-grey-dark tracking-tight">2,450</span>
+            <div className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-bold bg-yappy-green/10 text-yappy-green">
+              <ArrowUp className="w-3 h-3" /> 8%
+            </div>
+          </div>
+        </div>
+        <div className="flex flex-col p-3 bg-white rounded-lg border border-yappy-grey-light shadow-[0_2px_4px_rgba(0,0,0,0.02)] h-full relative overflow-hidden group">
+          <div className="flex justify-between items-start mb-2">
+            <span className="text-[10px] font-bold text-yappy-grey-med uppercase tracking-widest">Impressions</span>
+            <Eye className="w-4 h-4 text-yappy-grey-med/70" />
+          </div>
+          <div className="flex items-center justify-between mt-auto">
+            <span className="text-2xl font-bold text-yappy-grey-dark tracking-tight">14.2k</span>
+            <div className="flex items-center gap-1 px-2 py-1 rounded-full text-[10px] font-bold bg-yappy-red/10 text-yappy-red">
+              <ArrowDown className="w-3 h-3" /> 2.1%
+            </div>
+          </div>
+        </div>
       </div>
 
       <div className="mb-10">
