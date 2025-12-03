@@ -596,10 +596,10 @@ const Page4_AlwaysOnHighlights = () => (
                         {row.badges.length > 0 && (
                           <div className="flex gap-1">
                             {row.badges.map((badge) => (
-                              <span key={badge} className={`text-xs font-semibold px-1.5 py-0.5 rounded ${
+                              <span key={badge} className={`text-xs font-medium px-1.5 py-0.5 rounded ${
                                 badge === 'Top Mover' 
-                                  ? 'bg-yappy-orange/20 text-yappy-orange border border-yappy-orange/30' 
-                                  : 'bg-yappy-green/20 text-yappy-green border border-yappy-green/30'
+                                  ? 'bg-yappy-orange/10 text-yappy-orange/70' 
+                                  : 'bg-yappy-green/10 text-yappy-green/70'
                               }`}>
                                 {badge}
                               </span>
