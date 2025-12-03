@@ -531,14 +531,14 @@ const Page4_AlwaysOnHighlights = () => (
         </h3>
         <div className="mb-4 flex items-center gap-6 text-sm">
           <div className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-5 h-5 rounded bg-yappy-orange">
-              <TrendingUp className="w-3 h-3 text-white" />
+            <div className="flex items-center justify-center w-5 h-5 rounded bg-yappy-orange/40">
+              <TrendingUp className="w-3 h-3 text-yappy-orange/70" />
             </div>
             <span className="text-yappy-grey-med">Top Mover – Highest engagement growth</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-5 h-5 rounded bg-yappy-green">
-              <Zap className="w-3 h-3 text-white" />
+            <div className="flex items-center justify-center w-5 h-5 rounded bg-yappy-green/40">
+              <Zap className="w-3 h-3 text-yappy-green/70" />
             </div>
             <span className="text-yappy-grey-med">Top Engager – Highest engagement this month</span>
           </div>
@@ -604,10 +604,14 @@ const Page4_AlwaysOnHighlights = () => (
                               return (
                                 <div key={badge} className={`flex items-center justify-center w-5 h-5 rounded ${
                                   badge === 'Top Mover' 
-                                    ? 'bg-yappy-orange' 
-                                    : 'bg-yappy-green'
+                                    ? 'bg-yappy-orange/40' 
+                                    : 'bg-yappy-green/40'
                                 }`} title={badge}>
-                                  <IconComponent className="w-3 h-3 text-white" />
+                                  <IconComponent className={`w-3 h-3 ${
+                                    badge === 'Top Mover' 
+                                      ? 'text-yappy-orange/70' 
+                                      : 'text-yappy-green/70'
+                                  }`} />
                                 </div>
                               );
                             })}
