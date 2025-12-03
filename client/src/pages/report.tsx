@@ -309,7 +309,7 @@ const TacticalDeepDive = () => (
             <p className="text-2xl font-bold text-yappy-grey-dark">24h <span className="text-sm text-yappy-green font-bold">▲ +3h</span></p>
           </div>
         </div>
-        <div className="space-y-4">
+        <div className="bg-white border border-yappy-grey-light rounded-lg p-4 space-y-4">
           <div>
             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Roles Reached</p>
             <p className="text-2xl font-bold text-yappy-grey-dark">140 <span className="text-sm text-yappy-green font-bold">▲ +12</span></p>
@@ -319,7 +319,7 @@ const TacticalDeepDive = () => (
             <p className="text-2xl font-bold text-yappy-grey-dark">28 <span className="text-sm text-yappy-green font-bold">▲ +7</span></p>
           </div>
         </div>
-        <div className="space-y-4">
+        <div className="bg-white border border-yappy-grey-light rounded-lg p-4 space-y-4">
           <div>
             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Roles Engaged</p>
             <p className="text-2xl font-bold text-yappy-grey-dark">42 <span className="text-sm text-yappy-green font-bold">▲ +5</span></p>
