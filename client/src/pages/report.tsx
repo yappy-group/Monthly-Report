@@ -567,7 +567,7 @@ const Page4_AlwaysOnHighlights = () => (
                   <td className="px-6 py-4 font-semibold text-yappy-grey-dark">{row.name}</td>
                   <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.imp}</td>
                   <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.views}</td>
-                  <td className="px-6 py-4 text-yappy-orange font-semibold">{row.rate}</td>
+                  <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.rate}</td>
                   <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.time}</td>
                 </tr>
               ))}
