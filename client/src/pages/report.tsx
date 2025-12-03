@@ -299,7 +299,7 @@ const TacticalDeepDive = () => (
           <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Audience Size</p>
           <p className="text-2xl font-bold text-yappy-grey-dark">38,000</p>
         </div>
-        <div className="space-y-4">
+        <div className="bg-white border border-yappy-grey-light rounded-lg p-4 space-y-4">
           <div>
             <p className="text-[10px] text-yappy-grey-med font-bold uppercase mb-2">Impressions</p>
             <p className="text-2xl font-bold text-yappy-grey-dark">24,000 <span className="text-sm text-yappy-green font-bold">▲ +2,000</span></p>
