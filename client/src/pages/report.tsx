@@ -592,10 +592,16 @@ const Page4_AlwaysOnHighlights = () => (
       </div>
 
       <div className="mb-10">
-        <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
+        <h3 className="text-lg font-bold text-yappy-grey-dark mb-4 flex items-center gap-2">
           <FileText className="w-5 h-5 text-yappy-grey-med" />
           Key Messaging Performance
         </h3>
+        <div className="flex items-center gap-3 mb-5 p-3 bg-yappy-grey-med/10 border border-yappy-grey-med/25 rounded-lg">
+          <div className="px-2.5 py-0.5 rounded bg-yappy-grey-med/25 border border-yappy-grey-med/40">
+            <span className="text-xs font-bold text-yappy-grey-dark uppercase tracking-wide">Objective</span>
+          </div>
+          <span className="text-sm font-semibold text-yappy-grey-dark">Communicating Value Proposition</span>
+        </div>
         <div className="grid grid-cols-3 gap-4">
           {[
             { message: "Predictive Maintenance ROI", length: "18s", impressions: "12.4k", views: "4.2k", watchTime: "42h", efficiency: 8400 },
@@ -629,12 +635,6 @@ const Page4_AlwaysOnHighlights = () => (
               </div>
             </div>
           ))}
-        </div>
-        <div className="flex items-center gap-2 mt-4">
-          <div className="px-2 py-1 rounded bg-yappy-grey-med/25 border border-yappy-grey-med/40">
-            <span className="text-xs font-bold text-yappy-grey-dark uppercase tracking-wide">Objective</span>
-          </div>
-          <span className="text-sm font-medium text-yappy-grey-dark">Communicating Value Proposition</span>
         </div>
       </div>
     </div>
