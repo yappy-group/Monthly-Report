@@ -228,10 +228,10 @@ const ProgramOverviewGrid = () => (
 const TacticalRollupTable = () => (
   <div className="mb-10">
     <div className="flex items-center gap-3 mb-4">
-      <div className="flex items-center gap-2 px-3 py-1.5 rounded-md bg-yappy-grey-med/15 border border-yappy-grey-med/30">
-        <div className="w-2 h-2 rounded-full bg-yappy-grey-med"></div>
-        <span className="text-sm font-semibold text-yappy-grey-dark">Decision Chain Influence</span>
+      <div className="px-3 py-1.5 rounded-md bg-yappy-grey-med/15 border border-yappy-grey-med/30">
+        <span className="text-xs font-bold text-yappy-grey-dark uppercase">Objective</span>
       </div>
+      <span className="text-sm font-medium text-yappy-grey-dark">Decision Chain Influence</span>
     </div>
     <p className="text-xs text-yappy-grey-med font-medium mb-3 italic">Note: Roles Reached, Roles Engaged, and Key Roles are lifetime totals with monthly increases shown as deltas.</p>
     <div className="border border-yappy-grey-light rounded-lg overflow-hidden bg-white shadow-sm">
