@@ -630,6 +630,12 @@ const Page4_AlwaysOnHighlights = () => (
             </div>
           ))}
         </div>
+        <div className="flex items-center gap-2 mt-4">
+          <div className="px-2 py-1 rounded bg-yappy-grey-med/25 border border-yappy-grey-med/40">
+            <span className="text-xs font-bold text-yappy-grey-dark uppercase tracking-wide">Objective</span>
+          </div>
+          <span className="text-sm font-medium text-yappy-grey-dark">Communicating Value Proposition</span>
+        </div>
       </div>
     </div>
   </section>
