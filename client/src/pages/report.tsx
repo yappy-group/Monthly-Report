@@ -561,26 +561,26 @@ const Page4_AlwaysOnHighlights = () => (
             </thead>
             <tbody className="divide-y divide-yappy-grey-light">
               {[
-                { name: "Global Logistics Co.", imp: "12,400", views: "4,200", rate: "33.9%", time: "42h", badges: [], trend: 0 },
-                { name: "Pacific Ports Group", imp: "6,500", views: "1,800", rate: "27.7%", time: "22h", badges: ["Top Mover"], trend: 1 },
-                { name: "Southern Energy Systems", imp: "4,100", views: "1,100", rate: "26.8%", time: "15h", badges: [], trend: 1 },
-                { name: "Metro Transit Authority", imp: "8,100", views: "2,100", rate: "25.9%", time: "28h", badges: ["Top Mover"], trend: 1 },
-                { name: "National Rail Services", imp: "5,200", views: "1,350", rate: "25.9%", time: "18h", badges: ["Top Mover"], trend: 0 },
-                { name: "West Coast Ports", imp: "4,800", views: "1,200", rate: "25.0%", time: "16h", badges: [], trend: -1 },
-                { name: "Midwest Rail Operations", imp: "3,900", views: "980", rate: "25.1%", time: "13h", badges: [], trend: 0 },
-                { name: "Eastern Shipping Lines", imp: "3,600", views: "920", rate: "25.5%", time: "12h", badges: [], trend: 1 },
-                { name: "Continental Transport", imp: "3,400", views: "850", rate: "25.0%", time: "11h", badges: [], trend: 0 },
-                { name: "Northern Grid Services", imp: "3,100", views: "780", rate: "25.1%", time: "10h", badges: [], trend: -1 },
-                { name: "Central Hub Logistics", imp: "2,950", views: "720", rate: "24.4%", time: "9.5h", badges: [], trend: 0 },
-                { name: "Urban Transit Solutions", imp: "2,800", views: "680", rate: "24.2%", time: "9h", badges: [], trend: -1 },
-                { name: "Prairie Railway Systems", imp: "2,600", views: "640", rate: "24.6%", time: "8.5h", badges: [], trend: 1 },
-                { name: "Coastal Port Authority", imp: "2,450", views: "600", rate: "24.4%", time: "8h", badges: [], trend: 0 },
-                { name: "Regional Distribution", imp: "2,300", views: "560", rate: "24.3%", time: "7.5h", badges: [], trend: -1 },
-                { name: "Frontier Logistics Hub", imp: "2,150", views: "520", rate: "24.1%", time: "7h", badges: [], trend: 0 },
-                { name: "Interstate Carriers", imp: "2,000", views: "480", rate: "24.0%", time: "6.5h", badges: [], trend: 1 },
-                { name: "Valley Transport Group", imp: "1,850", views: "440", rate: "23.7%", time: "6h", badges: [], trend: 0 },
-                { name: "Summit Shipping Co.", imp: "1,700", views: "410", rate: "24.1%", time: "5.5h", badges: [], trend: 1 },
-                { name: "Horizon Logistics Ltd.", imp: "1,550", views: "370", rate: "23.8%", time: "5h", badges: [], trend: -1 },
+                { name: "Global Logistics Co.", imp: "12,400", impDelta: "+800", views: "4,200", viewsDelta: "+120", rate: "33.9%", rateDelta: "+1.2%", time: "42h", badges: [], trend: 1 },
+                { name: "Pacific Ports Group", imp: "6,500", impDelta: "+1,200", views: "1,800", viewsDelta: "+340", rate: "27.7%", rateDelta: "+2.1%", time: "22h", badges: ["Top Mover"], trend: 1 },
+                { name: "Southern Energy Systems", imp: "4,100", impDelta: "+620", views: "1,100", viewsDelta: "+210", rate: "26.8%", rateDelta: "+1.8%", time: "15h", badges: [], trend: 1 },
+                { name: "Metro Transit Authority", imp: "8,100", impDelta: "+950", views: "2,100", viewsDelta: "+280", rate: "25.9%", rateDelta: "+0.9%", time: "28h", badges: ["Top Mover"], trend: 1 },
+                { name: "National Rail Services", imp: "5,200", impDelta: "+380", views: "1,350", viewsDelta: "+95", rate: "25.9%", rateDelta: "+0.5%", time: "18h", badges: ["Top Mover"], trend: 0 },
+                { name: "West Coast Ports", imp: "4,800", impDelta: "-280", views: "1,200", viewsDelta: "-65", rate: "25.0%", rateDelta: "-0.8%", time: "16h", badges: [], trend: -1 },
+                { name: "Midwest Rail Operations", imp: "3,900", impDelta: "+145", views: "980", viewsDelta: "+32", rate: "25.1%", rateDelta: "+0.2%", time: "13h", badges: [], trend: 0 },
+                { name: "Eastern Shipping Lines", imp: "3,600", impDelta: "+420", views: "920", viewsDelta: "+125", rate: "25.5%", rateDelta: "+1.3%", time: "12h", badges: [], trend: 1 },
+                { name: "Continental Transport", imp: "3,400", impDelta: "-120", views: "850", viewsDelta: "-28", rate: "25.0%", rateDelta: "-0.3%", time: "11h", badges: [], trend: 0 },
+                { name: "Northern Grid Services", imp: "3,100", impDelta: "-180", views: "780", viewsDelta: "-42", rate: "25.1%", rateDelta: "-0.6%", time: "10h", badges: [], trend: -1 },
+                { name: "Central Hub Logistics", imp: "2,950", impDelta: "+85", views: "720", viewsDelta: "+18", rate: "24.4%", rateDelta: "+0.1%", time: "9.5h", badges: [], trend: 0 },
+                { name: "Urban Transit Solutions", imp: "2,800", impDelta: "-210", views: "680", viewsDelta: "-58", rate: "24.2%", rateDelta: "-0.7%", time: "9h", badges: [], trend: -1 },
+                { name: "Prairie Railway Systems", imp: "2,600", impDelta: "+380", views: "640", viewsDelta: "+95", rate: "24.6%", rateDelta: "+1.1%", time: "8.5h", badges: [], trend: 1 },
+                { name: "Coastal Port Authority", imp: "2,450", impDelta: "+42", views: "600", viewsDelta: "+12", rate: "24.4%", rateDelta: "+0.3%", time: "8h", badges: [], trend: 0 },
+                { name: "Regional Distribution", imp: "2,300", impDelta: "-145", views: "560", viewsDelta: "-38", rate: "24.3%", rateDelta: "-0.5%", time: "7.5h", badges: [], trend: -1 },
+                { name: "Frontier Logistics Hub", imp: "2,150", impDelta: "+78", views: "520", viewsDelta: "+22", rate: "24.1%", rateDelta: "+0.2%", time: "7h", badges: [], trend: 0 },
+                { name: "Interstate Carriers", imp: "2,000", impDelta: "+320", views: "480", viewsDelta: "+85", rate: "24.0%", rateDelta: "+0.9%", time: "6.5h", badges: [], trend: 1 },
+                { name: "Valley Transport Group", imp: "1,850", impDelta: "+68", views: "440", viewsDelta: "+18", rate: "23.7%", rateDelta: "+0.2%", time: "6h", badges: [], trend: 0 },
+                { name: "Summit Shipping Co.", imp: "1,700", impDelta: "+285", views: "410", viewsDelta: "+78", rate: "24.1%", rateDelta: "+1.0%", time: "5.5h", badges: [], trend: 1 },
+                { name: "Horizon Logistics Ltd.", imp: "1,550", impDelta: "-95", views: "370", viewsDelta: "-25", rate: "23.8%", rateDelta: "-0.4%", time: "5h", badges: [], trend: -1 },
               ].map((row, i) => {
                 const impressions = parseInt(row.imp.replace(/,/g, ''));
                 const rate = parseFloat(row.rate);
@@ -619,9 +619,30 @@ const Page4_AlwaysOnHighlights = () => (
                         )}
                       </div>
                     </td>
-                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.imp}</td>
-                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.views}</td>
-                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.rate}</td>
+                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">
+                      <div className="flex items-center justify-between">
+                        <span>{row.imp}</span>
+                        <span className={`text-xs font-bold ml-2 ${row.impDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>
+                          {row.impDelta.includes('+') ? '▲' : '▼'} {row.impDelta}
+                        </span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">
+                      <div className="flex items-center justify-between">
+                        <span>{row.views}</span>
+                        <span className={`text-xs font-bold ml-2 ${row.viewsDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>
+                          {row.viewsDelta.includes('+') ? '▲' : '▼'} {row.viewsDelta}
+                        </span>
+                      </div>
+                    </td>
+                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">
+                      <div className="flex items-center justify-between">
+                        <span>{row.rate}</span>
+                        <span className={`text-xs font-bold ml-2 ${row.rateDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>
+                          {row.rateDelta.includes('+') ? '▲' : '▼'} {row.rateDelta}
+                        </span>
+                      </div>
+                    </td>
                     <td className={`px-6 py-4 rounded text-sm font-medium ${levelColor}`}>
                       <div className="flex items-center justify-between">
                         <span>{level}</span>
