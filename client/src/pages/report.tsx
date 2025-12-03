@@ -505,50 +505,6 @@ const Page4_AlwaysOnHighlights = () => (
       </div>
 
       <div className="mb-10">
-        <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
-          <BarChart3 className="w-5 h-5 text-yappy-grey-med" />
-          Biggest Movers
-        </h3>
-        <div className="border border-yappy-grey-light rounded-lg overflow-hidden shadow-sm bg-white">
-          <table className="w-full text-sm text-left">
-            <thead className="bg-gray-50 text-yappy-grey-med font-semibold border-b border-yappy-grey-light uppercase text-[11px] tracking-wider">
-              <tr>
-                <th className="px-6 py-4">Target Company</th>
-                <th className="px-6 py-4">Impressions</th>
-                <th className="px-6 py-4">Complete Views</th>
-                <th className="px-6 py-4">Watch Time</th>
-              </tr>
-            </thead>
-            <tbody className="divide-y divide-yappy-grey-light">
-              {[
-                { name: "Global Logistics Co.", imp: "12,400", impDelta: "+8%", views: "4,200", viewsDelta: "+12%", time: "42h", timeDelta: "+18%" },
-                { name: "Pacific Ports Group", imp: "6,500", impDelta: "+15%", views: "1,800", viewsDelta: "+22%", time: "22h", timeDelta: "+25%" },
-                { name: "Metro Transit Authority", imp: "8,100", impDelta: "+6%", views: "2,100", viewsDelta: "+9%", time: "28h", timeDelta: "+14%" },
-                { name: "National Rail Services", imp: "4,200", impDelta: "+3%", views: "1,100", viewsDelta: "+5%", time: "18h", timeDelta: "+7%" },
-                { name: "West Coast Ports", imp: "3,400", impDelta: "+11%", views: "850", viewsDelta: "+16%", time: "12h", timeDelta: "+20%" },
-              ].map((row, i) => (
-                <tr key={i} className="hover:bg-gray-50/50 transition-colors">
-                  <td className="px-6 py-4 font-bold text-yappy-grey-dark">{row.name}</td>
-                  <td className="px-6 py-4">
-                    <div className="text-yappy-grey-dark font-bold">{row.imp}</div>
-                    <div className="text-[11px] text-yappy-green font-semibold">{row.impDelta}</div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="text-yappy-grey-dark font-bold">{row.views}</div>
-                    <div className="text-[11px] text-yappy-green font-semibold">{row.viewsDelta}</div>
-                  </td>
-                  <td className="px-6 py-4">
-                    <div className="text-yappy-grey-dark font-bold">{row.time}</div>
-                    <div className="text-[11px] text-yappy-green font-semibold">{row.timeDelta}</div>
-                  </td>
-                </tr>
-              ))}
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <div className="mb-10">
         <h3 className="text-lg font-bold text-yappy-grey-dark mb-4 flex items-center gap-2">
           <FileText className="w-5 h-5 text-yappy-grey-med" />
           Key Messaging Performance
