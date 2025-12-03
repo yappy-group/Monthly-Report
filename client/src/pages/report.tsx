@@ -504,49 +504,6 @@ const Page4_AlwaysOnHighlights = () => (
         />
       </div>
 
-      <div className="mb-12">
-        <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
-          <Users className="w-5 h-5 text-yappy-grey-med" />
-          Top 3 Most Engaged Targets
-        </h3>
-        <div className="grid grid-cols-3 gap-6">
-          {[
-            { name: "Global Logistics Co.", initials: "GL", imp: "12,400", views: "4,200", time: "42h", rate: "33.9%" },
-            { name: "Metro Transit Authority", initials: "MT", imp: "8,100", views: "2,100", time: "28h", rate: "25.9%" },
-            { name: "Pacific Ports Group", initials: "PP", imp: "6,500", views: "1,800", time: "22h", rate: "27.7%" },
-          ].map((target) => (
-            <div key={target.name} className="bg-white border border-yappy-grey-light rounded-lg shadow-sm p-4">
-              <div className="flex items-center gap-3 mb-4">
-                <div className="w-10 h-10 bg-yappy-orange/10 rounded flex items-center justify-center flex-shrink-0">
-                  <span className="text-xs font-semibold text-yappy-orange">{target.initials}</span>
-                </div>
-                <h4 className="font-semibold text-yappy-grey-dark text-sm">{target.name}</h4>
-              </div>
-              <div className="space-y-3">
-                <div>
-                  <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-1">Impressions</p>
-                  <p className="text-lg font-semibold text-yappy-grey-dark">{target.imp}</p>
-                </div>
-                <div className="grid grid-cols-2 gap-3">
-                  <div>
-                    <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-1">Views</p>
-                    <p className="text-base font-semibold text-yappy-grey-dark">{target.views}</p>
-                  </div>
-                  <div>
-                    <p className="text-[10px] font-semibold text-yappy-grey-med uppercase mb-1">Watch Time</p>
-                    <p className="text-base font-semibold text-yappy-grey-dark">{target.time}</p>
-                  </div>
-                </div>
-                <div className="border border-yappy-orange/20 rounded p-3 bg-[#f77c2200]">
-                  <p className="text-[10px] font-semibold text-yappy-orange uppercase mb-1">Completion Rate</p>
-                  <p className="text-lg font-semibold text-yappy-orange">{target.rate}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </div>
-
       <div className="mb-10">
         <h3 className="text-lg font-bold text-yappy-grey-dark mb-5 flex items-center gap-2">
           <BarChart3 className="w-5 h-5 text-yappy-grey-med" />
