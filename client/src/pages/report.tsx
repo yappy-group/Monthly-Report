@@ -546,12 +546,6 @@ const Page4_AlwaysOnHighlights = () => (
             </div>
             <span className="text-yappy-grey-med">Top Mover – Highest engagement growth</span>
           </div>
-          <div className="flex items-center gap-2">
-            <div className="flex items-center justify-center w-5 h-5 rounded bg-yappy-green">
-              <Zap className="w-3 h-3 text-white" />
-            </div>
-            <span className="text-yappy-grey-med">Top Engager – Highest engagement this month</span>
-          </div>
         </div>
         <div className="border border-yappy-grey-light rounded-lg overflow-hidden shadow-sm bg-white">
           <table className="w-full text-sm text-left">
@@ -566,9 +560,9 @@ const Page4_AlwaysOnHighlights = () => (
             </thead>
             <tbody className="divide-y divide-yappy-grey-light">
               {[
-                { name: "Global Logistics Co.", imp: "12,400", views: "4,200", rate: "33.9%", time: "42h", badges: ["Top Engager"] },
-                { name: "Pacific Ports Group", imp: "6,500", views: "1,800", rate: "27.7%", time: "22h", badges: ["Top Mover", "Top Engager"] },
-                { name: "Southern Energy Systems", imp: "4,100", views: "1,100", rate: "26.8%", time: "15h", badges: ["Top Engager"] },
+                { name: "Global Logistics Co.", imp: "12,400", views: "4,200", rate: "33.9%", time: "42h", badges: [] },
+                { name: "Pacific Ports Group", imp: "6,500", views: "1,800", rate: "27.7%", time: "22h", badges: ["Top Mover"] },
+                { name: "Southern Energy Systems", imp: "4,100", views: "1,100", rate: "26.8%", time: "15h", badges: [] },
                 { name: "Metro Transit Authority", imp: "8,100", views: "2,100", rate: "25.9%", time: "28h", badges: ["Top Mover"] },
                 { name: "National Rail Services", imp: "5,200", views: "1,350", rate: "25.9%", time: "18h", badges: ["Top Mover"] },
                 { name: "West Coast Ports", imp: "4,800", views: "1,200", rate: "25.0%", time: "16h", badges: [] },
