@@ -236,18 +236,17 @@ const TacticalRollupTable = () => (
             <th className="px-5 py-3">Audience Size</th>
             <th className="px-5 py-3">Impressions</th>
             <th className="px-5 py-3">Roles Reached</th>
-            <th className="px-5 py-3">Roles Engaged</th>
-            <th className="px-5 py-3">Key Roles</th>
+            <th className="px-5 py-3 bg-yappy-grey-med/15">Key Roles Engaged</th>
           </tr>
         </thead>
         <tbody className="divide-y divide-yappy-grey-light text-sm">
           {[
-            { name: "Pacific Energy Systems", aud: "45,000", imp: "3,100", impTrend: "+18%", reached: "215", reachedDelta: "+18", engaged: "68", engagedDelta: "+9", keyRoles: "52", keyRolesDelta: "+15" },
-            { name: "Southern Rail Logistics", aud: "38,000", imp: "2,400", impTrend: "+8%", reached: "140", reachedDelta: "+12", engaged: "42", engagedDelta: "+5", keyRoles: "28", keyRolesDelta: "+7" },
-            { name: "Apex Manufacturing Group", aud: "22,500", imp: "1,200", impTrend: "+3%", reached: "98", reachedDelta: "+5", engaged: "28", engagedDelta: "+2", keyRoles: "18", keyRolesDelta: "+4" },
-            { name: "Metro Infrastructure", aud: "28,000", imp: "1,500", impTrend: "+6%", reached: "65", reachedDelta: "+4", engaged: "18", engagedDelta: "+2", keyRoles: "14", keyRolesDelta: "+3" },
-            { name: "Global Shipping Corp", aud: "18,200", imp: "900", impTrend: "-1%", reached: "85", reachedDelta: "+3", engaged: "24", engagedDelta: "+1", keyRoles: "12", keyRolesDelta: "+2" },
-            { name: "Northern Grid", aud: "12,400", imp: "450", impTrend: "+2%", reached: "45", reachedDelta: "+1", engaged: "12", engagedDelta: "+0", keyRoles: "8", keyRolesDelta: "+1" },
+            { name: "Pacific Energy Systems", aud: "45,000", imp: "3,100", impTrend: "+18%", reached: "215", reachedDelta: "+18", keyRoles: "52", keyRolesDelta: "+15" },
+            { name: "Southern Rail Logistics", aud: "38,000", imp: "2,400", impTrend: "+8%", reached: "140", reachedDelta: "+12", keyRoles: "28", keyRolesDelta: "+7" },
+            { name: "Apex Manufacturing Group", aud: "22,500", imp: "1,200", impTrend: "+3%", reached: "98", reachedDelta: "+5", keyRoles: "18", keyRolesDelta: "+4" },
+            { name: "Metro Infrastructure", aud: "28,000", imp: "1,500", impTrend: "+6%", reached: "65", reachedDelta: "+4", keyRoles: "14", keyRolesDelta: "+3" },
+            { name: "Global Shipping Corp", aud: "18,200", imp: "900", impTrend: "-1%", reached: "85", reachedDelta: "+3", keyRoles: "12", keyRolesDelta: "+2" },
+            { name: "Northern Grid", aud: "12,400", imp: "450", impTrend: "+2%", reached: "45", reachedDelta: "+1", keyRoles: "8", keyRolesDelta: "+1" },
           ].map((row, i) => (
             <tr key={i} className="hover:bg-gray-50 transition-colors">
               <td className="px-5 py-3 font-bold text-yappy-grey-dark">
@@ -260,10 +259,7 @@ const TacticalRollupTable = () => (
               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
                 {row.reached} <span className={`text-[10px] ml-1 font-bold ${row.reachedDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.reachedDelta.includes('+') ? '▲' : '▼'} {row.reachedDelta}</span>
               </td>
-               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
-                {row.engaged} <span className={`text-[10px] ml-1 font-bold ${row.engagedDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.engagedDelta.includes('+') ? '▲' : '▼'} {row.engagedDelta}</span>
-              </td>
-               <td className="px-5 py-3 text-yappy-grey-dark font-medium">
+              <td className="px-5 py-3 text-yappy-grey-dark font-medium bg-yappy-grey-med/15">
                 {row.keyRoles} <span className={`text-[10px] ml-1 font-bold ${row.keyRolesDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>{row.keyRolesDelta.includes('+') ? '▲' : '▼'} {row.keyRolesDelta}</span>
               </td>
             </tr>
