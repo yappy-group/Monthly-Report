@@ -531,12 +531,16 @@ const Page4_AlwaysOnHighlights = () => (
         </h3>
         <div className="mb-4 flex items-center gap-6 text-sm">
           <div className="flex items-center gap-2">
-            <div className="px-2 py-1 rounded bg-yappy-orange/20 border border-yappy-orange/30 text-yappy-orange font-semibold text-xs">Top Mover</div>
-            <span className="text-yappy-grey-med">Highest engagement growth</span>
+            <div className="flex items-center justify-center w-5 h-5 rounded bg-yappy-orange">
+              <TrendingUp className="w-3 h-3 text-white" />
+            </div>
+            <span className="text-yappy-grey-med">Top Mover – Highest engagement growth</span>
           </div>
           <div className="flex items-center gap-2">
-            <div className="px-2 py-1 rounded bg-yappy-green/20 border border-yappy-green/30 text-yappy-green font-semibold text-xs">Top Engager</div>
-            <span className="text-yappy-grey-med">Highest engagement this month</span>
+            <div className="flex items-center justify-center w-5 h-5 rounded bg-yappy-green">
+              <Zap className="w-3 h-3 text-white" />
+            </div>
+            <span className="text-yappy-grey-med">Top Engager – Highest engagement this month</span>
           </div>
         </div>
         <div className="border border-yappy-grey-light rounded-lg overflow-hidden shadow-sm bg-white">
@@ -600,14 +604,10 @@ const Page4_AlwaysOnHighlights = () => (
                               return (
                                 <div key={badge} className={`flex items-center justify-center w-5 h-5 rounded ${
                                   badge === 'Top Mover' 
-                                    ? 'bg-yappy-orange/10' 
-                                    : 'bg-yappy-green/10'
+                                    ? 'bg-yappy-orange' 
+                                    : 'bg-yappy-green'
                                 }`} title={badge}>
-                                  <IconComponent className={`w-3.5 h-3.5 ${
-                                    badge === 'Top Mover' 
-                                      ? 'text-yappy-orange/70' 
-                                      : 'text-yappy-green/70'
-                                  }`} />
+                                  <IconComponent className="w-3 h-3 text-white" />
                                 </div>
                               );
                             })}
