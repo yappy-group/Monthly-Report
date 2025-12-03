@@ -546,7 +546,7 @@ const Page4_AlwaysOnHighlights = () => (
             </div>
             <span className="text-yappy-grey-med">Top Mover – Highest engagement growth</span>
           </div>
-          <p className="text-xs text-yappy-grey-med italic bg-yappy-grey-light/20 p-3 rounded border border-yappy-grey-light/40">Awareness Levels calculated from engagement metrics (impressions, views, completion rate) over a 60-day moving average: High (≥3,600 impressions), Medium (2,450–3,599), Low (&lt;2,450).</p>
+          <p className="text-xs text-yappy-grey-med italic bg-yappy-grey-light/20 p-3 rounded border border-yappy-grey-light/40">Awareness levels are derived from engagement metrics tracked and averaged over a rolling 60-day window.</p>
         </div>
         <div className="border border-yappy-grey-light rounded-lg overflow-hidden shadow-sm bg-white">
           <table className="w-full text-sm text-left">
