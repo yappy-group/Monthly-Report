@@ -1,5 +1,5 @@
 import React from "react";
-import { ArrowUp, ArrowDown, Box, Users, Clock, Eye, Target, Layers, CheckCircle2, PlayCircle, Briefcase, LucideIcon, Zap, BarChart3, Info, Calendar, Building2, FileText, Goal } from "lucide-react";
+import { ArrowUp, ArrowDown, Box, Users, Clock, Eye, Target, Layers, CheckCircle2, PlayCircle, Briefcase, LucideIcon, Zap, BarChart3, Info, Calendar, Building2, FileText, Goal, TrendingUp } from "lucide-react";
 
 // --- Components ---
 
@@ -595,15 +595,22 @@ const Page4_AlwaysOnHighlights = () => (
                         <span>{row.name}</span>
                         {row.badges.length > 0 && (
                           <div className="flex gap-1">
-                            {row.badges.map((badge) => (
-                              <span key={badge} className={`text-xs font-medium px-1.5 py-0.5 rounded ${
-                                badge === 'Top Mover' 
-                                  ? 'bg-yappy-orange/10 text-yappy-orange/70' 
-                                  : 'bg-yappy-green/10 text-yappy-green/70'
-                              }`}>
-                                {badge}
-                              </span>
-                            ))}
+                            {row.badges.map((badge) => {
+                              const IconComponent = badge === 'Top Mover' ? TrendingUp : Zap;
+                              return (
+                                <div key={badge} className={`flex items-center justify-center w-5 h-5 rounded ${
+                                  badge === 'Top Mover' 
+                                    ? 'bg-yappy-orange/10' 
+                                    : 'bg-yappy-green/10'
+                                }`} title={badge}>
+                                  <IconComponent className={`w-3.5 h-3.5 ${
+                                    badge === 'Top Mover' 
+                                      ? 'text-yappy-orange/70' 
+                                      : 'text-yappy-green/70'
+                                  }`} />
+                                </div>
+                              );
+                            })}
                           </div>
                         )}
                       </div>
