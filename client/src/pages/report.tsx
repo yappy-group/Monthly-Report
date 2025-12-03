@@ -539,13 +539,14 @@ const Page4_AlwaysOnHighlights = () => (
           <Users className="w-5 h-5 text-yappy-grey-med" />
           Always On Target Companies
         </h3>
-        <div className="mb-4 flex items-center gap-6 text-sm">
+        <div className="mb-4 space-y-3">
           <div className="flex items-center gap-2">
             <div className="flex items-center justify-center w-5 h-5 rounded bg-yappy-orange">
               <TrendingUp className="w-3 h-3 text-white" />
             </div>
             <span className="text-yappy-grey-med">Top Mover – Highest engagement growth</span>
           </div>
+          <p className="text-xs text-yappy-grey-med italic bg-yappy-grey-light/20 p-3 rounded border border-yappy-grey-light/40">Awareness Levels calculated from engagement metrics (impressions, views, completion rate) over a 60-day moving average: High (≥3,600 impressions), Medium (2,450–3,599), Low (&lt;2,450).</p>
         </div>
         <div className="border border-yappy-grey-light rounded-lg overflow-hidden shadow-sm bg-white">
           <table className="w-full text-sm text-left">
@@ -585,14 +586,14 @@ const Page4_AlwaysOnHighlights = () => (
                 const rate = parseFloat(row.rate);
                 
                 let level = 'Low';
-                let levelColor = 'bg-yappy-grey-light/40 text-yappy-grey-dark';
+                let levelColor = 'bg-green-100 text-green-700 font-medium';
                 
                 if (impressions >= 3600) {
                   level = 'High';
-                  levelColor = 'bg-yappy-orange/20 text-yappy-orange font-semibold';
+                  levelColor = 'bg-green-600 text-white font-semibold';
                 } else if (impressions >= 2450) {
                   level = 'Medium';
-                  levelColor = 'bg-yappy-grey-med/20 text-yappy-grey-med font-semibold';
+                  levelColor = 'bg-green-300 text-green-900 font-semibold';
                 }
                 
                 return (
