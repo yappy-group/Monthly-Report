@@ -534,6 +534,7 @@ const Page4_AlwaysOnHighlights = () => (
             <thead className="bg-gray-50 text-yappy-grey-med font-semibold border-b border-yappy-grey-light uppercase text-[11px] tracking-wider">
               <tr>
                 <th className="px-6 py-4">Target Company</th>
+                <th className="px-6 py-4">Awareness Level</th>
                 <th className="px-6 py-4">Impressions</th>
                 <th className="px-6 py-4">Complete Views</th>
                 <th className="px-6 py-4">Completion Rate</th>
@@ -562,15 +563,32 @@ const Page4_AlwaysOnHighlights = () => (
                 { name: "Valley Transport Group", imp: "1,850", views: "440", rate: "23.7%", time: "6h" },
                 { name: "Summit Shipping Co.", imp: "1,700", views: "410", rate: "24.1%", time: "5.5h" },
                 { name: "Horizon Logistics Ltd.", imp: "1,550", views: "370", rate: "23.8%", time: "5h" },
-              ].map((row, i) => (
-                <tr key={i} className="hover:bg-gray-50/50 transition-colors">
-                  <td className="px-6 py-4 font-semibold text-yappy-grey-dark">{row.name}</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.imp}</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.views}</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.rate}</td>
-                  <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.time}</td>
-                </tr>
-              ))}
+              ].map((row, i) => {
+                const impressions = parseInt(row.imp.replace(/,/g, ''));
+                const rate = parseFloat(row.rate);
+                
+                let level = 'Low';
+                let levelColor = 'bg-yappy-grey-light/40 text-yappy-grey-dark';
+                
+                if (impressions >= 6000 && rate >= 26.5) {
+                  level = 'High';
+                  levelColor = 'bg-yappy-orange/20 text-yappy-orange font-semibold';
+                } else if ((impressions >= 3000 && rate >= 24.5) || impressions >= 6000) {
+                  level = 'Medium';
+                  levelColor = 'bg-yappy-grey-med/20 text-yappy-grey-med font-semibold';
+                }
+                
+                return (
+                  <tr key={i} className="hover:bg-gray-50/50 transition-colors">
+                    <td className="px-6 py-4 font-semibold text-yappy-grey-dark">{row.name}</td>
+                    <td className={`px-6 py-4 rounded text-sm font-medium ${levelColor}`}>{level}</td>
+                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.imp}</td>
+                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.views}</td>
+                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.rate}</td>
+                    <td className="px-6 py-4 text-yappy-grey-dark font-medium">{row.time}</td>
+                  </tr>
+                );
+              })}
             </tbody>
           </table>
         </div>
