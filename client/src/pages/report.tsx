@@ -410,35 +410,45 @@ const Page1_ExecutiveSummary = () => (
         Program Overview
       </h2>
       
-      <div className="grid grid-cols-4 gap-5 mb-6">
-        <MetricCard 
-          label="Roles Reached (Tactical)" 
-          value="342" 
-          trend="+27" 
-          trendIsPositive={true} 
-          icon={Users}
-        />
-        <MetricCard 
-          label="Key Roles Engaged (Tactical)" 
-          value="124" 
-          trend="+19" 
-          trendIsPositive={true} 
-          icon={Target}
-        />
-        <MetricCard 
-          label="Targets Reached % (Always On)" 
-          value="68%" 
-          trend="4%" 
-          trendIsPositive={true} 
-          icon={Briefcase}
-        />
-        <MetricCard 
-          label="Individual Reach (Always On)" 
-          value="2,450" 
-          trend="8%" 
-          trendIsPositive={true} 
-          icon={Users}
-        />
+      <div className="flex gap-6 mb-6">
+        <div className="flex-1 border-l-2 border-yappy-orange/30 pl-4">
+          <div className="text-xs font-semibold text-yappy-orange uppercase tracking-wide mb-3">Tactical</div>
+          <div className="grid grid-cols-2 gap-5">
+            <MetricCard 
+              label="Roles Reached" 
+              value="342" 
+              trend="+27" 
+              trendIsPositive={true} 
+              icon={Users}
+            />
+            <MetricCard 
+              label="Key Roles Engaged" 
+              value="124" 
+              trend="+19" 
+              trendIsPositive={true} 
+              icon={Target}
+            />
+          </div>
+        </div>
+        <div className="flex-1 border-l-2 border-yappy-orange/20 pl-4">
+          <div className="text-xs font-semibold text-yappy-orange/70 uppercase tracking-wide mb-3">Always On</div>
+          <div className="grid grid-cols-2 gap-5">
+            <MetricCard 
+              label="Targets Reached %" 
+              value="68%" 
+              trend="4%" 
+              trendIsPositive={true} 
+              icon={Briefcase}
+            />
+            <MetricCard 
+              label="Individual Reach" 
+              value="2,450" 
+              trend="8%" 
+              trendIsPositive={true} 
+              icon={Users}
+            />
+          </div>
+        </div>
       </div>
       <p className="text-xs text-yappy-grey-med font-medium mb-10 text-center italic">All metrics shown are for this month across all Always On and Tactical campaigns.</p>
 
