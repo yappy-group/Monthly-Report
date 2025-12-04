@@ -121,7 +121,7 @@ const ProgramNarrativeBlock = () => (
     <div className="space-y-4 relative z-10">
         <div className="flex items-start gap-4">
           <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
-          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Significant increase in role engagement across priority accounts, driven by Tactical campaigns.</p>
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Global Logistics Co. showed the highest level of awareness amongst Always On targets this month</p>
         </div>
         <div className="flex items-start gap-4">
           <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
