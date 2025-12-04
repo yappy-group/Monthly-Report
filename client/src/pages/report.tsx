@@ -138,7 +138,7 @@ const ProgramNarrativeBlock = () => (
     </div>
     <div className="mt-8 pt-6 border-t border-yappy-grey-light/50 text-sm font-medium flex items-center gap-2 text-[#363636]">
       <Info className="w-4 h-4 text-yappy-orange" />
-      This month: 2.4M impressions, 38k complete views, 38% avg completion rate. 4 new key roles engaged on Tactical, 3 companies showed significant awareness lift, Predictive Maintenance ROI as top-performing message.
+      This month: 2.4M impressions, 38k complete views, 38% avg completion rate across all campaigns.
     </div>
   </div>
 );
