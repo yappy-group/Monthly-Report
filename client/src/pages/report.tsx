@@ -576,14 +576,14 @@ const Page4_AlwaysOnHighlights = () => (
             <tbody className="divide-y divide-yappy-grey-light">
               {[
                 { name: "Global Logistics Co.", imp: "12,400", impDelta: "+6.9%", views: "4,200", viewsDelta: "+2.9%", rate: "33.9%", rateDelta: "+1.2%", time: "42h", badges: [], trend: 1 },
-                { name: "Pacific Ports Group", imp: "6,500", impDelta: "+22.6%", views: "1,800", viewsDelta: "+23.2%", rate: "27.7%", rateDelta: "+2.1%", time: "22h", badges: ["Top Mover"], trend: 1 },
-                { name: "Southern Energy Systems", imp: "4,100", impDelta: "+17.8%", views: "1,100", viewsDelta: "+23.6%", rate: "26.8%", rateDelta: "+1.8%", time: "15h", badges: [], trend: 1 },
                 { name: "Metro Transit Authority", imp: "8,100", impDelta: "+13.3%", views: "2,100", viewsDelta: "+15.3%", rate: "25.9%", rateDelta: "+0.9%", time: "28h", badges: ["Top Mover"], trend: 1 },
+                { name: "Pacific Ports Group", imp: "6,500", impDelta: "+22.6%", views: "1,800", viewsDelta: "+23.2%", rate: "27.7%", rateDelta: "+2.1%", time: "22h", badges: ["Top Mover"], trend: 1 },
                 { name: "National Rail Services", imp: "5,200", impDelta: "+7.9%", views: "1,350", viewsDelta: "+7.6%", rate: "25.9%", rateDelta: "+0.5%", time: "18h", badges: ["Top Mover"], trend: 0 },
-                { name: "West Coast Ports", imp: "3,200", impDelta: "-15.2%", views: "1,200", viewsDelta: "-14.8%", rate: "25.0%", rateDelta: "-0.8%", time: "16h", badges: [], trend: -1 },
+                { name: "Southern Energy Systems", imp: "4,100", impDelta: "+17.8%", views: "1,100", viewsDelta: "+23.6%", rate: "26.8%", rateDelta: "+1.8%", time: "15h", badges: [], trend: 1 },
                 { name: "Midwest Rail Operations", imp: "3,900", impDelta: "+3.9%", views: "980", viewsDelta: "+3.4%", rate: "25.1%", rateDelta: "+0.2%", time: "13h", badges: [], trend: 0 },
                 { name: "Eastern Shipping Lines", imp: "3,600", impDelta: "+13.3%", views: "920", viewsDelta: "+15.7%", rate: "25.5%", rateDelta: "+1.3%", time: "12h", badges: [], trend: 1 },
                 { name: "Continental Transport", imp: "3,400", impDelta: "-3.4%", views: "850", viewsDelta: "-3.2%", rate: "25.0%", rateDelta: "-0.3%", time: "11h", badges: [], trend: 0 },
+                { name: "West Coast Ports", imp: "3,200", impDelta: "-15.2%", views: "1,200", viewsDelta: "-14.8%", rate: "25.0%", rateDelta: "-0.8%", time: "16h", badges: [], trend: -1 },
                 { name: "Northern Grid Services", imp: "3,100", impDelta: "-18.6%", views: "780", viewsDelta: "-16.9%", rate: "25.1%", rateDelta: "-0.6%", time: "10h", badges: [], trend: -1 },
                 { name: "Central Hub Logistics", imp: "2,950", impDelta: "+3.0%", views: "720", viewsDelta: "+2.6%", rate: "24.4%", rateDelta: "+0.1%", time: "9.5h", badges: [], trend: 0 },
                 { name: "Urban Transit Solutions", imp: "2,800", impDelta: "-12.4%", views: "680", viewsDelta: "-13.2%", rate: "24.2%", rateDelta: "-0.7%", time: "9h", badges: [], trend: -1 },
