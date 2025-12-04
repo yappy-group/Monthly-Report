@@ -125,7 +125,7 @@ const ProgramNarrativeBlock = () => (
         </div>
         <div className="flex items-start gap-4">
           <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
-          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Watch time up 24%, led by C-Suite personas in heavy industry targets. Three new targets surpassed the 20% exposure threshold.</p>
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Pacific Ports Group, Metro Transit Authority and National Rail Services showed the biggest lift in brand awareness this month</p>
         </div>
         <div className="flex items-start gap-4">
           <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
