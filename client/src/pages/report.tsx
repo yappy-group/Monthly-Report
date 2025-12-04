@@ -116,7 +116,7 @@ const ProgramNarrativeBlock = () => (
       <div className="w-6 h-6 rounded-full border-2 border-yappy-orange flex items-center justify-center">
         <CheckCircle2 className="w-3 h-3 text-yappy-orange" />
       </div>
-      Key Insights & Program Narrative
+      Key Insights
     </h4>
     <div className="space-y-4 relative z-10">
         <div className="flex items-start gap-4">
