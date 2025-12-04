@@ -636,24 +636,24 @@ const Page4_AlwaysOnHighlights = () => (
                     <td className="px-6 py-4 text-yappy-grey-dark font-medium">
                       <div className="flex items-center justify-between">
                         <span>{row.imp}</span>
-                        <span className={`text-[10px] font-bold ml-2 ${row.impDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>
-                          {row.impDelta.includes('+') ? '▲' : '▼'} {row.impDelta}
+                        <span className={`text-[10px] font-bold ml-2 ${Math.abs(parseFloat(row.impDelta)) >= 10 ? (row.impDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red') : 'text-yappy-grey-med'}`}>
+                          {Math.abs(parseFloat(row.impDelta)) >= 10 ? (row.impDelta.includes('+') ? '▲' : '▼') + ' ' + row.impDelta : '–'}
                         </span>
                       </div>
                     </td>
                     <td className="px-6 py-4 text-yappy-grey-dark font-medium">
                       <div className="flex items-center justify-between">
                         <span>{row.views}</span>
-                        <span className={`text-[10px] font-bold ml-2 ${row.viewsDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>
-                          {row.viewsDelta.includes('+') ? '▲' : '▼'} {row.viewsDelta}
+                        <span className={`text-[10px] font-bold ml-2 ${Math.abs(parseFloat(row.viewsDelta)) >= 10 ? (row.viewsDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red') : 'text-yappy-grey-med'}`}>
+                          {Math.abs(parseFloat(row.viewsDelta)) >= 10 ? (row.viewsDelta.includes('+') ? '▲' : '▼') + ' ' + row.viewsDelta : '–'}
                         </span>
                       </div>
                     </td>
                     <td className="px-6 py-4 text-yappy-grey-dark font-medium">
                       <div className="flex items-center justify-between">
                         <span>{row.rate}</span>
-                        <span className={`text-[10px] font-bold ml-2 ${row.rateDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red'}`}>
-                          {row.rateDelta.includes('+') ? '▲' : '▼'} {row.rateDelta}
+                        <span className={`text-[10px] font-bold ml-2 ${Math.abs(parseFloat(row.rateDelta)) >= 10 ? (row.rateDelta.includes('+') ? 'text-yappy-green' : 'text-yappy-red') : 'text-yappy-grey-med'}`}>
+                          {Math.abs(parseFloat(row.rateDelta)) >= 10 ? (row.rateDelta.includes('+') ? '▲' : '▼') + ' ' + row.rateDelta : '–'}
                         </span>
                       </div>
                     </td>
