@@ -233,7 +233,7 @@ const TacticalRollupTable = () => (
   <div className="mb-10">
     <div className="flex items-center gap-3 mb-6 p-4 bg-yappy-grey-med/10 border border-yappy-grey-med/25 rounded-lg">
       <div className="px-3 py-1 rounded bg-yappy-grey-med/25 border border-yappy-grey-med/40">
-        <span className="text-xs font-bold text-yappy-grey-dark uppercase tracking-wide">Objective</span>
+        <span className="text-xs font-bold text-yappy-grey-dark uppercase tracking-wide">Decision Chain Influence</span>
       </div>
       <span className="text-base font-semibold text-yappy-grey-dark">Decision Chain Influence</span>
     </div>
