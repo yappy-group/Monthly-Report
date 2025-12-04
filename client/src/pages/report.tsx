@@ -407,7 +407,7 @@ const Page1_ExecutiveSummary = () => (
         <div className="p-1.5 bg-yappy-orange/10 rounded text-yappy-orange">
           <Target className="w-5 h-5" />
         </div>
-        Global Overview
+        Program Overview
       </h2>
       
       <div className="grid grid-cols-4 gap-5 mb-6">
