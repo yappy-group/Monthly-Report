@@ -129,7 +129,7 @@ const ProgramNarrativeBlock = () => (
         </div>
         <div className="flex items-start gap-4">
           <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
-          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">AO program continues to build early awareness across priority heavy industry markets, with consistent uplift in logistics sector.</p>
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">4 new key roles showed engagement for the first time on the Southern Rail Logistics Tactical incl. Director of Operations and Head of Compliance</p>
         </div>
     </div>
     <div className="mt-8 pt-6 border-t border-yappy-grey-light/50 text-sm font-medium flex items-center gap-2 text-[#363636]">
