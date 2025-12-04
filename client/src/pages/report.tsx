@@ -580,7 +580,7 @@ const Page4_AlwaysOnHighlights = () => (
                 { name: "Southern Energy Systems", imp: "4,100", impDelta: "+17.8%", views: "1,100", viewsDelta: "+23.6%", rate: "26.8%", rateDelta: "+1.8%", time: "15h", badges: [], trend: 1 },
                 { name: "Metro Transit Authority", imp: "8,100", impDelta: "+13.3%", views: "2,100", viewsDelta: "+15.3%", rate: "25.9%", rateDelta: "+0.9%", time: "28h", badges: ["Top Mover"], trend: 1 },
                 { name: "National Rail Services", imp: "5,200", impDelta: "+7.9%", views: "1,350", viewsDelta: "+7.6%", rate: "25.9%", rateDelta: "+0.5%", time: "18h", badges: ["Top Mover"], trend: 0 },
-                { name: "West Coast Ports", imp: "4,800", impDelta: "-15.2%", views: "1,200", viewsDelta: "-14.8%", rate: "25.0%", rateDelta: "-0.8%", time: "16h", badges: [], trend: -1 },
+                { name: "West Coast Ports", imp: "3,200", impDelta: "-15.2%", views: "1,200", viewsDelta: "-14.8%", rate: "25.0%", rateDelta: "-0.8%", time: "16h", badges: [], trend: -1 },
                 { name: "Midwest Rail Operations", imp: "3,900", impDelta: "+3.9%", views: "980", viewsDelta: "+3.4%", rate: "25.1%", rateDelta: "+0.2%", time: "13h", badges: [], trend: 0 },
                 { name: "Eastern Shipping Lines", imp: "3,600", impDelta: "+13.3%", views: "920", viewsDelta: "+15.7%", rate: "25.5%", rateDelta: "+1.3%", time: "12h", badges: [], trend: 1 },
                 { name: "Continental Transport", imp: "3,400", impDelta: "-3.4%", views: "850", viewsDelta: "-3.2%", rate: "25.0%", rateDelta: "-0.3%", time: "11h", badges: [], trend: 0 },
