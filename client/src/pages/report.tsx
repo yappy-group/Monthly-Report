@@ -410,6 +410,8 @@ const Page1_ExecutiveSummary = () => (
         Global Overview
       </h2>
       
+      <p className="text-sm text-yappy-grey-med leading-relaxed mb-8">The following metrics represent key performance indicators across our Tactical and Always On campaigns this month, measuring our progress in role engagement, target penetration, and audience reach.</p>
+      
       <div className="grid grid-cols-4 gap-5 mb-6">
         <MetricCard 
           label="Roles Reached (Tactical)" 
