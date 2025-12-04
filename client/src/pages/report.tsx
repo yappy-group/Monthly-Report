@@ -484,7 +484,7 @@ const Page4_AlwaysOnHighlights = () => (
       <div className="px-3 py-1 rounded bg-yappy-grey-med/25 border border-yappy-grey-med/40">
         <span className="text-xs font-bold text-yappy-grey-dark uppercase tracking-wide">Build Brand Awareness</span>
       </div>
-      <span className="text-base font-semibold text-yappy-grey-dark">Build Brand Awareness</span>
+      <span className="text-base text-yappy-grey-dark font-normal">Ensure key strategic targets clearly understand Acme’s brand and its value</span>
     </div>
     
     <div className="mb-8">
