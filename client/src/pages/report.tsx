@@ -121,15 +121,15 @@ const ProgramNarrativeBlock = () => (
     <div className="space-y-4 relative z-10">
         <div className="flex items-start gap-4">
           <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
-          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Global Logistics Co. showed the highest level of awareness amongst Always On targets this month</p>
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed"><span className="font-semibold">Global Logistics Co.</span> showed the highest level of awareness amongst Always On targets this month</p>
         </div>
         <div className="flex items-start gap-4">
           <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
-          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">Pacific Ports Group, Metro Transit Authority and National Rail Services showed the biggest lift in brand awareness this month</p>
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed"><span className="font-semibold">Pacific Ports Group</span>, <span className="font-semibold">Metro Transit Authority</span> and <span className="font-semibold">National Rail Services</span> showed the biggest lift in brand awareness this month</p>
         </div>
         <div className="flex items-start gap-4">
           <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
-          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">4 new key roles showed engagement for the first time on the Southern Rail Logistics Tactical incl. Director of Operations and Head of Compliance</p>
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">4 new key roles showed engagement for the first time on the <span className="font-semibold">Southern Rail Logistics</span> Tactical incl. Director of Operations and Head of Compliance</p>
         </div>
         <div className="flex items-start gap-4">
           <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
