@@ -131,6 +131,10 @@ const ProgramNarrativeBlock = () => (
           <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
           <p className="text-yappy-grey-dark text-[15px] leading-relaxed">4 new key roles showed engagement for the first time on the Southern Rail Logistics Tactical incl. Director of Operations and Head of Compliance</p>
         </div>
+        <div className="flex items-start gap-4">
+          <div className="w-1.5 h-1.5 bg-yappy-orange rounded-full mt-2.5 shrink-0" />
+          <p className="text-yappy-grey-dark text-[15px] leading-relaxed">The key message <span className="font-semibold">Predictive Maintenance ROI</span> held viewer attention significantly longer than expected, making it this month's top-performing message</p>
+        </div>
     </div>
     <div className="mt-8 pt-6 border-t border-yappy-grey-light/50 text-sm font-medium flex items-center gap-2 text-[#363636]">
       <Info className="w-4 h-4 text-yappy-orange" />
