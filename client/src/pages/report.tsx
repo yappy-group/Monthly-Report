@@ -235,7 +235,10 @@ const TacticalRollupTable = () => (
       <div className="px-3 py-1 rounded bg-yappy-grey-med/25 border border-yappy-grey-med/40">
         <span className="text-xs font-bold text-yappy-grey-dark uppercase tracking-wide">Decision Chain Influence</span>
       </div>
-      <span className="text-base text-yappy-grey-dark font-normal">Target key decision makers and influencers with tailored messaging to convey the Acme's value proposition during active opportunities</span>
+      <div className="flex items-start gap-2">
+        <span className="text-base text-yappy-grey-dark font-semibold">Objective:</span>
+        <span className="text-base text-yappy-grey-dark font-normal">Target key decision makers and influencers with tailored messaging to convey the Acme's value proposition during active opportunities</span>
+      </div>
     </div>
     <p className="text-xs text-yappy-grey-med font-medium mb-6 italic bg-yappy-grey-light/20 p-3 rounded border border-yappy-grey-light/40">Lifetime totals shown with monthly increases indicated by deltas (▲).</p>
     <div className="border border-yappy-grey-light rounded-lg overflow-hidden bg-white shadow-sm">
@@ -484,7 +487,10 @@ const Page4_AlwaysOnHighlights = () => (
       <div className="px-3 py-1 rounded bg-yappy-grey-med/25 border border-yappy-grey-med/40">
         <span className="text-xs font-bold text-yappy-grey-dark uppercase tracking-wide">Build Brand Awareness</span>
       </div>
-      <span className="text-base text-yappy-grey-dark font-normal">Ensure key strategic targets clearly understand Acme’s brand and its value</span>
+      <div className="flex items-start gap-2">
+        <span className="text-base text-yappy-grey-dark font-semibold">Objective:</span>
+        <span className="text-base text-yappy-grey-dark font-normal">Ensure key strategic targets clearly understand Acme's brand and its value</span>
+      </div>
     </div>
     
     <div className="mb-8">
